@@ -44,3 +44,79 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
+html,
+body {
+  font-family: 'Gotham';
+  font-size: 16px; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.click-animation {
+  transition: transform .1s ease-in-out; }
+  .click-animation:active {
+    transform: scale(0.9); }
+
+.header {
+  height: 90px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); }
+  .header .wrapper {
+    max-width: 1211px;
+    height: 100%; }
+  .header .inner {
+    display: flex;
+    align-items: center;
+    height: inherit; }
+  .header__menu {
+    width: 100%;
+    display: flex;
+    align-items: center; }
+    .header__menu li:not(.header__logo) a {
+      display: block;
+      width: fit-content;
+      min-width: 154px;
+      font-size: 13px;
+      line-height: 39px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      background-color: #7A65B4;
+      color: #ffffff;
+      text-align: center; }
+    .header__menu li:nth-child(1), .header__menu li:nth-child(4) {
+      margin-right: 30px; }
+  .header__logo {
+    margin: 0 auto; }
+    .header__logo a {
+      display: block; }
+  .header__user {
+    display: none; }
+  .header.is-logged-in .header__menu li:not(.header__logo) {
+    display: none; }
+  .header.is-logged-in .header__user {
+    display: flex; }
+    .header.is-logged-in .header__user a {
+      display: block;
+      flex-shrink: 0; }
+      .header.is-logged-in .header__user a:first-child {
+        margin-right: 10px; }
+    .header.is-logged-in .header__user-cart {
+      position: relative; }
+      .header.is-logged-in .header__user-cart__counter {
+        display: block;
+        position: absolute;
+        bottom: 8px;
+        right: 0;
+        width: 16px;
+        border-radius: 50%;
+        background-color: #7a65b5;
+        line-height: 16px;
+        font-size: 12px;
+        color: #ffffff;
+        text-align: center; }
+    .header.is-logged-in .header__user-avatar img {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%; }

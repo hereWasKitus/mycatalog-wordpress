@@ -1,0 +1,11 @@
+2020-09-22T13:13:28+00:00 CRITICAL Uncaught Error: Using $this when not in object context in D:\Kitus\Apps\laragon\www\mycatalog\wp-content\plugins\woocommerce\includes\class-wc-cart.php:656
+Stack trace:
+#0 D:\Kitus\Apps\laragon\www\mycatalog\wp-content\themes\mycatalog\header.php(4): WC_Cart::get_cart_contents_count()
+#1 D:\Kitus\Apps\laragon\www\mycatalog\wp-includes\template.php(730): require_once('D:\\Kitus\\Apps\\l...')
+#2 D:\Kitus\Apps\laragon\www\mycatalog\wp-includes\template.php(676): load_template('D:\\Kitus\\Apps\\l...', true, Array)
+#3 D:\Kitus\Apps\laragon\www\mycatalog\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#4 D:\Kitus\Apps\laragon\www\mycatalog\wp-content\themes\mycatalog\index.php(15): get_header()
+#5 D:\Kitus\Apps\laragon\www\mycatalog\wp-includes\template-loader.php(106): include('D:\\Kitus\\Apps\\l...')
+#6 D:\Kitus\Apps\laragon\www\mycatalog\wp-blog-header.php(19): require_once('D:\\Kitus\\Apps\\l...')
+#7 D:\Kitus\Apps\laragon\www\mycatalog\index.php(17): require('D:\\Kitus\\Apps\\l.. in D:\Kitus\Apps\laragon\www\mycatalog\wp-content\plugins\woocommerce\includes\class-wc-cart.php on line 656
+
