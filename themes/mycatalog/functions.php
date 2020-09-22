@@ -148,6 +148,9 @@ function mycatalog_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_style( 'mycatalog-main-css', get_template_directory_uri() . '/src/css/main.css', array(), false );
+	wp_enqueue_script( 'mycatalog-index-js', get_template_directory_uri() . '/src/js/index.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'mycatalog_scripts' );
 
@@ -178,3 +181,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Add attribute to script
+ */
+add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
+function add_type_attribute($tag, $handle, $src) {
+	if ( 'mycatalog-index-js' !== $handle ) {
+		return $tag;
+	}
+	$tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+	return $tag;
+}

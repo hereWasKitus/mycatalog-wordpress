@@ -16,6 +16,9 @@
     "url": "https://github.com/Automattic/_s/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^12.1.0"
+    "@wordpress/scripts": "^12.1.0",
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
   }
 }
