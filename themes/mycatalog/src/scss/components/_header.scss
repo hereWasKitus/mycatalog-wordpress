@@ -53,6 +53,10 @@
 
 
   &.is-logged-in {
+    .wrapper {
+      max-width: 1364px;
+    }
+
     .header__menu {
       li {
         &:not(.header__logo) {

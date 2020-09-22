@@ -93,6 +93,8 @@ body {
       display: block; }
   .header__user {
     display: none; }
+  .header.is-logged-in .wrapper {
+    max-width: 1364px; }
   .header.is-logged-in .header__menu li:not(.header__logo) {
     display: none; }
   .header.is-logged-in .header__user {
