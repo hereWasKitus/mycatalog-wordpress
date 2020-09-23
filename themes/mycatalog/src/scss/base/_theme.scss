@@ -17,3 +17,9 @@ body {
     transform: scale(.9);
   }
 }
+
+#page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
