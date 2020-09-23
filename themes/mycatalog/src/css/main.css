@@ -122,3 +122,27 @@ body {
       width: 43px;
       height: 43px;
       border-radius: 50%; }
+
+.footer {
+  background-color: #232323;
+  padding: 42px 0 24px;
+  color: #ffffff;
+  font-size: 13px; }
+  .footer .wrapper {
+    max-width: 1344px; }
+  .footer .inner {
+    display: flex;
+    justify-content: space-between; }
+  .footer .col-heading {
+    text-transform: uppercase;
+    margin-bottom: 14px; }
+  .footer__social .col-heading, .footer__contacts .col-heading {
+    margin-bottom: 26px; }
+  .footer__social ul {
+    display: flex; }
+    .footer__social ul li:not(:last-child) {
+      margin-right: 16px; }
+  .footer .copyright {
+    margin-top: 38px;
+    font-size: 12px;
+    text-align: center; }

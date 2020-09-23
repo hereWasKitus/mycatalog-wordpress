@@ -1,0 +1,47 @@
+.footer {
+  background-color: #232323;
+  padding: 42px 0 24px;
+  color: #ffffff;
+  font-size: 13px;
+
+  .wrapper {
+    max-width: 1344px;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col {
+    &-heading {
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__social,
+  &__contacts {
+    .col-heading {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__social {
+    ul {
+      display: flex;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 38px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
