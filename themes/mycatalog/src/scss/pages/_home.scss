@@ -1,0 +1,248 @@
+.last-products {
+  .inner {
+    display: flex;
+  }
+
+  &__item {
+    flex: 1;
+    padding: 29px 45px 46px 48px;
+    display: flex;
+    color: #ffffff;
+
+    &:nth-child(1) {
+      background: radial-gradient(127.44% 220.51% at 67.56% 50%, #9680D1 0%, #7A65B4 100%);
+    }
+
+    &:nth-child(2) {
+      max-width: 546px;
+      background: linear-gradient(117.42deg, #7A65B4 21.18%, #A577FF 87.3%);
+    }
+
+    &__image,
+    &__info {
+      width: 50%;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__status {
+      width: fit-content;
+      padding: 6px 14px;
+      margin-bottom: 33px;
+      font-size: 12px;
+      text-align: center;
+      background-color: #1C1C1C;
+      border-radius: 5px;
+      cursor: default;
+    }
+
+    &__category {
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #c8c8c8;
+
+      a {
+        color: inherit;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    &__price {
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    &__name {
+      font-size: 23px;
+      line-height: 27.5px;
+      font-weight: 400;
+    }
+
+    &__button {
+      display: block;
+      width: 130px;
+      margin-top: auto;
+      line-height: 42px;
+      text-align: center;
+      white-space: nowrap;
+      background-color: #fff;
+      color: #5b4597;
+    }
+
+    &__image {
+      min-width: fit-content;
+      position: relative;
+
+      a {
+        display: flex;
+      }
+
+      img {
+        width: 289px;
+        height: 265px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.products {
+  padding: 90px 30px 93px;
+
+  &__search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 38px;
+
+    &__input {
+      width: 100%;
+      position: relative;
+
+      input {
+        width: inherit;
+        padding: 15px 20px;
+        background-color: #efefef;
+        border-radius: 8px;
+        font-size: 18px;
+        border: 0;
+
+        &::placeholder {
+          font-size: 18px;
+          color: #C8C8C8;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      img {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        cursor: pointer;
+      }
+    }
+
+    .custom-select-container {
+      margin-left: 36px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 46px;
+    row-gap: 38px;
+
+    &__item {
+      position: relative;
+      background-color: #fff;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+      transition: all .3s ease;
+
+      &.fade-in {
+        animation: fade-in .5s ease forwards;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &__image {
+        width: 100%;
+        height: 241px;
+        display: block;
+        object-fit: cover;
+      }
+
+      &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 9px 5px 13px;
+        font-size: 14px;
+      }
+
+      &__category {
+        color: #c8c8c8;
+        margin-bottom: 5px;
+
+        a {
+          color: inherit;
+        }
+      }
+
+      &__name {
+        color: #8e78c9;
+        font-size: inherit;
+        margin-bottom: 8px;
+      }
+
+      &__price {
+        font-size: 12px;
+        color: #000000;
+      }
+
+      &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 62px;
+
+    .page-numbers {
+      width: 51px;
+      height: 51px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $violet-main;
+      font-size: 14px;
+      font-weight: 500;
+      color: $violet-main;
+      background-color: #ffffff;
+      transition: all .3s ease;
+
+      &:not(:last-child) {
+        margin-right: 7px;
+      }
+
+      &.current,
+      &:not(.prev):not(.next):hover {
+        background-color: $violet-main;
+        color: #ffffff;
+      }
+
+      &.prev {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

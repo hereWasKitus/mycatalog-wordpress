@@ -1,0 +1,20 @@
+.sale-circle {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: $violet-main;
+  flex-shrink: 0;
+  position: absolute;
+
+  &.is-top-right {
+    top: -20px;
+    right: -28px;
+  }
+
+  span {
+    display: block;
+    margin: auto;
+    color: #ffffff;
+  }
+}

@@ -27,6 +27,10 @@ a {
   &:hover {
     color: #000000;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 p {

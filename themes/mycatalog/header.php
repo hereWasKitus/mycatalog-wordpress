@@ -4,8 +4,8 @@
   $cart_count = '';
 
   if ( $user !== false ) {
-    $wc_cart = new WC_Cart();
-    $cart_count = $wc_cart -> get_cart_contents_count();
+    global $woocommerce;
+    $cart_count = $woocommerce -> cart -> cart_contents_count;
   }
 ?>
 <!doctype html>
@@ -39,7 +39,7 @@
         </ul>
 
         <div class="header__user">
-          <a href="#" class="header__user-cart">
+          <a href="<?= wc_get_cart_url() ?>" class="header__user-cart">
             <img src="<?= get_template_directory_uri() . '/assets/images/basket.svg' ?>">
             <span class="header__user-cart__counter"><?= $cart_count ?></span>
           </a>

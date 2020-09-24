@@ -1,0 +1,6 @@
+2020-09-24T12:16:47+00:00 CRITICAL syntax error, unexpected '$html' (T_VARIABLE) in D:\Kitus\Apps\laragon\www\mycatalog\wp-content\themes\mycatalog\functions.php on line 225
+
+2020-09-24T12:42:49+00:00 CRITICAL Object of class WP_Term could not be converted to string in D:\Kitus\Apps\laragon\www\mycatalog\wp-content\themes\mycatalog\templates\home.php on line 138
+
+2020-09-24T12:47:09+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in D:\Kitus\Apps\laragon\www\mycatalog\wp-content\themes\mycatalog\functions.php on line 250
+

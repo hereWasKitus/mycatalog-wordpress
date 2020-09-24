@@ -1,0 +1,47 @@
+.page-header {
+  height: 247px;
+  background-color: $violet-main;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  .wrapper,
+  .inner {
+    height: inherit;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 48px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+
+  ul {
+    display: flex;
+    font-size: 13px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      height: 10px;
+      width: .4px;
+      margin: 0 13px;
+      background-color: #ffffff;
+    }
+  }
+}
