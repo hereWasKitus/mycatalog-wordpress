@@ -27,15 +27,19 @@
       <div class="inner">
 
         <ul class="header__menu">
-          <li><a href="#" class="click-animation">pod</a></li>
-          <li><a href="#" class="click-animation">digital franchise</a></li>
+          <?php
+            $franchise_pages = get_franchise_pages();
+            foreach ( $franchise_pages as $index => $page ):
+          ?>
+          <li><a href="<?= $page['link'] ?>" class="click-animation"><?= $page['name'] ?></a></li>
 
+          <?php if ( $index == 1 ): ?>
           <li class="header__logo">
             <a href="<?= home_url() ?>"><img src="<?= get_template_directory_uri() . '/assets/images/logo.svg' ?>"></a>
           </li>
+          <?php endif; ?>
 
-          <li><a href="#" class="click-animation">for advertisers</a></li>
-          <li><a href="#" class="click-animation">private label</a></li>
+          <?php endforeach; ?>
         </ul>
 
         <div class="header__user">

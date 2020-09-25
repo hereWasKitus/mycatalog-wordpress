@@ -260,3 +260,30 @@ function get_products_categories () {
 
   return $categories;
 }
+
+/**
+ * Get list of franchise pages
+ */
+function get_franchise_pages () {
+  $query = new WP_Query([
+    'post_type' => 'page',
+    'meta_query' => [
+      [
+        'key' => '_wp_page_template',
+        'value' => 'templates/franchise.php'
+      ]
+    ]
+  ]);
+  $pages = [];
+  $count = 0;
+
+  while ( $query -> have_posts() ) {
+    $query -> the_post();
+    $pages[$count]['name'] = get_the_title();
+    $pages[$count]['link'] = get_the_permalink();
+    $count ++;
+  }
+
+  wp_reset_postdata();
+  return $pages;
+}
