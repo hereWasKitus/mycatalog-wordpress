@@ -53,6 +53,19 @@ ul {
   margin: 0;
   padding: 0; }
 
+input {
+  border-radius: 0 !important; }
+  input:focus {
+    outline: none; }
+  input[type='submit'] {
+    border: 0;
+    padding: 0; }
+
+textarea {
+  resize: none; }
+  textarea:focus {
+    outline: none; }
+
 html,
 body {
   font-family: 'Gotham';
@@ -112,6 +125,126 @@ main {
       .floating-content__social__icon img {
         width: 18px;
         height: 18px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-11 {
+  margin-bottom: 11px; }
+
+.mb-12 {
+  margin-bottom: 12px; }
+
+.mb-13 {
+  margin-bottom: 13px; }
+
+.mb-14 {
+  margin-bottom: 14px; }
+
+.mb-15 {
+  margin-bottom: 15px; }
+
+.mb-16 {
+  margin-bottom: 16px; }
+
+.mb-17 {
+  margin-bottom: 17px; }
+
+.mb-18 {
+  margin-bottom: 18px; }
+
+.mb-19 {
+  margin-bottom: 19px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-21 {
+  margin-bottom: 21px; }
+
+.mb-22 {
+  margin-bottom: 22px; }
+
+.mb-23 {
+  margin-bottom: 23px; }
+
+.mb-24 {
+  margin-bottom: 24px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
+
+.mb-26 {
+  margin-bottom: 26px; }
+
+.mb-27 {
+  margin-bottom: 27px; }
+
+.mb-28 {
+  margin-bottom: 28px; }
+
+.mb-29 {
+  margin-bottom: 29px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.mb-31 {
+  margin-bottom: 31px; }
+
+.mb-32 {
+  margin-bottom: 32px; }
+
+.mb-33 {
+  margin-bottom: 33px; }
+
+.mb-34 {
+  margin-bottom: 34px; }
+
+.mb-35 {
+  margin-bottom: 35px; }
+
+.mb-36 {
+  margin-bottom: 36px; }
+
+.mb-37 {
+  margin-bottom: 37px; }
+
+.mb-38 {
+  margin-bottom: 38px; }
+
+.mb-39 {
+  margin-bottom: 39px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.mb-41 {
+  margin-bottom: 41px; }
+
+.mb-42 {
+  margin-bottom: 42px; }
+
+.mb-43 {
+  margin-bottom: 43px; }
+
+.mb-44 {
+  margin-bottom: 44px; }
+
+.mb-45 {
+  margin-bottom: 45px; }
+
+.mb-46 {
+  margin-bottom: 46px; }
+
+.mb-47 {
+  margin-bottom: 47px; }
+
+.mb-48 {
+  margin-bottom: 48px; }
+
+.mb-49 {
+  margin-bottom: 49px; }
 
 .header {
   height: 90px;
@@ -262,7 +395,7 @@ main {
   .custom-select-container.is-active .custom-select-list {
     opacity: 1;
     z-index: 1;
-    top: calc(100% - 10px); }
+    top: calc(100% - 6px); }
 
 .custom-select-selected {
   display: flex;
@@ -462,3 +595,99 @@ main {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+.template-franchise .wrapper {
+  max-width: 1388px;
+  padding: 0 30px; }
+
+.template-franchise .inner {
+  display: flex;
+  padding-top: 51px; }
+
+.template-franchise .franchise-section {
+  width: 50%;
+  padding-bottom: 100px; }
+  .template-franchise .franchise-section:first-child {
+    padding-right: 85px; }
+
+.template-franchise .franchise-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 36px;
+  color: #000000; }
+  .template-franchise .franchise-title img {
+    margin-right: 15px;
+    cursor: pointer; }
+  .template-franchise .franchise-title h1 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1; }
+
+.template-franchise .franchise-content {
+  max-width: 566px;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 36px; }
+  .template-franchise .franchise-content p:not(:last-child) {
+    margin-bottom: 50px; }
+  .template-franchise .franchise-content ul {
+    margin-bottom: 50px; }
+    .template-franchise .franchise-content ul li::before {
+      content: '- '; }
+
+.template-franchise .franchise-form {
+  display: flex; }
+  .template-franchise .franchise-form__column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; }
+    .template-franchise .franchise-form__column:first-child {
+      margin-right: 38px; }
+  .template-franchise .franchise-form__field {
+    background-color: #eeeeee;
+    padding: 0 18px;
+    border: 0;
+    transition: all .3s ease; }
+    .template-franchise .franchise-form__field::placeholder {
+      font-size: 18px;
+      color: #cecbcb; }
+    .template-franchise .franchise-form__field:focus {
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25); }
+  .template-franchise .franchise-form input[type='text'], .template-franchise .franchise-form input[type='tel'], .template-franchise .franchise-form input[type='email'] {
+    line-height: 44px;
+    padding: 0 18px; }
+  .template-franchise .franchise-form input[type='submit'] {
+    margin-top: auto;
+    line-height: 62px;
+    background-color: #7A65B4;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer; }
+  .template-franchise .franchise-form__textarea {
+    height: 100%;
+    min-height: 136px; }
+    .template-franchise .franchise-form__textarea textarea {
+      height: inherit;
+      padding: 12px 18px; }
+  .template-franchise .franchise-form-file-container {
+    display: flex; }
+  .template-franchise .franchise-form-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    cursor: pointer; }
+  .template-franchise .franchise-form-file {
+    background-color: #7A65B4; }
+    .template-franchise .franchise-form-file input {
+      display: none; }
+  .template-franchise .franchise-form-add-file {
+    transition: all .3s ease; }
+    .template-franchise .franchise-form-add-file:hover {
+      background-color: #E8E8E8; }
+
+.template-franchise .franchise-image {
+  position: relative; }

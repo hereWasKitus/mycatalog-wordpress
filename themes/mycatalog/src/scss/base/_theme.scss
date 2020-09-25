@@ -79,3 +79,9 @@ main {
     }
   }
 }
+
+@for $i from 10 to 50 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+}

@@ -42,3 +42,24 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+input {
+  border-radius: 0 !important;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[type='submit'] {
+    border: 0;
+    padding: 0;
+  }
+}
+
+textarea {
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,156 @@
+.template-franchise {
+  .wrapper {
+    max-width: (1328px + 60px);
+    padding: 0 30px;
+  }
+
+  .inner {
+    display: flex;
+    padding-top: 51px;
+  }
+
+
+  .franchise {
+    &-section {
+      width: 50%;
+      padding-bottom: 100px;
+
+      &:first-child {
+        padding-right: 85px;
+      }
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 36px;
+      color: #000000;
+
+      img {
+        margin-right: 15px;
+        cursor: pointer;
+      }
+
+      h1 {
+        font-size: 36px;
+        font-weight: normal;
+        line-height: 1;
+      }
+    }
+
+    &-content {
+      max-width: 566px;
+      font-size: 20px;
+      line-height: 32px;
+      color: #000000;
+      margin-bottom: 36px;
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 50px;
+        }
+      }
+
+      ul {
+        margin-bottom: 50px;
+
+        li::before {
+          content: '- ';
+        }
+      }
+    }
+
+    &-form {
+      display: flex;
+
+      &__column {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        &:first-child {
+          margin-right: 38px;
+        }
+      }
+
+      &__field {
+        background-color: #eeeeee;
+        padding: 0 18px;
+        border: 0;
+        transition: all .3s ease;
+
+        &::placeholder {
+          font-size: 18px;
+          color: #cecbcb;
+        }
+
+        &:focus {
+          box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.25);
+        }
+      }
+
+      input {
+        &[type='text'],
+        &[type='tel'],
+        &[type='email'] {
+          line-height: 44px;
+          padding: 0 18px;
+        }
+
+        &[type='submit'] {
+          margin-top: auto;
+          line-height: 62px;
+          background-color: $violet-main;
+          text-transform: uppercase;
+          color: #ffffff;
+          font-size: 24px;
+          cursor: pointer;
+        }
+      }
+
+      &__textarea {
+        height: 100%;
+        min-height: 136px;
+
+        textarea {
+          height: inherit;
+          padding: 12px 18px;
+        }
+      }
+
+      &-file-container {
+        display: flex;
+      }
+
+      &-square {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        cursor: pointer;
+      }
+
+      &-file {
+        background-color: $violet-main;
+
+        input {
+          display: none;
+        }
+      }
+
+      &-add-file {
+        transition: all .3s ease;
+
+        &:hover {
+          background-color: #E8E8E8;
+        }
+      }
+    }
+
+    &-image {
+      position: relative;
+    }
+  }
+
+}
