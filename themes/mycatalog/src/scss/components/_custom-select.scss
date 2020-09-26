@@ -16,6 +16,7 @@
 
       .custom-select-list {
         opacity: 1;
+        transform: scale(1);
         pointer-events: unset;
       }
     }
@@ -52,6 +53,7 @@
 
   &-list {
     position: absolute;
+    z-index: 1;
     top: calc(100% - 6px);
     width: 100%;
     padding: 26px 25px 20px 17px;
@@ -59,8 +61,8 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     opacity: 0;
+    transform: scale(.7);
     transition: all .3s ease;
-    z-index: 1;
     pointer-events: none;
 
     &__item {
@@ -72,7 +74,7 @@
 
       &:hover {
         &::before {
-          animation: arrowAnimation .2s alternate ease-in-out 2;
+          animation: arrow-animation .2s alternate ease-in-out 2;
         }
       }
 
@@ -95,7 +97,7 @@
         transform: rotate(-45deg);
       }
 
-      @keyframes arrowAnimation {
+      @keyframes arrow-animation {
         to {
           left: 0;
         }

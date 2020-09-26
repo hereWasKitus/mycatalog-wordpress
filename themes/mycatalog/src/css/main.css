@@ -393,6 +393,7 @@ main {
     transform: rotate(-45deg) translate(0, 7.5px); }
   .custom-select-container.is-active .custom-select-list {
     opacity: 1;
+    transform: scale(1);
     pointer-events: unset; }
 
 .custom-select-selected {
@@ -423,6 +424,7 @@ main {
 
 .custom-select-list {
   position: absolute;
+  z-index: 1;
   top: calc(100% - 6px);
   width: 100%;
   padding: 26px 25px 20px 17px;
@@ -430,8 +432,8 @@ main {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   opacity: 0;
+  transform: scale(0.7);
   transition: all .3s ease;
-  z-index: 1;
   pointer-events: none; }
   .custom-select-list__item {
     position: relative;
@@ -440,7 +442,7 @@ main {
     border-bottom: 1px solid #A18DD7;
     cursor: pointer; }
     .custom-select-list__item:hover::before {
-      animation: arrowAnimation .2s alternate ease-in-out 2; }
+      animation: arrow-animation .2s alternate ease-in-out 2; }
     .custom-select-list__item:not(:last-child) {
       margin-bottom: 25px; }
     .custom-select-list__item::before {
@@ -457,7 +459,7 @@ main {
       border-left: 2px solid #fff;
       transform: rotate(-45deg); }
 
-@keyframes arrowAnimation {
+@keyframes arrow-animation {
   to {
     left: 0; } }
 
