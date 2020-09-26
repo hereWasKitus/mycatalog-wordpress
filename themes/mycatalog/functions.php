@@ -149,10 +149,6 @@ function mycatalog_scripts() {
     wp_enqueue_script( 'comment-reply' );
   }
 
-  // Custom select
-  wp_enqueue_style( 'mycatalog-select-css', get_template_directory_uri() . '/src/css/libs/custom-select.css', array(), false );
-  wp_enqueue_script( 'mycatalog-select-js', get_template_directory_uri() . '/src/js/libs/custom-select.min.js', array(), false, true );
-
   // Main
   wp_enqueue_style( 'mycatalog-main-css', get_template_directory_uri() . '/src/css/main.css', array(), false );
   wp_enqueue_script( 'mycatalog-index-js', get_template_directory_uri() . '/src/js/index.js', array(), false, true );
