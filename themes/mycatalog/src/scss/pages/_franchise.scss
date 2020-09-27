@@ -139,6 +139,27 @@
         }
       }
 
+      &-file-list {
+        display: flex;
+        margin-right: 15px;
+
+        & > div {
+          margin-left: 15px;
+        }
+      }
+
+      &-file-item {
+        text-transform: uppercase;
+        color: #9b9b9b;
+        background-color: #E8E8E8;
+        position: relative;
+
+        .close {
+          top: -9px;
+          right: -9px;
+        }
+      }
+
       &-add-file {
         transition: all .3s ease;
 

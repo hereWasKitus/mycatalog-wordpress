@@ -283,3 +283,57 @@ function get_franchise_pages () {
   wp_reset_postdata();
   return $pages;
 }
+
+/**
+ * Send contact form
+ */
+add_action( 'wp_ajax_send_contact_form', 'send_contact_form' );
+add_action( 'wp_ajax_nopriv_send_contact_form', 'send_contact_form' );
+function send_contact_form () {
+  $files = [];
+  $message_body = "Full name: " . $_POST['name'] . "\n\r";
+
+  if ( isset($_POST['email']) ) {
+    $message_body .= "Email: " . $_POST['email'] . "\n\r";
+  }
+
+  if ( isset($_POST['company']) ) {
+    $message_body .= "Company: " . $_POST['company'] . "\n\r";
+  }
+
+  if ( isset($_POST['position']) ) {
+    $message_body .= "Position in company: " . $_POST['position'] . "\n\r";
+  }
+
+  if ( isset($_POST['position']) ) {
+    $message_body .= "Position in company: " . $_POST['position'] . "\n\r";
+  }
+
+  if ( isset($_POST['phone']) ) {
+    $message_body .= "Phone: " . $_POST['phone'] . "\n\r";
+  }
+
+  if ( isset($_POST['link']) ) {
+    $message_body .= "Web resource: " . $_POST['link'] . "\n\r";
+  }
+
+  if ( isset($_POST['message']) ) {
+    $message_body .= "Message: " . $_POST['message'] . "\n\r";
+  }
+
+  if ( isset($_FILES['files']) ) {
+    foreach ($_FILES['files']['name'] as $key => $value) {
+      $files[] = [
+        'name' => $_FILES['files']['name'][$key],
+        'type' => $_FILES['files']['type'][$key],
+        'tmp_name' => $_FILES['files']['tmp_name'][$key],
+        'error' => $_FILES['files']['error'][$key],
+        'size' => $_FILES['files']['size'][$key]
+      ];
+    }
+  }
+
+  $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog form', $message_body, $headers, $files);
+  echo json_encode(['status' => $mail_sent]);
+  wp_die();
+}

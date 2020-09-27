@@ -463,6 +463,27 @@ main {
   to {
     left: 0; } }
 
+.close {
+  background: #4f3f7e;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; }
+  .close::before, .close::after {
+    content: '';
+    display: block;
+    width: 9.5px;
+    height: 1.2px;
+    background: #fff;
+    position: absolute; }
+  .close::before {
+    transform: rotate(45deg); }
+  .close::after {
+    transform: rotate(-45deg); }
+
 .last-products .inner {
   display: flex; }
 
@@ -716,6 +737,19 @@ main {
     background-color: #7A65B4; }
     .template-franchise .franchise-form-file input {
       display: none; }
+  .template-franchise .franchise-form-file-list {
+    display: flex;
+    margin-right: 15px; }
+    .template-franchise .franchise-form-file-list > div {
+      margin-left: 15px; }
+  .template-franchise .franchise-form-file-item {
+    text-transform: uppercase;
+    color: #9b9b9b;
+    background-color: #E8E8E8;
+    position: relative; }
+    .template-franchise .franchise-form-file-item .close {
+      top: -9px;
+      right: -9px; }
   .template-franchise .franchise-form-add-file {
     transition: all .3s ease; }
     .template-franchise .franchise-form-add-file:hover {
