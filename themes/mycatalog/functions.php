@@ -40,6 +40,8 @@ if ( ! function_exists( 'mycatalog_setup' ) ) :
      */
     add_theme_support( 'title-tag' );
 
+    add_theme_support( 'woocommerce' );
+
     /*
      * Enable support for Post Thumbnails on posts and pages.
      *
@@ -103,7 +105,6 @@ if ( ! function_exists( 'mycatalog_setup' ) ) :
   }
 endif;
 add_action( 'after_setup_theme', 'mycatalog_setup' );
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -335,5 +336,44 @@ function send_contact_form () {
 
   $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog form', $message_body, $headers, $files);
   echo json_encode(['status' => $mail_sent]);
+  wp_die();
+}
+
+/**
+ * Ajax remove product from cart
+ */
+add_action( 'wp_ajax_product_remove', 'ajax_product_remove' );
+add_action( 'wp_ajax_nopriv_product_remove', 'ajax_product_remove' );
+
+function ajax_product_remove () {
+  ob_start();
+
+  foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
+    if($cart_item['product_id'] == $_POST['product_id'] && $cart_item_key == $_POST['cart_item_key'] ) {
+      WC()->cart->remove_cart_item($cart_item_key);
+    }
+  }
+
+  WC()->cart->calculate_totals();
+  WC()->cart->maybe_set_cart_cookies();
+
+  woocommerce_mini_cart();
+
+  $mini_cart = ob_get_clean();
+
+  // Fragments and mini cart are returned
+  $data = [
+    'status' => 'success',
+    'fragments' => apply_filters('woocommerce_add_to_cart_fragments', [
+      'cart_count' => WC() -> cart -> cart_contents_count,
+      'empty_message_fragment' => '<p class="mini-cart__empty-message">' .  __('No products in the cart.', 'mycatalog') . '</p>',
+      '.mini-cart .mini-cart__count' => '<span class="mini-cart__count">' . WC() -> cart -> cart_contents_count .'</span>',
+      '.mini-cart .mini-cart__total' => '<p class="mini-cart__total woocommerce-mini-cart__total total">' . WC() -> cart -> get_cart_subtotal() . '</p>',
+    ]),
+    'cart_hash' => apply_filters( 'woocommerce_add_to_cart_hash', WC()->cart->get_cart_for_session() ? md5( json_encode( WC()->cart->get_cart_for_session() ) ) : '', WC()->cart->get_cart_for_session() )
+  ];
+
+  wp_send_json( $data );
+
   wp_die();
 }

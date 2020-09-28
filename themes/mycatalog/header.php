@@ -1,12 +1,6 @@
 <?php
   $user = is_user_logged_in() ? wp_get_current_user() : false;
   $avatar_url = $user !== false ? get_avatar_url( $user -> ID ) : '';
-  $cart_count = '';
-
-  if ( $user !== false ) {
-    global $woocommerce;
-    $cart_count = $woocommerce -> cart -> cart_contents_count;
-  }
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -43,10 +37,9 @@
         </ul>
 
         <div class="header__user">
-          <a href="<?= wc_get_cart_url() ?>" class="header__user-cart">
-            <img src="<?= get_template_directory_uri() . '/assets/images/basket.svg' ?>">
-            <span class="header__user-cart__counter"><?= $cart_count ?></span>
-          </a>
+          <div class="header__user-cart">
+            <?php get_template_part('template-parts/mini-cart') ?>
+          </div>
           <a href="#" class="header__user-avatar">
             <img src="<?= get_template_directory_uri() . '/assets/images/no-avatar.svg' ?>">
           </a>
