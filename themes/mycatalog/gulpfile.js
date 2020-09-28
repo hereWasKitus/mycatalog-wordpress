@@ -21,10 +21,7 @@ function scss() {
 
 function js() {
   return src([
-    'src/js/libs/products-search.js',
-    'src/js/libs/custom-select.js',
-    'src/js/libs/history-back.js',
-    'src/js/libs/file-uploader.js',
+    'src/js/libs/*.js'
   ])
     .pipe( concat('index.js') )
     .pipe( dest('src/js/') )
