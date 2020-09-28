@@ -96,7 +96,7 @@ get_header();
           $products_loop = new WP_Query([
             'post_type' => 'product',
             'posts_per_page' => 12,
-            'order' => 'ASC',
+            'order' => 'DESC',
             'orderby' => 'date',
             'paged' => $paged
           ]);
