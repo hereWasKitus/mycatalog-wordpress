@@ -155,6 +155,9 @@
     window.history.back();
   }
 })();
+/**
+ * Custom mini cart
+ */
 (function () {
 
   if ( document.querySelector('.js-mini-cart') === null ) return;

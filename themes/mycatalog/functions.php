@@ -40,8 +40,6 @@ if ( ! function_exists( 'mycatalog_setup' ) ) :
      */
     add_theme_support( 'title-tag' );
 
-    add_theme_support( 'woocommerce' );
-
     /*
      * Enable support for Post Thumbnails on posts and pages.
      *
@@ -105,6 +103,7 @@ if ( ! function_exists( 'mycatalog_setup' ) ) :
   }
 endif;
 add_action( 'after_setup_theme', 'mycatalog_setup' );
+add_theme_support( 'woocommerce' );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -377,3 +376,13 @@ function ajax_product_remove () {
 
   wp_die();
 }
+
+/**
+ * Add form label filter
+ */
+// define the woocommerce_form_field_args callback
+// add_filter( 'woocommerce_form_field_args', 'filter_woocommerce_form_field_args', 10, 3 );
+// function filter_woocommerce_form_field_args( $args, $key, $value ) {
+//   $args['label'] = '<span>' . $args['label'] . '</span>';
+//   return $args;
+// }

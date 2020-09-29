@@ -85,3 +85,46 @@ main {
     margin-bottom: #{$i}px;
   }
 }
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 164px;
+  height: 36px;
+
+  background-color: $violet-main;
+  color: #ffffff !important;
+
+  img {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    img {
+      animation: back-arrow-animation .2s alternate 2 ease;
+    }
+  }
+
+  @keyframes back-arrow-animation {
+    to {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.woocommerce-info {
+  border-top-color: $violet-main;
+  background-color: rgba(122, 101, 180, 0.1);
+  font-size: 18px;
+  font-weight: 300;
+
+  &::before {
+    color: $violet-main;
+  }
+
+  a {
+    color: $violet-main;
+  }
+}
