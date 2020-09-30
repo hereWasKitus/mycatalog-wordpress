@@ -1,0 +1,58 @@
+@mixin remove-icon-grey {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #D4D4D4;
+  transition: all .3s ease;
+
+  &:hover {
+    border: 1px solid #e84118;
+
+    &::before,
+    &::after {
+      background-color: #e84118;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 1px;
+    border-radius: 0.5px;
+    background-color: #D4D4D4;
+    transition: all .3s ease;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}
+
+@mixin button-violet {
+  padding: 0 15px;
+  background-color: $violet-main;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled] {
+    background-color: #B7A7E4;
+  }
+}

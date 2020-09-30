@@ -1,0 +1,214 @@
+.p-cart {
+  padding: 74px 117px 70px 120px;
+
+  &__title {
+    font-size: 36px;
+    color: $violet-main;
+    font-weight: 400;
+
+    margin-bottom: 29px;
+  }
+
+  .back-button {
+    margin-bottom: 18px;
+  }
+
+  .woocommerce-cart-form .shop_table {
+    border: 1px solid #DFDFDF !important;
+    border-radius: 0 !important;
+    font-size: 18px;
+    color: #000000;
+
+    thead {
+      background-color: rgba(120, 99, 177, 0.1);
+
+      th {
+        font-weight: 500;
+      }
+    }
+
+    .product-remove .remove {
+      @include remove-icon-grey;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+    .product-thumbnail img {
+      width: 65px;
+      height: 64px;
+    }
+
+    .product-name a {
+      color: $violet-main;
+    }
+
+    .coupon {
+      input[name="coupon_code"] {
+        width: 100% !important;
+        margin-right: 25px !important;
+        max-width: 169px;
+        padding: 0 6px !important;
+        line-height: 36px;
+        border: 1px solid #C5C5C5 !important;
+
+        &::placeholder {
+          font-size: 13px;
+          background-image: 16px;
+          color: #c5c5c5;
+        }
+      }
+
+      button {
+        @include button-violet;
+        width: 164px;
+        padding: 0;
+      }
+    }
+
+    .actions {
+      .button[name="update_cart"] {
+        @include button-violet;
+
+        &[disabled] {
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .cart_totals {
+    font-size: 18px;
+
+    &__heading {
+      padding: 0 37px;
+      background-color: #f1eff7;
+      line-height: 56px;
+      border: 1px solid #EFEFEF;
+      color: $violet-main;
+      font-weight: 500;
+    }
+
+    &__content {
+      padding: 32px 42px 35px 33px;
+      border: 1px solid #DFDFDF;
+    }
+
+    .shop_table {
+      border: 0;
+      border-bottom: 1px solid #EFEFEF;
+      margin: 0 !important;
+      border-radius: 0;
+      color: #000000;
+
+      .cart-subtotal,
+      .order-total {
+        td {
+          font-weight: 400;
+        }
+
+        bdi,
+        strong {
+          font-weight: inherit;
+        }
+      }
+
+      .shipping {
+        bdi,
+        strong {
+          font-weight: 300;
+        }
+      }
+
+      th {
+        font-weight: 400;
+      }
+
+      td {
+        font-weight: 300;
+      }
+    }
+
+    .woocommerce-shipping-calculator {
+      .button[type="submit"] {
+        @include button-violet;
+        width: 100%;
+      }
+
+      .form-row {
+        padding: 0;
+        margin: 0 0 7px;
+      }
+
+      .select2 {
+        height: 36px;
+      }
+
+      .select2-selection {
+        border: 0.8px solid #D5D5D5;
+        height: 36px;
+        border-radius: 0;
+
+        &__rendered {
+          line-height: 36px;
+        }
+
+        &__arrow b {
+          border-color: $violet-main transparent transparent transparent;
+          border-width: 12px 8px 0;
+          margin-left: -16px;
+          transition: all .3s ease;
+        }
+      }
+
+      .select2-container--open {
+        .select2-selection__arrow b {
+          border-color: transparent transparent $violet-main transparent;
+          border-width: 0 8px 12px 8px;
+        }
+      }
+
+      .input-text {
+        line-height: 39px;
+        border: 1px solid #DFDFDF;
+        padding: 0 11px;
+
+        &::placeholder {
+          color: #bebebe;
+        }
+      }
+    }
+
+    .wc-proceed-to-checkout {
+      padding: 0;
+
+      .checkout-button {
+        @include button-violet;
+        max-width: 223px;
+        font-size: 16px;
+        margin: 21px auto 0;
+        transition: all .1s ease;
+
+        &:hover {
+          background-color: $violet-main;
+        }
+
+        &:active {
+          transform: scale(.9);
+        }
+      }
+    }
+
+    .shipping-calculator-button {
+      margin: 0;
+      color: $violet-main;
+      text-decoration: underline;
+
+      &::after {
+        content: '';
+      }
+    }
+
+  }
+}
