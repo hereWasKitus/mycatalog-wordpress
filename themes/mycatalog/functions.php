@@ -408,3 +408,25 @@ function tm_related_products_limit() {
     return $args;
 }
 add_filter( 'woocommerce_related_products_args', 'tm_related_products_limit' );
+
+/**
+ * Subscribe to newsletter
+ */
+add_action( 'wp_ajax_subscribe_to_newsletter', 'subscribe_to_newsletter' );
+add_action( 'wp_ajax_nopriv_subscribe_to_newsletter', 'subscribe_to_newsletter' );
+
+function subscribe_to_newsletter () {
+  $resp = [
+    'success' => true,
+    'message' => __('Thanks for subscription!', 'mycatalog')
+  ];
+  $res = TNP::subscribe( ['email' => $_POST['email']] );
+
+  if ( is_wp_error( $res ) ) {
+    $resp['success'] = false;
+    $resp['message'] = $res -> get_error_message();
+  }
+
+  echo json_encode( $resp );
+  wp_die();
+}

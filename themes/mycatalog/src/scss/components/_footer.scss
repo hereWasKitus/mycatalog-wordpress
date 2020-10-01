@@ -1,5 +1,5 @@
 .footer {
-  padding: 42px 0 24px;
+  padding: 42px 0 17px;
   margin-top: auto;
   background-color: #232323;
   color: #ffffff;
@@ -11,38 +11,106 @@
 
   .inner {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
-  .col {
-    &-heading {
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  &__social,
-  &__contacts {
-    .col-heading {
-      margin-bottom: 26px;
-    }
+  &__heading {
+    text-transform: uppercase;
+    font-size: 18px;
   }
 
-  &__social {
-    ul {
+  &__logo {
+    width: 178px;
+    height: 60px;
+  }
+
+  &__phone,
+  &__mail {
+    font-size: 16px;
+  }
+
+  &-col {
+    &--newsletter {
       display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      li {
-        &:not(:last-child) {
-          margin-right: 16px;
+      .footer__heading {
+        margin-bottom: 19px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 334px;
+      }
+
+      input[type="email"] {
+        width: inherit;
+        padding: 0 29px;
+        margin-bottom: 19px;
+        border: 0;
+        border-radius: 6px !important;
+        background-color: #404040;
+        line-height: 44px;
+        font-size: 18px;
+        color: #ffffff;
+
+        &::placeholder {
+          color: #7e7e7e;
+        }
+      }
+
+      input[type="submit"] {
+        background: unset;
+        font-size: 14px;
+        text-decoration: underline;
+        color: $violet-main;
+        cursor: pointer;
+      }
+    }
+
+    &--social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .footer__heading {
+        margin-bottom: 42px;
+      }
+
+      .icons {
+        a {
+          &:not(:last-child) {
+            margin-right: 34px;
+          }
+        }
+
+        img {
+          width: 25px;
+          height: 25px;
         }
       }
     }
   }
 
-  .copyright {
-    margin-top: 38px;
+  &-copyright {
+    margin-top: 36px;
     font-size: 12px;
+    text-transform: uppercase;
+    color: #767676;
     text-align: center;
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
   }
 }

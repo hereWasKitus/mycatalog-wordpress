@@ -15,58 +15,39 @@
     <div class="wrapper">
       <div class="inner">
 
-        <div class="col footer__contacts">
-          <p class="col-heading">contacts</p>
-          <ul>
-            <li>City</li>
-            <li>Street</li>
-            <li>+7 974 87 982</li>
-            <li>irss2019@gmail.com</li>
-          </ul>
-        </div>
-        <div class="col footer__social">
-          <p class="col-heading">social</p>
-          <ul>
-            <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/facebook.svg' ?>"></a></li>
-            <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/linkedin.svg' ?>"></a></li>
-            <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/twitter.svg' ?>"></a></li>
-          </ul>
-        </div>
-        <div class="col footer__logo">
-          <img src="<?= get_template_directory_uri() . '/assets/images/logo-footer.svg' ?>">
-        </div>
-        <div class="col">
-          <p class="col-heading">news</p>
-          <ul>
-            <li>Num 1</li>
-            <li>Num 2</li>
-            <li>Num 3</li>
-            <li>Num 4</li>
-          </ul>
-        </div>
-        <div class="col">
-          <p class="col-heading">events</p>
-          <ul>
-            <li>Num 1</li>
-            <li>Num 2</li>
-            <li>Num 3</li>
-            <li>Num 4</li>
-          </ul>
-        </div>
-        <div class="col">
-          <p class="col-heading">blog</p>
-          <ul>
-            <li>Num 1</li>
-            <li>Num 2</li>
-            <li>Num 3</li>
-            <li>Num 4</li>
-          </ul>
+        <div class="footer-grid">
+          <!-- FOOTER CONTACT DATA -->
+          <div class="footer-col footer-col--contact">
+            <div class="footer__logo"><img src="<?= get_template_directory_uri() . '/assets/images/logo-footer.svg' ?>"></div>
+            <p class="footer__phone">+7 000 00 0000</p>
+            <p class="footer__mail">mycatalog@gmail.com</p>
+          </div>
+
+          <!-- FOOTER NEWSLETTER FORM -->
+          <div class="footer-col footer-col--newsletter">
+            <p class="footer__heading"><?= __('stay updated', 'mycatalog') ?></p>
+            <form class="js-newsletter-form">
+              <input type="hidden" name="action" value="subscribe_to_newsletter">
+              <input type="email" name="email" placeholder="<?= __('Email', 'mycatalog') ?>">
+              <input type="submit" value="<?= __('Subscribe to the newsletter', 'mycatalog') ?>">
+            </form>
+          </div>
+
+          <!-- FOOTER SOCIAL -->
+          <div class="footer-col footer-col--social">
+            <p class="footer__heading"><?= __('social', 'mycatalog') ?></p>
+            <div class="icons">
+              <a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/facebook.svg' ?>"></a>
+              <a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/linkedin.svg' ?>"></a>
+              <a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/instagram.svg' ?>"></a>
+            </div>
+          </div>
         </div>
 
-      </div>
-      <div class="copyright">
-        <p>COPYRIGHT 2020 QANTUMTHEMES. CUSTOMIZABLE TEXT.</p>
-      </div>
+        <div class="footer-copyright">
+          <p>COPYRIGHT 2020 mycatalog <a href="#">Terms & Conditions Privacy Policy</a></p>
+        </div>
+
     </div>
   </footer><!-- #colophon -->
 </div><!-- #page -->

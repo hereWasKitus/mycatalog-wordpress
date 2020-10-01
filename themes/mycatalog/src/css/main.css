@@ -324,7 +324,7 @@ main {
       border-radius: 50%; }
 
 .footer {
-  padding: 42px 0 24px;
+  padding: 42px 0 17px;
   margin-top: auto;
   background-color: #232323;
   color: #ffffff;
@@ -333,20 +333,68 @@ main {
     max-width: 1344px; }
   .footer .inner {
     display: flex;
-    justify-content: space-between; }
-  .footer .col-heading {
+    flex-direction: column; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+  .footer__heading {
     text-transform: uppercase;
-    margin-bottom: 14px; }
-  .footer__social .col-heading, .footer__contacts .col-heading {
-    margin-bottom: 26px; }
-  .footer__social ul {
-    display: flex; }
-    .footer__social ul li:not(:last-child) {
-      margin-right: 16px; }
-  .footer .copyright {
-    margin-top: 38px;
+    font-size: 18px; }
+  .footer__logo {
+    width: 178px;
+    height: 60px; }
+  .footer__phone, .footer__mail {
+    font-size: 16px; }
+  .footer-col--newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .footer-col--newsletter .footer__heading {
+      margin-bottom: 19px; }
+    .footer-col--newsletter form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 334px; }
+    .footer-col--newsletter input[type="email"] {
+      width: inherit;
+      padding: 0 29px;
+      margin-bottom: 19px;
+      border: 0;
+      border-radius: 6px !important;
+      background-color: #404040;
+      line-height: 44px;
+      font-size: 18px;
+      color: #ffffff; }
+      .footer-col--newsletter input[type="email"]::placeholder {
+        color: #7e7e7e; }
+    .footer-col--newsletter input[type="submit"] {
+      background: unset;
+      font-size: 14px;
+      text-decoration: underline;
+      color: #7A65B4;
+      cursor: pointer; }
+  .footer-col--social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .footer-col--social .footer__heading {
+      margin-bottom: 42px; }
+    .footer-col--social .icons a:not(:last-child) {
+      margin-right: 34px; }
+    .footer-col--social .icons img {
+      width: 25px;
+      height: 25px; }
+  .footer-copyright {
+    margin-top: 36px;
     font-size: 12px;
+    text-transform: uppercase;
+    color: #767676;
     text-align: center; }
+    .footer-copyright a {
+      color: #ffffff;
+      text-decoration: underline; }
 
 .page-header {
   height: 247px;
