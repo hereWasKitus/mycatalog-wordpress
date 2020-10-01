@@ -11,6 +11,10 @@
       "product-tabs product-tabs"
       "product-related product-related";
 
+    .onsale {
+      display: none;
+    }
+
     &-images {
       width: 580px;
       grid-area: product-images;
@@ -62,6 +66,10 @@
         margin-bottom: 17px;
         font-size: 24px !important;
         color: #333333 !important;
+
+        ins {
+          font-weight: 400 !important;
+        }
       }
 
       .woocommerce-product-details__short-description {

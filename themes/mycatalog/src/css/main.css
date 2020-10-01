@@ -1288,6 +1288,8 @@ main {
     column-gap: 46px;
     row-gap: 30px;
     grid-template-areas: "product-images product-summary" "product-tabs product-tabs" "product-related product-related"; }
+    .p-single-product .c-product .onsale {
+      display: none; }
     .p-single-product .c-product-images {
       width: 580px;
       grid-area: product-images; }
@@ -1322,6 +1324,8 @@ main {
         margin-bottom: 17px;
         font-size: 24px !important;
         color: #333333 !important; }
+        .p-single-product .c-product-summary .price ins {
+          font-weight: 400 !important; }
       .p-single-product .c-product-summary .woocommerce-product-details__short-description {
         color: #333333;
         margin-bottom: 24px; }
