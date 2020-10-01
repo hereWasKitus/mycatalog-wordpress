@@ -619,7 +619,8 @@ main {
   position: relative;
   background-color: #fff;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  z-index: 1; }
   .c-product-item.fade-in {
     animation: fade-in .5s ease forwards; }
   .c-product-item:hover {
@@ -1383,3 +1384,6 @@ main {
         .p-single-product .c-product-related .products .c-product-item__price {
           font-size: 14px;
           color: #333333; }
+        .p-single-product .c-product-related .products .c-product-item .sale-circle {
+          top: -12px;
+          right: -12px; }
