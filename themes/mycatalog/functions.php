@@ -386,3 +386,25 @@ function ajax_product_remove () {
 //   $args['label'] = '<span>' . $args['label'] . '</span>';
 //   return $args;
 // }
+
+/**
+ * Change limit of related products
+ */
+function tm_related_products_limit() {
+    global $product;
+
+    $orderby = '';
+    $columns = 4;
+    $related = $product->get_related( 4 );
+    $args = array(
+        'post_type'           => 'product',
+        'no_found_rows'       => 1,
+        'posts_per_page'      => 4,
+        'ignore_sticky_posts' => 1,
+        'orderby'             => $orderby,
+        'post__in'            => $related,
+        'post__not_in'        => array($product->id)
+    );
+    return $args;
+}
+add_filter( 'woocommerce_related_products_args', 'tm_related_products_limit' );

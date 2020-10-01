@@ -1,0 +1,213 @@
+.p-single-product {
+  padding: 20px 20px 55px;
+
+  .c-product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 46px;
+    row-gap: 30px;
+    grid-template-areas:
+      "product-images product-summary"
+      "product-tabs product-tabs"
+      "product-related product-related";
+
+    &-images {
+      width: 580px;
+      grid-area: product-images;
+
+      &__main {
+        line-height: 1;
+        margin-bottom: 7px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__gallery {
+        img {
+          width: 80px;
+          height: 80px;
+          border: 1px solid #D3D3D3;
+          object-fit: cover;
+
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
+    &-summary {
+      grid-area: product-summary;
+      width: unset !important;
+      margin: 0 !important;
+
+      .woocommerce-breadcrumb {
+        margin: 0 0 12px;
+        color: #777777;
+        font-size: 14px;
+      }
+
+      .product_title {
+        margin-bottom: 17px;
+        font-size: 29px;
+        line-height: 36px;
+        font-weight: normal;
+        color: #000000;
+      }
+
+      .price {
+        margin-bottom: 17px;
+        font-size: 24px !important;
+        color: #333333 !important;
+      }
+
+      .woocommerce-product-details__short-description {
+        color: #333333;
+        margin-bottom: 24px;
+      }
+
+      .single_add_to_cart_button {
+        @include button-violet;
+        font-family: Gotham;
+        background-color: $violet-main !important;
+        transition: all .1s ease;
+
+        &:active {
+          transform: scale(.9);
+        }
+      }
+
+      form.cart {
+        margin-bottom: 28px !important;
+      }
+
+      .product_meta {
+        padding: 15px 0 27px;
+        border-top: 1px solid #EBEBEB;
+        border-bottom: 1px solid #EBEBEB;
+        font-size: 14px;
+        color: #333333;
+
+        .posted_in a {
+          color: $violet-main;
+        }
+
+        &__buttons {
+          margin-top: 16px;
+          display: flex;
+        }
+
+        &__button {
+          @include button-violet;
+          width: fit-content;
+          font-size: 16px;
+
+          &:not(:last-child) {
+            margin-right: 18px;
+          }
+        }
+      }
+    }
+
+    &-tabs {
+      grid-area: product-tabs;
+
+      ul.tabs {
+        padding: 0 !important;
+
+        &::before {
+          content: '';
+          height: 1px;
+          background-color: rgba(0, 0, 0, 0.05);
+          width: 100%;
+          border-bottom: unset !important;
+          position: absolute;
+          bottom: unset !important;
+          top: 0;
+        }
+
+        &::after {
+          display: none !important;
+        }
+
+        li {
+          background-color: #fff !important;
+          border: 0 !important;
+          border-radius: 0 !important;
+          padding: 0 !important;
+          margin: 0 !important;
+
+          &:not(:last-child) {
+            margin-right: 15px !important;
+          }
+
+          &::before,
+          &::after {
+            display: none;
+          }
+
+          &.active {
+            border-top: 4px solid $violet-main !important;
+          }
+
+          a {
+            padding: 5px 0 0 !important;
+            font-weight: 400 !important;
+            color: #333333 !important;
+          }
+        }
+      }
+
+      .panel {
+        margin: 0 !important;
+        color: #333333 !important;
+
+        h2 {
+          display: none;
+        }
+      }
+    }
+
+    &-related {
+      grid-area: product-related;
+      padding: 0;
+
+      h2 {
+        font-size: 24px;
+        color: $violet-main;
+        font-weight: normal;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        margin: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+
+        .c-product-item {
+          &__category {
+            font-size: 13px;
+            color: #333333;
+          }
+
+          &__name {
+            font-size: 16px;
+          }
+
+          &__price {
+            font-size: 14px;
+            color: #333333;
+          }
+        }
+      }
+    }
+  }
+}

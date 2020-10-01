@@ -87,20 +87,13 @@ get_header();
           ]);
 
           while ( $products_loop -> have_posts() ) :
+
             $products_loop -> the_post();
-            $product = wc_get_product( get_the_ID() );
-            $image = get_the_post_thumbnail_url();
+            get_template_part('template-parts/product-item');
+
+          endwhile;
+          wp_reset_postdata();
           ?>
-          <div class="products__grid__item">
-            <img class="products__grid__item__image" src="<?= $image ?>">
-            <div class="products__grid__item__footer">
-              <div class="products__grid__item__category"><?= $product -> get_categories() ?></div>
-              <h3 class="products__grid__item__name"><?= $product -> get_name() ?></h3>
-              <p class="products__grid__item__price">$<?= $product -> get_regular_price() ?></p>
-            </div>
-            <a class="products__grid__item__link" href="<?= get_the_permalink() ?>"></a>
-          </div>
-          <?php endwhile; wp_reset_postdata(); ?>
       </div>
 
       <!-- PRODUCTS PAGINATION -->
