@@ -1,6 +1,7 @@
 .custom-select {
   &-container {
     position: relative;
+    z-index: 2;
     font-size: 23px;
     color: #ffffff;
     select {
