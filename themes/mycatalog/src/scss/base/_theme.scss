@@ -114,7 +114,8 @@ main {
   }
 }
 
-.woocommerce-info {
+.woocommerce-info,
+.woocommerce-message {
   border-top-color: $violet-main;
   background-color: rgba(122, 101, 180, 0.1);
   font-size: 18px;
@@ -126,5 +127,9 @@ main {
 
   a {
     color: $violet-main;
+  }
+
+  a.button.wc-forward {
+    @include button-violet;
   }
 }
