@@ -710,6 +710,74 @@ main {
     top: 0;
     left: 0; }
 
+.gallery-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+  pointer-events: none;
+  opacity: 0; }
+  .gallery-popup-container.is-active {
+    opacity: 1;
+    pointer-events: all; }
+
+.gallery-popup {
+  width: 100%;
+  max-width: 989px; }
+  .gallery-popup__display-image {
+    background-color: rgba(15, 15, 15, 0.51);
+    display: flex; }
+    .gallery-popup__display-image img {
+      display: none;
+      width: 100%;
+      max-width: 753px;
+      margin: 0 auto;
+      height: auto;
+      pointer-events: none; }
+      .gallery-popup__display-image img.is-active {
+        display: block; }
+  .gallery-popup__images-list {
+    max-width: 665px;
+    margin: 0 auto;
+    background-color: rgba(15, 15, 15, 0.51);
+    padding: 10px 23px;
+    display: flex;
+    overflow-x: auto; }
+  .gallery-popup__small-image {
+    opacity: 0.5;
+    width: fit-content;
+    transition: all .3s ease;
+    flex-shrink: 0;
+    line-height: 0;
+    padding-right: 20px; }
+    .gallery-popup__small-image img {
+      width: 82px;
+      height: 82px; }
+    .gallery-popup__small-image.is-active {
+      opacity: 1; }
+  .gallery-popup__arrow {
+    width: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; }
+    .gallery-popup__arrow img {
+      display: block;
+      width: 30px;
+      height: 56px;
+      transition: all .1s ease; }
+    .gallery-popup__arrow.right {
+      transform: rotate(180deg);
+      transform-origin: center; }
+    .gallery-popup__arrow:active img {
+      transform: scale(0.9); }
+
 .last-products .inner {
   display: flex; }
 
@@ -1293,6 +1361,8 @@ main {
     .p-single-product .c-product-images {
       width: 580px;
       grid-area: product-images; }
+      .p-single-product .c-product-images img {
+        cursor: pointer; }
       .p-single-product .c-product-images__main {
         line-height: 1;
         margin-bottom: 7px; }
@@ -1314,6 +1384,8 @@ main {
         margin: 0 0 12px;
         color: #777777;
         font-size: 14px; }
+        .p-single-product .c-product-summary .woocommerce-breadcrumb a:last-child {
+          pointer-events: none; }
       .p-single-product .c-product-summary .product_title {
         margin-bottom: 17px;
         font-size: 29px;

@@ -31,11 +31,36 @@ $attachment_ids = $product->get_gallery_image_ids();
 
 <div class="c-product-images">
 	<div class="c-product-images__main">
-		<img src="<?= get_the_post_thumbnail_url() ?>">
+		<img data-index="0" src="<?= get_the_post_thumbnail_url() ?>">
 	</div>
 	<div class="c-product-images__gallery">
-		<?php foreach ( $attachment_ids as $attachment_id ): ?>
-		<img src="<?= wp_get_attachment_url( $attachment_id ) ?>">
+		<?php foreach ( $attachment_ids as $key => $attachment_id ): ?>
+		<img data-index="<?= $key + 1 ?>" src="<?= wp_get_attachment_url( $attachment_id ) ?>">
 		<?php endforeach; ?>
 	</div>
+
+	<!-- PRODUCT GALLERY POPUP -->
+	<div class="gallery-popup-container js-gallery-popup">
+		<div class="gallery-popup">
+
+			<!-- BIG IMAGES -->
+			<div class="gallery-popup__display-image">
+				<a data-direction="-1" href="#" class="gallery-popup__arrow left"><img class="except" src="<?= get_template_directory_uri() . '/assets/images/popup-arrow.svg' ?>"></a>
+				<img data-index="0" class="is-active" src="<?= get_the_post_thumbnail_url() ?>">
+				<?php foreach ( $attachment_ids as $key => $attachment_id ): ?>
+				<img data-index="<?= $key + 1 ?>" src="<?= wp_get_attachment_url( $attachment_id ) ?>">
+				<?php endforeach; ?>
+				<a data-direction="1" href="#" class="gallery-popup__arrow right"><img class="except" src="<?= get_template_directory_uri() . '/assets/images/popup-arrow.svg' ?>"></a>
+			</div>
+
+			<!-- SMALL IMAGES -->
+			<div class="gallery-popup__images-list">
+				<div class="gallery-popup__small-image is-active" data-index="0"><img src="<?= get_the_post_thumbnail_url() ?>"></div>
+				<?php foreach ( $attachment_ids as $key => $attachment_id ): ?>
+				<div class="gallery-popup__small-image" data-index="<?= $key + 1 ?>"><img src="<?= wp_get_attachment_url( $attachment_id ) ?>"></div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</div>
+
 </div>

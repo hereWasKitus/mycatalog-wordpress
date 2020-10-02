@@ -19,6 +19,10 @@
       width: 580px;
       grid-area: product-images;
 
+      img {
+        cursor: pointer;
+      }
+
       &__main {
         line-height: 1;
         margin-bottom: 7px;
@@ -52,6 +56,10 @@
         margin: 0 0 12px;
         color: #777777;
         font-size: 14px;
+
+        a:last-child {
+          pointer-events: none;
+        }
       }
 
       .product_title {
