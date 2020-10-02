@@ -748,7 +748,19 @@ main {
     background-color: rgba(15, 15, 15, 0.51);
     padding: 10px 23px;
     display: flex;
-    overflow-x: auto; }
+    overflow-x: auto;
+    /* Track */
+    /* Handle */
+    /* Handle on hover */ }
+    .gallery-popup__images-list::-webkit-scrollbar {
+      width: 7px;
+      height: 7px; }
+    .gallery-popup__images-list::-webkit-scrollbar-track {
+      background: #f1f1f1; }
+    .gallery-popup__images-list::-webkit-scrollbar-thumb {
+      background: rgba(15, 15, 15, 0.51); }
+    .gallery-popup__images-list::-webkit-scrollbar-thumb:hover {
+      background: #555; }
   .gallery-popup__small-image {
     opacity: 0.5;
     width: fit-content;
