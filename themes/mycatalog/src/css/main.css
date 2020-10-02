@@ -725,7 +725,8 @@ main {
   opacity: 0; }
   .gallery-popup-container.is-active {
     opacity: 1;
-    pointer-events: all; }
+    pointer-events: all;
+    animation: popup-slide-in .3s ease forwards; }
 
 .gallery-popup {
   width: 100%;
@@ -789,6 +790,12 @@ main {
       transform-origin: center; }
     .gallery-popup__arrow:active img {
       transform: scale(0.9); }
+
+@keyframes popup-slide-in {
+  0% {
+    top: -100%; }
+  100% {
+    top: 0; } }
 
 .last-products .inner {
   display: flex; }

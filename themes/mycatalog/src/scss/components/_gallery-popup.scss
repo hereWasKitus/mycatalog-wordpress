@@ -15,6 +15,7 @@
   &.is-active {
     opacity: 1;
     pointer-events: all;
+    animation: popup-slide-in .3s ease forwards;
   }
 }
 
@@ -90,5 +91,14 @@
     &:active img {
       transform: scale(.9);
     }
+  }
+}
+
+@keyframes popup-slide-in {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
   }
 }

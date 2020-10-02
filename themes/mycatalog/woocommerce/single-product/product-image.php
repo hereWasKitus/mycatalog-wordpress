@@ -29,6 +29,7 @@ $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 
 $attachment_ids = $product->get_gallery_image_ids();
 ?>
 
+<!-- PRODUCT GALLERY -->
 <div class="c-product-images">
 	<div class="c-product-images__main">
 		<img data-index="0" src="<?= get_the_post_thumbnail_url() ?>">
@@ -60,6 +61,7 @@ $attachment_ids = $product->get_gallery_image_ids();
 				<div class="gallery-popup__small-image" data-index="<?= $key + 1 ?>"><img src="<?= wp_get_attachment_url( $attachment_id ) ?>"></div>
 				<?php endforeach; ?>
 			</div>
+
 		</div>
 	</div>
 
