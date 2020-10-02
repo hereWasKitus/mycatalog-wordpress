@@ -291,34 +291,34 @@ add_action( 'wp_ajax_send_contact_form', 'send_contact_form' );
 add_action( 'wp_ajax_nopriv_send_contact_form', 'send_contact_form' );
 function send_contact_form () {
   $files = [];
-  $message_body = "Full name: " . $_POST['name'] . "\n\r";
+  $message_body = "Full name: " . $_POST['name'] . "\r\n";
 
   if ( isset($_POST['email']) ) {
-    $message_body .= "Email: " . $_POST['email'] . "\n\r";
+    $message_body .= "Email: " . $_POST['email'] . "\r\n";
   }
 
   if ( isset($_POST['company']) ) {
-    $message_body .= "Company: " . $_POST['company'] . "\n\r";
+    $message_body .= "Company: " . $_POST['company'] . "\r\n";
   }
 
   if ( isset($_POST['position']) ) {
-    $message_body .= "Position in company: " . $_POST['position'] . "\n\r";
+    $message_body .= "Position in company: " . $_POST['position'] . "\r\n";
   }
 
   if ( isset($_POST['position']) ) {
-    $message_body .= "Position in company: " . $_POST['position'] . "\n\r";
+    $message_body .= "Position in company: " . $_POST['position'] . "\r\n";
   }
 
   if ( isset($_POST['phone']) ) {
-    $message_body .= "Phone: " . $_POST['phone'] . "\n\r";
+    $message_body .= "Phone: " . $_POST['phone'] . "\r\n";
   }
 
   if ( isset($_POST['link']) ) {
-    $message_body .= "Web resource: " . $_POST['link'] . "\n\r";
+    $message_body .= "Web resource: " . $_POST['link'] . "\r\n";
   }
 
   if ( isset($_POST['message']) ) {
-    $message_body .= "Message: " . $_POST['message'] . "\n\r";
+    $message_body .= "Message: " . $_POST['message'] . "\r\n";
   }
 
   if ( isset($_FILES['files']) ) {
@@ -428,5 +428,42 @@ function subscribe_to_newsletter () {
   }
 
   echo json_encode( $resp );
+  wp_die();
+}
+
+/**
+ * Brief form
+ */
+add_action( 'wp_ajax_brief_popup_submit', 'brief_popup_submit' );
+add_action( 'wp_ajax_nopriv_brief_popup_submit', 'brief_popup_submit' );
+function brief_popup_submit () {
+  $message = '';
+  $resp = [
+    'success' => true,
+    'message' => [
+      'header' => __('Thank you!', 'mycatalog')
+    ]
+  ];
+
+  if ( isset($_POST['markets']) ) {
+    $message .= 'The markets I want to distribute: ' . $_POST['markets'] . "\r\n";
+  }
+
+  if ( isset($_POST['channels']) ) {
+    $message .= "The channels I'm going to use for distribution: " . implode(', ', $_POST['channels']) . "\r\n";
+  }
+
+  if ( isset($_POST['information']) ) {
+    $message .= "I'd like to receive this information: " . $_POST['information'] . "\r\n";
+  }
+
+  if ( isset($_POST['goals']) ) {
+    $message .= "I want to: " . implode(', ', $_POST['goals']) . "\r\n";
+  }
+
+  $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog Brief Form', $message, ['From: My Catalog']);
+
+  echo json_encode( $resp );
+
   wp_die();
 }

@@ -36,7 +36,7 @@ global $product;
 	<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
 
 	<div class="product_meta__buttons">
-		<a href="#" class="product_meta__button click-animation"><?= __('Digital franchise', 'mycatalog') ?></a>
+		<a href="#" class="franchise-button product_meta__button click-animation"><?= __('Digital franchise', 'mycatalog') ?></a>
 		<a href="#" class="product_meta__button click-animation"><?= __('Personalized order', 'mycatalog') ?></a>
 	</div>
 
