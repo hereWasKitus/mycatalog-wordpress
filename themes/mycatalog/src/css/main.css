@@ -1380,7 +1380,8 @@ main {
       color: #ffffff;
       font-weight: 400;
       border-radius: 0;
-      white-space: nowrap; }
+      white-space: nowrap;
+      margin-left: auto; }
       .p-cart .woocommerce-cart-form .shop_table .actions .button[name="update_cart"]:focus {
         outline: none; }
       .p-cart .woocommerce-cart-form .shop_table .actions .button[name="update_cart"][disabled] {

@@ -70,6 +70,7 @@
     .actions {
       .button[name="update_cart"] {
         @include button-violet;
+        margin-left: auto;
 
         &[disabled] {
           color: #000000;
