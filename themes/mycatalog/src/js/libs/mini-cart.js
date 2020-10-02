@@ -41,8 +41,10 @@
     })
     .then(resp => resp.json() )
     .then(data => {
+      console.log( data );
       if ( data.fragments.cart_count == 0 ) {
         mini_cart.querySelector('.mini-cart-container').innerHTML = data.fragments.empty_message_fragment;
+        document.querySelector('.mini-cart .mini-cart__count').textContent = data.fragments.cart_count;
         return;
       } else {
         delete data.fragments.cart_count;
