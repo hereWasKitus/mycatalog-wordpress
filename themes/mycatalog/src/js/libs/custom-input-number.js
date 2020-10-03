@@ -1,32 +1,50 @@
 /**
  * Custom input number
  */
-// (function () {
+(function () {
 
-//   if (document.querySelector('input[type="number"]') === null) return;
+  const CustomNumber = function (el) {
+    this.root = el;
+    this.custom_root = '';
+    this.render();
+  }
 
-//   const InputNumber = function( el ) {
-//     this.root = el;
-//   }
+  CustomNumber.prototype = {
+    render() {
+      this.custom_root = document.createElement('div');
+      this.custom_root.classList.add('custom-number-container');
 
-//   InputNumber.prototype = {
-//     render () {
-//       const wrapper = document.createElement('div');
-//       wrapper.classList.add('custom-input-number-container');
+      var custom_el = document.createElement('div');
+      custom_el.classList.add('custom-number');
 
-//       const btnUp = document.createElement('div');
-//       btnUp.classList.add('custom-input-number__up');
-//       btnUp.textContent = '+';
-//       btnUp.addEventListener('click', this.set(1));
+      var minus_el = document.createElement('div');
+      minus_el.classList.add('custom-number__action', 'custom-number__action--minus');
+      minus_el.textContent = '-';
+      minus_el.addEventListener( 'click', this.updateValue.bind(this, -1) );
 
-//       const btnDown = document.createElement('div');
-//       btnDown.classList.add('custom-input-number__down');
-//       btnDown.textContent = '-';
-//       btnUp.addEventListener('click', this.set(-1));
-//     },
+      var plus_el = document.createElement('div');
+      plus_el.classList.add('custom-number__action', 'custom-number__action--plus');
+      plus_el.textContent = '+';
+      plus_el.addEventListener( 'click', this.updateValue.bind(this, 1) );
 
-//     set ( num ) {
-//       this.root.value += num;
-//     }
-//   }
-// })();
+      var value_el = document.createElement('div');
+      value_el.classList.add('custom-number__value');
+      value_el.textContent = this.root.value;
+
+      custom_el.append(minus_el, value_el, plus_el);
+      this.root.after(this.custom_root);
+      this.custom_root.append(this.root, custom_el);
+    },
+
+    updateValue ( num ) {
+      this.root.value = parseInt(this.root.value) + num;
+      this.custom_root.querySelector('.custom-number__value').textContent = this.root.value;
+    }
+  };
+
+  var inputs = document.querySelectorAll('.quantity input[type="number"]');
+  inputs.forEach(element => {
+    new CustomNumber(element);
+  });
+
+})();

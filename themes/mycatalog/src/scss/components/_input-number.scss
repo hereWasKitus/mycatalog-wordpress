@@ -1,0 +1,36 @@
+.custom-number-container {
+  input {
+    display: none;
+  }
+}
+
+.custom-number {
+  width: fit-content;
+  line-height: 35px;
+  display: flex;
+  text-align: center;
+  border: 1px solid #EBEBEB;
+  color: $violet-main;
+
+  & > div {
+    width: 35px;
+    transition: all .3s ease;
+
+    &:not(:last-child) {
+      border-right: 1px solid #EBEBEB;
+    }
+
+    &:hover {
+      background-color: $violet-main;
+      color: #ffffff;
+    }
+  }
+
+  &__value {
+    font-size: 12px;
+  }
+
+  &__action {
+    cursor: pointer;
+  }
+}
