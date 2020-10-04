@@ -335,7 +335,7 @@ function send_contact_form () {
         'error' => $_FILES['files']['error'][$key],
         'size' => $_FILES['files']['size'][$key]
       ];
-      $files[] = wp_handle_upload($file);
+      $files[] = wp_handle_upload($file, ['test_form' => false]);
     }
   }
 
@@ -344,7 +344,7 @@ function send_contact_form () {
   }
 
   $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog form', $message_body, $headers, $attachments);
-  echo json_encode(['status' => $mail_sent]);
+  echo json_encode(['status' => $mail_sent, 'files' => $files]);
   wp_die();
 }
 
