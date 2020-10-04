@@ -828,7 +828,8 @@ main {
   opacity: 0;
   pointer-events: none;
   transition: all .3s ease;
-  background-color: rgba(5, 5, 5, 0.2); }
+  background-color: rgba(5, 5, 5, 0.2);
+  backdrop-filter: blur(8px); }
   .brief-popup-container.is-active {
     opacity: 1;
     pointer-events: all; }

@@ -7,6 +7,7 @@
     this.root = el;
     this.custom_root = '';
     this.render();
+    this.native_event = new Event('change', {bubbles: true});
   }
 
   CustomNumber.prototype = {
@@ -37,6 +38,8 @@
     },
 
     updateValue ( num ) {
+      // fire native event to fix woocommerce update cart button behavior
+      this.root.dispatchEvent( this.native_event );
       this.root.value = parseInt(this.root.value) + num;
       this.custom_root.querySelector('.custom-number__value').textContent = this.root.value;
     }
