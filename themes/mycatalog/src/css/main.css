@@ -301,7 +301,7 @@ main {
   height: 90px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); }
   .header .wrapper {
-    max-width: 1211px;
+    max-width: 1364px;
     height: 100%; }
   .header .inner {
     display: flex;
@@ -329,20 +329,14 @@ main {
     .header__logo a {
       display: block; }
   .header__user {
-    display: none; }
-  .header.is-logged-in .wrapper {
-    max-width: 1364px; }
-  .header.is-logged-in .header__menu li:not(.header__logo) {
-    display: none; }
-  .header.is-logged-in .header__user {
     display: flex; }
-    .header.is-logged-in .header__user a {
+    .header__user a {
       flex-shrink: 0; }
-    .header.is-logged-in .header__user-cart {
+    .header__user-cart {
       position: relative;
       flex-shrink: 0;
       margin-right: 30px; }
-    .header.is-logged-in .header__user-avatar img {
+    .header__user-avatar img {
       width: 43px;
       height: 43px;
       border-radius: 50%; }

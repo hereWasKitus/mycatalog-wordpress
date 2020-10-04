@@ -16,25 +16,11 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
-  <header class="header <?= is_user_logged_in() ? 'is-logged-in' : '' ?>">
+  <header class="header">
     <div class="wrapper">
       <div class="inner">
 
-        <ul class="header__menu">
-          <?php
-            $franchise_pages = get_franchise_pages();
-            foreach ( $franchise_pages as $index => $page ):
-          ?>
-          <li><a href="<?= $page['link'] ?>" class="click-animation"><?= $page['name'] ?></a></li>
-
-          <?php if ( $index == 1 ): ?>
-          <li class="header__logo">
-            <a href="<?= home_url() ?>"><img src="<?= get_template_directory_uri() . '/assets/images/logo.svg' ?>"></a>
-          </li>
-          <?php endif; ?>
-
-          <?php endforeach; ?>
-        </ul>
+        <a class="header__logo" href="<?= home_url() ?>"><img src="<?= get_template_directory_uri() . '/assets/images/logo.svg' ?>"></a>
 
         <div class="header__user">
           <div class="header__user-cart">
