@@ -1014,6 +1014,8 @@ main {
     white-space: nowrap;
     background-color: #fff;
     color: #5b4597; }
+    .last-products__item__button:visited, .last-products__item__button:hover {
+      color: #5b4597; }
   .last-products__item__image {
     min-width: fit-content;
     position: relative; }

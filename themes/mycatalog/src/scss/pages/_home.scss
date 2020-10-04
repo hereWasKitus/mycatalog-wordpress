@@ -71,6 +71,11 @@
       white-space: nowrap;
       background-color: #fff;
       color: #5b4597;
+
+      &:visited,
+      &:hover {
+        color: #5b4597;
+      }
     }
 
     &__image {
