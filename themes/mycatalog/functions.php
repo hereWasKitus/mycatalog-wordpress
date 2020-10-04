@@ -375,7 +375,7 @@ function ajax_product_remove () {
       'cart_count' => WC() -> cart -> cart_contents_count,
       'empty_message_fragment' => '<p class="mini-cart__empty-message">' .  __('No products in the cart.', 'mycatalog') . '</p>',
       '.mini-cart .mini-cart__count' => '<span class="mini-cart__count">' . WC() -> cart -> cart_contents_count .'</span>',
-      '.mini-cart .mini-cart__total' => '<p class="mini-cart__total woocommerce-mini-cart__total total">' . WC() -> cart -> get_cart_subtotal() . '</p>',
+      '.mini-cart .mini-cart__total' => '<p class="mini-cart__total woocommerce-mini-cart__total total">' . '<strong>' . __('Subtotal', 'mycatalog') . ':</strong> ' . WC() -> cart -> get_cart_subtotal() . '</p>',
     ]),
     'cart_hash' => apply_filters( 'woocommerce_add_to_cart_hash', WC()->cart->get_cart_for_session() ? md5( json_encode( WC()->cart->get_cart_for_session() ) ) : '', WC()->cart->get_cart_for_session() )
   ];
@@ -433,7 +433,7 @@ function ajax_get_cart_items () {
       'cart_items' => $cart_items,
       'empty_message_fragment' => '<p class="mini-cart__empty-message">' .  __('No products in the cart.', 'mycatalog') . '</p>',
       '.mini-cart .mini-cart__count' => '<span class="mini-cart__count">' . WC() -> cart -> cart_contents_count .'</span>',
-      '.mini-cart .mini-cart__total' => '<p class="mini-cart__total woocommerce-mini-cart__total total">' . WC() -> cart -> get_cart_subtotal() . '</p>',
+      '.mini-cart .mini-cart__total' => '<p class="mini-cart__total woocommerce-mini-cart__total total">' . '<strong>' . __('Subtotal', 'mycatalog') . ':</strong> ' . WC() -> cart -> get_cart_subtotal() . '</p>',
     ]),
     'cart_hash' => apply_filters( 'woocommerce_add_to_cart_hash', WC()->cart->get_cart_for_session() ? md5( json_encode( WC()->cart->get_cart_for_session() ) ) : '', WC()->cart->get_cart_for_session() )
   ];

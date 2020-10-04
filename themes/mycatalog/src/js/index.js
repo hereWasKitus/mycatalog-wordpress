@@ -442,12 +442,14 @@
         }
         document.querySelector(key).outerHTML = data.fragments[key];
       }
+
+      mini_cart
+        .querySelectorAll('.mini-cart-item__remove')
+        .forEach(el => el.addEventListener('click', removeItem));
     })
   }
 
-  jQuery('body').on( 'updated_cart_totals', () => {
-    updateCart();
-  } )
+  jQuery('body').on( 'updated_cart_totals', () => updateCart() );
 })();
 ( function () {
 
