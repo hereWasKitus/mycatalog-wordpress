@@ -299,6 +299,7 @@ add_action( 'wp_ajax_send_contact_form', 'send_contact_form' );
 add_action( 'wp_ajax_nopriv_send_contact_form', 'send_contact_form' );
 function send_contact_form () {
   $files = [];
+  $attachments = [];
   $message_body = "Full name: " . $_POST['name'] . "\r\n";
 
   if ( isset($_POST['email']) ) {
@@ -307,10 +308,6 @@ function send_contact_form () {
 
   if ( isset($_POST['company']) ) {
     $message_body .= "Company: " . $_POST['company'] . "\r\n";
-  }
-
-  if ( isset($_POST['position']) ) {
-    $message_body .= "Position in company: " . $_POST['position'] . "\r\n";
   }
 
   if ( isset($_POST['position']) ) {
@@ -331,17 +328,22 @@ function send_contact_form () {
 
   if ( isset($_FILES['files']) ) {
     foreach ($_FILES['files']['name'] as $key => $value) {
-      $files[] = [
+      $file = [
         'name' => $_FILES['files']['name'][$key],
         'type' => $_FILES['files']['type'][$key],
         'tmp_name' => $_FILES['files']['tmp_name'][$key],
         'error' => $_FILES['files']['error'][$key],
         'size' => $_FILES['files']['size'][$key]
       ];
+      $files[] = wp_handle_upload($file);
     }
   }
 
-  $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog form', $message_body, $headers, $files);
+  foreach ($files as $file) {
+    $attachments[] = $file['file'];
+  }
+
+  $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog form', $message_body, $headers, $attachments);
   echo json_encode(['status' => $mail_sent]);
   wp_die();
 }
