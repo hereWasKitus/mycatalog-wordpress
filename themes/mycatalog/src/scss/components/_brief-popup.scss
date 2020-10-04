@@ -12,6 +12,7 @@
   pointer-events: none;
   transition: all .3s ease;
   background-color: rgba(5, 5, 5, 0.2);
+  backdrop-filter: blur(8px);
 
   &.is-active {
     opacity: 1;
