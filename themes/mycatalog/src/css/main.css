@@ -1438,7 +1438,8 @@ main {
       line-height: 56px;
       border: 1px solid #EFEFEF;
       color: #7A65B4;
-      font-weight: 500; }
+      font-weight: 500;
+      font-size: 18px; }
     .p-cart .cart_totals__content {
       padding: 32px 42px 35px 33px;
       border: 1px solid #DFDFDF; }
