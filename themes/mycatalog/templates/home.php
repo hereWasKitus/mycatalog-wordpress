@@ -34,6 +34,9 @@ get_header();
             $loop -> the_post();
             $product = wc_get_product( get_the_ID() );
             $image = get_the_post_thumbnail_url();
+            $is_sale = $product -> get_sale_price() != '';
+            $currency = get_woocommerce_currency_symbol();
+            $price = $is_sale ? $product -> get_sale_price() : $product -> get_regular_price() ;
           ?>
 
           <!-- LAST PRODUCT ITEM -->
@@ -41,13 +44,15 @@ get_header();
             <div class="last-products__item__info">
               <span class="last-products__item__status"><?= __('new', 'mycatalog') ?></span>
               <p class="last-products__item__category"><?= $product -> get_categories() ?></p>
-              <p class="last-products__item__price">$<?= $product -> get_regular_price() ?></p>
+              <p class="last-products__item__price"><?= $currency . $price ?></p>
               <h3 class="last-products__item__name"><?= $product -> get_name() ?></h3>
               <a class="last-products__item__button click-animation" href="<?= get_the_permalink() ?>"><?= __('Buy now', 'mycatelog') ?></a>
             </div>
             <div class="last-products__item__image">
               <a href="<?= get_the_permalink() ?>"><img src="<?= $image ?>"></a>
+              <?php if ( $is_sale ): ?>
               <div class="sale-circle is-top-right"><span><?= __('Sale!') ?></span></div>
+              <?php endif; ?>
             </div>
           </div>
 
