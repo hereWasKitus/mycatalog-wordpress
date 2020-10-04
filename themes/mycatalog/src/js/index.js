@@ -415,6 +415,39 @@
       }, 400);
     })
   }
+
+  function updateCart () {
+    var form_data = new FormData();
+    form_data.append('action', 'get_cart_items');
+
+    fetch(wp_data.ajax_url, {
+      method: 'POST',
+      body: form_data
+    })
+    .then(resp => resp.json() )
+    .then(data => {
+      if ( data.fragments.cart_count == 0 ) {
+        mini_cart.querySelector('.mini-cart-container').innerHTML = data.fragments.empty_message_fragment;
+        document.querySelector('.mini-cart .mini-cart__count').textContent = data.fragments.cart_count;
+        return;
+      } else {
+        delete data.fragments.cart_count;
+        delete data.fragments.empty_message_fragment;
+      }
+
+      for (const key in data.fragments) {
+        if ( key == 'cart_items' ) {
+          mini_cart.querySelector('.mini-cart__list').innerHTML = data.fragments[key];
+          continue;
+        }
+        document.querySelector(key).outerHTML = data.fragments[key];
+      }
+    })
+  }
+
+  jQuery('body').on( 'updated_cart_totals', () => {
+    updateCart();
+  } )
 })();
 ( function () {
 

@@ -386,6 +386,64 @@ function ajax_product_remove () {
 }
 
 /**
+ * Ajax get cart items
+ */
+add_action( 'wp_ajax_get_cart_items', 'ajax_get_cart_items' );
+add_action( 'wp_ajax_nopriv_get_cart_items', 'ajax_get_cart_items' );
+
+function ajax_get_cart_items () {
+  $cart_items = '';
+  ob_start();
+
+  foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
+    $_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+    $product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
+    if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+      $product_name      = apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key );
+      $thumbnail         = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+      $thumbnail_url     = get_the_post_thumbnail_url($product_id);
+      $product_price     = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
+      $product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+
+      $cart_items .= '<li class="mini-cart-item woocommerce-mini-cart-item' . esc_attr( apply_filters( 'woocommerce_mini_cart_item_class', 'mini_cart_item', $cart_item, $cart_item_key ) ) . '">';
+        $cart_items .= '<a class="mini-cart-item__image" href="' . $product_permalink . '"><img src="' . $thumbnail_url . '"></a>';
+        $cart_items .= '<div class="mini-cart-item__info">';
+          $cart_items .= '<span class="mini-cart-item__name">' . $product_name . '</span>';
+          $cart_items .= wc_get_formatted_cart_item_data( $cart_item );
+          $cart_items .= apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="mini-cart-item__quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key );
+        $cart_items .= '</div>';
+        $cart_items .= '<a href="#" class="mini-cart-item__remove" aria-label="' . esc_attr__( 'Remove this item', 'woocommerce' ) . '" data-product_id="' . esc_attr( $product_id ) . '" data-cart_item_key="' . esc_attr( $cart_item_key ) . '" data-product_sku="' . esc_attr( $_product->get_sku() ) . '"></a>';
+      $cart_items .= '</li>';
+    }
+  }
+
+  WC()->cart->calculate_totals();
+  WC()->cart->maybe_set_cart_cookies();
+
+  woocommerce_mini_cart();
+
+  $mini_cart = ob_get_clean();
+
+  // Fragments and mini cart are returned
+  $data = [
+    'status' => 'success',
+    'fragments' => apply_filters('woocommerce_add_to_cart_fragments', [
+      'cart_count' => WC() -> cart -> cart_contents_count,
+      'cart_items' => $cart_items,
+      'empty_message_fragment' => '<p class="mini-cart__empty-message">' .  __('No products in the cart.', 'mycatalog') . '</p>',
+      '.mini-cart .mini-cart__count' => '<span class="mini-cart__count">' . WC() -> cart -> cart_contents_count .'</span>',
+      '.mini-cart .mini-cart__total' => '<p class="mini-cart__total woocommerce-mini-cart__total total">' . WC() -> cart -> get_cart_subtotal() . '</p>',
+    ]),
+    'cart_hash' => apply_filters( 'woocommerce_add_to_cart_hash', WC()->cart->get_cart_for_session() ? md5( json_encode( WC()->cart->get_cart_for_session() ) ) : '', WC()->cart->get_cart_for_session() )
+  ];
+
+  wp_send_json( $data );
+
+  wp_die();
+}
+
+/**
  * Add form label filter
  */
 // define the woocommerce_form_field_args callback
