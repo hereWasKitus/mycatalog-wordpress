@@ -224,15 +224,23 @@ function ajax_get_products () {
     $products_loop -> the_post();
     $product = wc_get_product( get_the_ID() );
     $image = get_the_post_thumbnail_url();
+    $currency = get_woocommerce_currency_symbol();
+    $is_sale = $product -> get_sale_price() != '';
 
-    $html .= '<div class="products__grid__item fade-in">';
-      $html .= '<img class="products__grid__item__image" src="' . $image . '">';
-      $html .= '<div class="products__grid__item__footer">';
-        $html .= '<div class="products__grid__item__category">' . $product -> get_categories() . '</div>';
-        $html .= '<h3 class="products__grid__item__name">' . $product -> get_name() . '</h3>';
-        $html .= '<p class="products__grid__item__price">$' . $product -> get_regular_price() . '</p>';
+    $html .= '<div class="c-product-item fade-in">';
+      $html .= '<img class="c-product-item__image" src="' . $image . '">';
+      $html .= '<div class="c-product-item__footer">';
+        $html .= '<div class="c-product-item__category">' . $product -> get_categories() . '</div>';
+        $html .= '<h3 class="c-product-item__name">' . $product -> get_name() . '</h3>';
+
+        if ( $is_sale ):
+        $html .= '<p class="c-product-item__price"><span class="crossed">' . $currency . $product -> get_regular_price() . '</span>' . $currency . $product -> get_sale_price() . '</p>';
+        else:
+        $html .= '<p class="c-product-item__price">' . $currency . $product -> get_regular_price() . '</p>';
+        endif;
+
       $html .= '</div>';
-      $html .= '<a class="products__grid__item__link" href="' . get_the_permalink() . '"></a>';
+      $html .= '<a class="c-product-item__link" href="' . get_the_permalink() . '"></a>';
     $html .= '</div>';
   }
 
