@@ -3,6 +3,8 @@
  */
 (function () {
 
+  if ( document.querySelector('.quantity input[type="number"]') === null ) return;
+
   const CustomNumber = function (el) {
     this.root = el;
     this.custom_root = '';
@@ -48,6 +50,13 @@
   var inputs = document.querySelectorAll('.quantity input[type="number"]');
   inputs.forEach(element => {
     new CustomNumber(element);
+  });
+
+  jQuery('body').on('updated_wc_div', () => {
+    var inputs = document.querySelectorAll('.quantity input[type="number"]');
+    inputs.forEach(element => {
+      new CustomNumber(element);
+    });
   });
 
 })();
