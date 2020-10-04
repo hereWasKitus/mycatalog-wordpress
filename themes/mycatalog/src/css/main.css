@@ -1618,7 +1618,8 @@ main {
         font-size: 14px;
         color: #333333; }
         .p-single-product .c-product-summary .product_meta .posted_in a {
-          color: #7A65B4; }
+          color: #7A65B4;
+          pointer-events: none; }
         .p-single-product .c-product-summary .product_meta__buttons {
           margin-top: 16px;
           display: flex; }

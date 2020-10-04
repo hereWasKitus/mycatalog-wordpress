@@ -113,6 +113,7 @@
 
         .posted_in a {
           color: $violet-main;
+          pointer-events: none;
         }
 
         &__buttons {
