@@ -301,6 +301,9 @@ function send_contact_form () {
   $files = [];
   $attachments = [];
   $message_body = "Full name: " . $_POST['name'] . "\r\n";
+  $headers = [
+    'from' => 'mycatalog@gmail.com'
+  ];
 
   if ( isset($_POST['email']) ) {
     $message_body .= "Email: " . $_POST['email'] . "\r\n";
