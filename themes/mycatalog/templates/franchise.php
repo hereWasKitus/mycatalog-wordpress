@@ -3,8 +3,10 @@
  * Template Name: Franchise page
  */
   get_header();
+  global $post;
+  $slug = $post -> post_name;
 ?>
-<div class="template-franchise">
+<div class="template-franchise <?= "franchise-$slug" ?>">
   <div class="wrapper">
     <div class="inner">
 

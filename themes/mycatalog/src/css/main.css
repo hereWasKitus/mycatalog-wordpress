@@ -1408,6 +1408,18 @@ main {
 .template-franchise .franchise-image {
   position: relative; }
 
+.template-franchise.franchise-private-label .franchise-section:first-child {
+  padding-right: 38px;
+  padding-bottom: 85px;
+  max-width: 650px; }
+
+.template-franchise.franchise-private-label .franchise-image {
+  padding-bottom: 0;
+  display: flex; }
+  .template-franchise.franchise-private-label .franchise-image img {
+    margin-top: auto;
+    height: 100%; }
+
 @media screen and (max-width: 1024px) {
   .template-franchise .inner {
     flex-direction: column; }
@@ -1421,7 +1433,14 @@ main {
       display: block;
       margin: 0 auto; }
   .template-franchise .franchise-content {
-    max-width: unset; } }
+    max-width: unset; }
+  .template-franchise.franchise-private-label .franchise-section:first-child {
+    max-width: unset;
+    padding-right: 0; }
+  .template-franchise.franchise-private-label .franchise-image {
+    display: block; }
+    .template-franchise.franchise-private-label .franchise-image img {
+      height: auto; } }
 
 @media screen and (max-width: 630px) {
   .template-franchise .franchise-title img {

@@ -178,6 +178,27 @@
     }
   }
 
+  &.franchise-private-label {
+    .franchise-section {
+
+      &:first-child {
+        padding-right: 38px;
+        padding-bottom: 85px;
+        max-width: 650px;
+      }
+    }
+
+    .franchise-image {
+      padding-bottom: 0;
+      display: flex;
+
+      img {
+        margin-top: auto;
+        height: 100%;
+      }
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     .inner {
       flex-direction: column;
@@ -204,6 +225,21 @@
 
       &-content {
         max-width: unset;
+      }
+    }
+
+    &.franchise-private-label {
+      .franchise-section:first-child {
+        max-width: unset;
+        padding-right: 0;
+      }
+
+      .franchise-image {
+        display: block;
+
+        img {
+          height: auto;
+        }
       }
     }
   }
