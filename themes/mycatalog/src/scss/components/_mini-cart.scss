@@ -165,4 +165,29 @@
     right: 100%;
     pointer-events: all;
   }
+
+  @media screen and (max-width: 768px) {
+    &__icon {
+      width: 23px;
+      height: 23px;
+    }
+
+    &__count {
+      width: 8px;
+      line-height: 8px;
+      font-size: 7px;
+      bottom: 4px;
+      right: 2px;
+    }
+
+    &-container {
+      right: unset;
+      left: 0;
+    }
+
+    &.is-active &-container {
+      right: unset;
+      left: 0;
+    }
+  }
 }

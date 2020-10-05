@@ -20,7 +20,32 @@
     <div class="wrapper">
       <div class="inner">
 
-        <a class="header__logo" href="<?= home_url() ?>"><img src="<?= get_template_directory_uri() . '/assets/images/logo.svg' ?>"></a>
+        <!-- HEADER MENU -->
+        <div class="header__menu">
+          <div class="menu-button">
+            <div class="menu-button__line"></div>
+            <div class="menu-button__line"></div>
+            <div class="menu-button__line"></div>
+          </div>
+
+          <div class="header__menu__list-wrapper">
+            <ul class="header__menu__list">
+              <?php foreach ( get_franchise_pages() as $page ): ?>
+              <li><a href="<?= $page['link'] ?>"><?= $page['name'] ?></a></li>
+              <?php endforeach; ?>
+            </ul>
+            <ul class="header__menu__social">
+              <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/facebook.svg' ?>"></a></li>
+              <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/twitter.svg' ?>"></a></li>
+              <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/linkedin.svg' ?>"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a class="header__logo" href="<?= home_url() ?>">
+          <?php $logo_url = wp_is_mobile() ? get_template_directory_uri() . '/assets/images/logo-mobile.png' : get_template_directory_uri() . '/assets/images/logo.svg' ?>
+          <img src="<?= $logo_url ?>">
+        </a>
 
         <div class="header__user">
           <div class="header__user-cart">
