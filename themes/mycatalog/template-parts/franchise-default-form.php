@@ -12,4 +12,5 @@
       <textarea class="franchise-form__field" name="message" max-length="600" placeholder="Your message"></textarea>
     </div>
   </div>
+  <input class="click-animation" type="submit" value="send">
 </form>
