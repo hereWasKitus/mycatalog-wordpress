@@ -21,6 +21,7 @@ function scss() {
 
 function js() {
   return src([
+    'src/js/libs/first-priority/*.js',
     'src/js/libs/*.js'
   ])
     .pipe( concat('index.js') )

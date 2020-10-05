@@ -63,4 +63,11 @@
     top: 0;
     left: 0;
   }
+
+  @media screen and (max-width: 768px) {
+    .sale-circle {
+      top: -15px;
+      right: -20px;
+    }
+  }
 }

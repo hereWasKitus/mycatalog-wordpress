@@ -1,4 +1,6 @@
 .page-header {
+  position: relative;
+  z-index: 0;
   height: 247px;
   background-color: $violet-main;
   color: #ffffff;
@@ -42,6 +44,26 @@
       width: .4px;
       margin: 0 13px;
       background-color: #ffffff;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: fit-content;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+
+    .inner {
+      padding-top: 0;
+    }
+
+    ul {
+      display: none;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      line-height: 64px;
+      font-size: 14px;
     }
   }
 }

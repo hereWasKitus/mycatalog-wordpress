@@ -1,6 +1,8 @@
 .header {
   height: 90px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 99;
 
   .wrapper {
     max-width: calc(1364px + 53px); // 53 - sum of paddings

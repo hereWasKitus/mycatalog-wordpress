@@ -16,11 +16,26 @@
     &:nth-child(2) {
       max-width: 546px;
       background: linear-gradient(117.42deg, #7A65B4 21.18%, #A577FF 87.3%);
+
+      .last-products__item__image {
+        a {
+          margin-top: auto;
+        }
+
+        img {
+          width: 245px;
+          height: 241px;
+        }
+
+        .sale-circle {
+          top: -5px;
+        }
+      }
     }
 
     &__image,
     &__info {
-      width: 50%;
+      flex-grow: 1;
     }
 
     &__info {
@@ -79,17 +94,34 @@
     }
 
     &__image {
-      min-width: fit-content;
+      width: fit-content;
       position: relative;
+      display: flex;
+      padding-left: 15px;
 
       a {
         display: flex;
+        margin-left: auto;
       }
 
       img {
         width: 289px;
         height: 265px;
         object-fit: cover;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .inner {
+      flex-direction: column;
+    }
+
+    .last-products {
+      &__item {
+        &:nth-child(2) {
+          max-width: unset;
+        }
       }
     }
   }
@@ -111,7 +143,7 @@
         width: inherit;
         padding: 15px 20px;
         background-color: #efefef;
-        border-radius: 8px;
+        border-radius: 8px !important;
         font-size: 18px;
         border: 0;
 
@@ -190,6 +222,65 @@
     }
     to {
       opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 12.5px 30px 69px 25px;
+
+    .custom-select {
+      &-container {
+        width: 100%;
+        margin-left: unset;
+        margin-top: 12px;
+      }
+
+      &-selected {
+        max-width: unset;
+        width: inherit;
+      }
+    }
+
+    &__search {
+      flex-direction: column;
+
+      &__input {
+        input {
+          padding: 0 18px;
+          line-height: 42px;
+          font-size: 12px;
+
+          &::placeholder {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .c-product-item {
+      &__image {
+        height: 315px;
+      }
+    }
+
+    &__pagination {
+      margin-top: 27px;
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

@@ -20,7 +20,7 @@ get_template_part('template-parts/page-header');
     <!-- LAST 2 PRODUCTS -->
     <div class="last-products">
       <div class="wrapper">
-        <div class="inner">
+        <div class="inner slick-last-products">
           <?php
           $loop = new WP_Query([
             'post_type' => 'product',
@@ -102,16 +102,16 @@ get_template_part('template-parts/page-header');
 
       <!-- PRODUCTS PAGINATION -->
       <?php
-        $big = 999999999;
-        $pagination_html = paginate_links( array(
-          'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-          'current' => max( 1, get_query_var('page') ),
-          'total'   => $products_loop->max_num_pages,
-          'next_text' => "<img src=" . get_template_directory_uri() . '/assets/images/pagination-arrow.svg' . ">",
-          'prev_text' => "<img src=" . get_template_directory_uri() . '/assets/images/pagination-arrow.svg' . ">"
-        ) );
+      $big = 999999999;
+      $pagination_html = paginate_links( array(
+        'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'current' => max( 1, get_query_var('page') ),
+        'total'   => $products_loop->max_num_pages,
+        'next_text' => "<img src=" . get_template_directory_uri() . '/assets/images/pagination-arrow.svg' . ">",
+        'prev_text' => "<img src=" . get_template_directory_uri() . '/assets/images/pagination-arrow.svg' . ">"
+      ) );
 
-        if ( strlen( $pagination_html ) > 0 ) :
+      if ( strlen( $pagination_html ) > 0 ) :
       ?>
       <div class="products__pagination"><?= $pagination_html ?></div>
       <?php endif; ?>

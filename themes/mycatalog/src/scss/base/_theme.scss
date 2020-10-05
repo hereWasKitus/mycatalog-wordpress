@@ -78,6 +78,15 @@ main {
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    top: 0;
+    box-shadow: none;
+
+    &__social {
+      display: none;
+    }
+  }
 }
 
 @for $i from 10 to 50 {
