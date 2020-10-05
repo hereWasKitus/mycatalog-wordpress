@@ -1284,6 +1284,9 @@ main {
           font-size: 12px; }
           .products__search__input input::placeholder {
             font-size: 12px; }
+        .products__search__input img {
+          width: 14px;
+          height: 14px; }
       .products__grid {
         grid-template-columns: repeat(2, 1fr); }
       .products .c-product-item__image {
