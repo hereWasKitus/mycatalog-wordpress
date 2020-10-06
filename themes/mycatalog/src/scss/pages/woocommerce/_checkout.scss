@@ -35,19 +35,57 @@
 
   .woocommerce-form-coupon {
     border-radius: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 30px 0 !important;
+
+    & > p:first-child {
+      font-size: 18px;
+      color: #000000;
+      margin-bottom: 7px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .form-row {
+      padding: 0;
+      margin: 0;
+      width: fit-content;
+
+      &-first {
+        width: 169px;
+        margin-right: 25px;
+      }
+    }
+
+    .input-text {
+      line-height: 34px !important;
+      border: 1px solid #C5C5C5;
+      padding: 0 8px;
+      color: #000;
+      font-size: 13px;
+
+      &::placeholder {
+        color: #c5c5c5;
+      }
+    }
 
     .button {
       border-radius: 0;
       background-color: $violet-main;
       color: #ffffff;
       font-weight: 400;
+      line-height: 36px;
+      padding: 0 27px;
       font-family: Gotham;
     }
   }
 
   .woocommerce-checkout {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
 
     .woocommerce-NoticeGroup-checkout {
       width: 100%;
@@ -217,6 +255,136 @@
       font-size: 24px;
       font-weight: 400;
       border-bottom: 1px solid #DFDFDF;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 23px 21px 42px;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .back-button {
+      margin-bottom: 33px;
+    }
+
+    .woocommerce-form-coupon-toggle {
+      .woocommerce-info {
+        font-size: 13px;
+        flex-wrap: wrap;
+      }
+    }
+
+    .woocommerce-billing-fields {
+      h3 {
+        padding-bottom: 15px;
+        margin-bottom: 23px;
+        font-size: 18px;
+      }
+    }
+
+    .woocommerce-checkout {
+      flex-direction: column;
+
+      &__details {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+
+      &__review-col {
+        max-width: unset;
+        padding: 25px 14px 41px;
+
+        h3 {
+          font-size: 18px;
+          text-align: center;
+          margin-bottom: 16px;
+        }
+
+        .woocommerce-checkout-payment {
+          label {
+            font-size: 18px;
+          }
+        }
+
+        .woocommerce-privacy-policy-text {
+          font-size: 14px;
+        }
+
+        #place_order {
+          margin: 29px auto 0 !important;
+          max-width: 223px;
+        }
+      }
+
+      table.shop_table {
+        th:nth-child(2n) {
+          text-align: right;
+        }
+
+        td:nth-child(2n) {
+          text-align: right;
+        }
+      }
+
+      .form-row {
+        padding: 0;
+
+        &:not(:last-child) {
+          margin: 0 0 15px;
+        }
+      }
+
+      label {
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .input-text {
+        font-size: 13px;
+      }
+
+      .select2 {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .woocommerce-form-coupon-toggle {
+      .woocommerce-info {
+        img {
+          transform: translateY(10px);
+        }
+
+        .showcoupon {
+          margin-left: 40px;
+        }
+      }
+    }
+
+    .woocommerce-form-coupon {
+      .flex {
+        flex-direction: column;
+      }
+
+      .form-row {
+        &-first {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        &-last {
+          width: 100%;
+
+          button {
+            width: inherit;
+          }
+        }
+      }
     }
   }
 }
