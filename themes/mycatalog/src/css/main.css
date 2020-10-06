@@ -1650,6 +1650,7 @@ main {
         background-color: #fff; }
     .p-cart .woocommerce-cart-form .shop_table .product-thumbnail img {
       width: 65px;
+      min-width: 65px;
       height: 64px; }
     .p-cart .woocommerce-cart-form .shop_table .product-name a {
       color: #7A65B4; }
@@ -1801,6 +1802,96 @@ main {
       text-decoration: underline; }
       .p-cart .cart_totals .shipping-calculator-button::after {
         content: ''; }
+  @media screen and (max-width: 768px) {
+    .p-cart {
+      padding: 35px 30px 98px; }
+      .p-cart__title {
+        margin: 0 0 11px; }
+      .p-cart .back-button {
+        margin-bottom: 29px; }
+      .p-cart .woocommerce-cart-form .shop_table {
+        border: 0 !important;
+        margin: 0 -1px 45px 0; }
+        .p-cart .woocommerce-cart-form .shop_table tr {
+          border: 1px solid #F1F1F1; }
+          .p-cart .woocommerce-cart-form .shop_table tr:not(:last-child) {
+            margin-bottom: 11px; }
+          .p-cart .woocommerce-cart-form .shop_table tr:nth-child(2n) td:not(.product-remove) {
+            background: unset; }
+          .p-cart .woocommerce-cart-form .shop_table tr:last-child {
+            margin-top: 22px;
+            border: 0; }
+            .p-cart .woocommerce-cart-form .shop_table tr:last-child td {
+              padding: 0; }
+        .p-cart .woocommerce-cart-form .shop_table td {
+          font-size: 14px;
+          font-weight: 300; }
+          .p-cart .woocommerce-cart-form .shop_table td:not(:first-child) {
+            border-top: 1px solid #F1F1F1; }
+          .p-cart .woocommerce-cart-form .shop_table td:first-child {
+            border-top: 0; }
+          .p-cart .woocommerce-cart-form .shop_table td::before {
+            font-weight: 400;
+            font-size: 14px; }
+        .p-cart .woocommerce-cart-form .shop_table .product-remove {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 4px 16px 4px 14px;
+          border: 1px solid #E6E6E6;
+          background-color: #F1EFF7;
+          font-weight: 400; }
+          .p-cart .woocommerce-cart-form .shop_table .product-remove__thumbnail {
+            display: block;
+            line-height: 0; }
+            .p-cart .woocommerce-cart-form .shop_table .product-remove__thumbnail img {
+              width: 65px;
+              height: 65px; }
+          .p-cart .woocommerce-cart-form .shop_table .product-remove a:nth-child(2) {
+            color: #7A65B4; }
+        .p-cart .woocommerce-cart-form .shop_table .product-quantity {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+        .p-cart .woocommerce-cart-form .shop_table .coupon {
+          display: flex;
+          padding-bottom: 22px !important; }
+          .p-cart .woocommerce-cart-form .shop_table .coupon input[name="coupon_code"] {
+            line-height: 31px;
+            font-size: 12px; }
+            .p-cart .woocommerce-cart-form .shop_table .coupon input[name="coupon_code"]::placeholder {
+              font-size: 12px; }
+          .p-cart .woocommerce-cart-form .shop_table .coupon button {
+            line-height: 31px;
+            max-width: 143px;
+            flex-shrink: 0; }
+      .p-cart .cart_totals__heading {
+        line-height: 38px;
+        font-size: 14px; }
+      .p-cart .cart_totals__content {
+        padding: 21px 9px 22px 25px;
+        font-size: 14px; }
+      .p-cart .cart_totals .shop_table td {
+        padding-left: 0;
+        padding-right: 0; }
+        .p-cart .cart_totals .shop_table td::before {
+          font-weight: 400; }
+      .p-cart .cart_totals .shop_table .cart-subtotal .amount,
+      .p-cart .cart_totals .shop_table .order-total .amount {
+        font-size: 18px; }
+      .p-cart .cart_totals .shop_table .shipping td {
+        background: unset; }
+      .p-cart .cart_totals .wc-proceed-to-checkout .checkout-button {
+        max-width: unset;
+        line-height: 40px; }
+      .p-cart .cart_totals .woocommerce-shipping-calculator .select2-selection__rendered {
+        text-align-last: left; }
+      .p-cart .cart_totals .woocommerce-shipping-calculator .input-text {
+        font-size: 14px;
+        font-weight: 300; }
+        .p-cart .cart_totals .woocommerce-shipping-calculator .input-text::placeholder {
+          font-size: 14px;
+          font-weight: 300; } }
 
 .p-single-product {
   padding: 20px 20px 55px; }
