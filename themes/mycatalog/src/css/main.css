@@ -2181,7 +2181,9 @@ main {
         height: auto; }
       .p-single-product .c-product-related .products {
         grid-template-columns: repeat(3, 1fr);
-        row-gap: 93px; } }
+        row-gap: 93px; }
+      .p-single-product .woocommerce-message {
+        font-size: 13px; } }
   @media screen and (max-width: 600px) {
     .p-single-product .c-product-related .products {
       grid-template-columns: repeat(2, 1fr);
