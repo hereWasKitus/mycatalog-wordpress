@@ -3,7 +3,7 @@
 
   .c-product {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
     column-gap: 46px;
     row-gap: 30px;
     grid-template-areas:
@@ -64,7 +64,7 @@
 
       .product_title {
         margin-bottom: 17px;
-        font-size: 29px;
+        font-size: 30px;
         line-height: 36px;
         font-weight: normal;
         color: #000000;
@@ -198,6 +198,7 @@
 
       h2 {
         font-size: 24px;
+        margin-bottom: 16px;
         color: $violet-main;
         font-weight: normal;
       }
@@ -231,6 +232,123 @@
           .sale-circle {
             top: -12px;
             right: -12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .c-product {
+
+      &-images {
+        min-width: 400px;
+        width: unset;
+      }
+    }
+  }
+
+  @media screen and (max-width: 830px) {
+    .c-product {
+      row-gap: 25px;
+      grid-template-areas:
+      "product-images"
+      "product-summary"
+      "product-tabs"
+      "product-related";
+
+      &-images {
+        min-width: unset;
+
+        &__main {
+          margin-bottom: 0;
+        }
+
+        &__gallery {
+          display: none;
+        }
+      }
+
+      &-summary {
+        .woocommerce-breadcrumb {
+          font-size: 13px;
+        }
+
+        .price {
+          font-size: 22px !important;
+        }
+
+        .woocommerce-product-details__short-description {
+          margin-bottom: 14px;
+        }
+
+        form.cart {
+          margin-bottom: 33px !important;
+        }
+
+        .product_meta {
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 8px 94px;
+
+    .c-product-item {
+      &__image {
+        height: auto;
+      }
+    }
+
+    .c-product {
+      &-related {
+        .products {
+          grid-template-columns: repeat(3, 1fr);
+          row-gap: 93px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .c-product {
+      &-related {
+        .products {
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 53px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .c-product {
+      &-related {
+
+        .products {
+          .c-product-item {
+            &__category {
+              font-size: 11px;
+            }
+
+            &__name {
+              font-size: 12px;
+            }
+
+            &__price {
+              font-size: 10px;
+            }
+
+            .sale-circle {
+              width: 30px;
+              height: 30px;
+              font-size: 11px;
+              top: -5px;
+              right: -7px;
+            }
           }
         }
       }

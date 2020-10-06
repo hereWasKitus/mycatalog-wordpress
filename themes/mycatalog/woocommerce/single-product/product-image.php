@@ -34,6 +34,7 @@ $attachment_ids = $product->get_gallery_image_ids();
   <div class="c-product-images__main">
     <img data-index="0" src="<?= get_the_post_thumbnail_url() ?>">
   </div>
+
   <div class="c-product-images__gallery">
     <?php foreach ( $attachment_ids as $key => $attachment_id ): ?>
     <img data-index="<?= $key + 1 ?>" src="<?= wp_get_attachment_url( $attachment_id ) ?>">
