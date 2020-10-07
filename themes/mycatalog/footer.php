@@ -19,8 +19,8 @@
           <!-- FOOTER CONTACT DATA -->
           <div class="footer-col footer-col--contact">
             <div class="footer__logo"><img src="<?= get_template_directory_uri() . '/assets/images/logo-footer.svg' ?>"></div>
-            <p class="footer__phone">+7 000 00 0000</p>
-            <p class="footer__mail">mycatalog@gmail.com</p>
+            <a href="<?= "tel:" . get_field('contact_phone', 'option') ?>" class="footer__phone"><?= get_field('contact_phone', 'option') ?></a>
+            <a href="<?= "mailto:" . get_field('contact_email', 'option') ?>" class="footer__mail"><?= get_field('contact_email', 'option') ?></a>
           </div>
 
           <!-- FOOTER NEWSLETTER FORM -->

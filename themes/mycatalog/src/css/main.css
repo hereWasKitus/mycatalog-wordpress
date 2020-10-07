@@ -439,7 +439,9 @@ main {
     width: 178px;
     height: 60px; }
   .footer__phone, .footer__mail {
-    font-size: 16px; }
+    display: block;
+    font-size: 16px;
+    color: #ffffff; }
   .footer-col--contact {
     grid-area: footer-contact; }
   .footer-col--newsletter {

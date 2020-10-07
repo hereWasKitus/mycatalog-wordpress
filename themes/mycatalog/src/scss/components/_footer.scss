@@ -18,7 +18,6 @@
   &-grid {
     display: grid;
     grid-template-areas: "footer-contact footer-newsletter footer-social";
-    // grid-template-columns: repeat(3, 1fr);
   }
 
   &__heading {
@@ -33,7 +32,9 @@
 
   &__phone,
   &__mail {
+    display: block;
     font-size: 16px;
+    color: #ffffff;
   }
 
   &-col {

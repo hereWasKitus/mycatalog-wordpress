@@ -346,7 +346,8 @@ function send_contact_form () {
     $attachments[] = $file['file'];
   }
 
-  $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog form', $message_body, $headers, $attachments);
+  // $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog form', $message_body, $headers, $attachments);
+  $mail_sent = wp_mail(get_field('contact_email', 'option'), 'My Catalog form', $message_body, $headers, $attachments);
   echo json_encode(['status' => $mail_sent, 'files' => $files]);
   wp_die();
 }
@@ -532,7 +533,8 @@ function brief_popup_submit () {
     $message .= "I want to: " . implode(', ', $_POST['goals']) . "\r\n";
   }
 
-  $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog Brief Form', $message, ['From: My Catalog']);
+  // $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog Brief Form', $message, ['From: My Catalog']);
+  $mail_sent = wp_mail(get_field('contact_email', 'option'), 'My Catalog Brief Form', $message, ['From: My Catalog']);
 
   echo json_encode( $resp );
 
