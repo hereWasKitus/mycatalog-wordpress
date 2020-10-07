@@ -45,7 +45,7 @@
         </div>
 
         <div class="footer-copyright">
-          <p>COPYRIGHT 2020 mycatalog <a href="#">Terms & Conditions Privacy Policy</a></p>
+          <p><?= __('COPYRIGHT 2020 mycatalog', 'mycatalog') ?> <a href="<?= get_privacy_policy_url() ?>"><?= __('Terms & Conditions Privacy Policy', 'mycatalog') ?></a></p>
         </div>
 
     </div>
