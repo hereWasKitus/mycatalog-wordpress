@@ -474,7 +474,8 @@ main {
       background-color: #404040;
       line-height: 44px;
       font-size: 18px;
-      color: #ffffff; }
+      color: #ffffff;
+      font-family: 'Roboto'; }
       .footer-col--newsletter input[type="email"]::placeholder {
         color: #7e7e7e; }
     .footer-col--newsletter input[type="submit"] {
