@@ -69,6 +69,8 @@
     }
 
     .actions {
+      padding-right: 30px;
+
       .button[name="update_cart"] {
         @include button-violet;
         margin-left: auto;
