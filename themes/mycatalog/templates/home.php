@@ -24,6 +24,7 @@ get_template_part('template-parts/page-header');
             'order' => 'DESC',
             'orderby' => 'date'
           ]);
+          $count = 0;
 
           while ( $loop -> have_posts() ) :
             $loop -> the_post();
@@ -35,7 +36,8 @@ get_template_part('template-parts/page-header');
           ?>
 
           <!-- LAST PRODUCT ITEM -->
-          <div class="last-products__item">
+          <!-- <div class="last-products__item-container"> -->
+          <div class="last-products__item <?= "item-" . $loop -> current_post ?>">
             <div class="last-products__item__info">
               <span class="last-products__item__status"><?= __('new', 'mycatalog') ?></span>
               <p class="last-products__item__category"><?= $product -> get_categories() ?></p>
@@ -50,6 +52,7 @@ get_template_part('template-parts/page-header');
               <?php endif; ?>
             </div>
           </div>
+          <!-- </div> -->
 
           <?php endwhile; wp_reset_postdata(); ?>
         </div>

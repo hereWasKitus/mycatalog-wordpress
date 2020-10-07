@@ -530,7 +530,7 @@ window.blockBodyScroll = function () {
   document.body.style.position = 'fixed';
   document.body.style.top = `-${window.scrollPosition}px`;
   document.body.style.width = '100%';
-}
+};
 
 window.enableBodyScroll = function () {
   document.body.style.removeProperty('overflow');
@@ -538,4 +538,16 @@ window.enableBodyScroll = function () {
   document.body.style.removeProperty('top');
   document.body.style.removeProperty('width');
   window.scrollTo(0, window.scrollPosition);
+};
+(function () {
+if ( document.querySelector('.slick-last-products') && window.innerWidth <= 1024 ) {
+
+  $('.slick-last-products').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true
+  })
+
 }
+})();

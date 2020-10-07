@@ -5,7 +5,7 @@ window.blockBodyScroll = function () {
   document.body.style.position = 'fixed';
   document.body.style.top = `-${window.scrollPosition}px`;
   document.body.style.width = '100%';
-}
+};
 
 window.enableBodyScroll = function () {
   document.body.style.removeProperty('overflow');
@@ -13,4 +13,4 @@ window.enableBodyScroll = function () {
   document.body.style.removeProperty('top');
   document.body.style.removeProperty('width');
   window.scrollTo(0, window.scrollPosition);
-}
+};

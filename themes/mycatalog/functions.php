@@ -149,10 +149,25 @@ function mycatalog_scripts() {
     wp_enqueue_script( 'comment-reply' );
   }
 
+  // jQuery
+  if ( !is_admin() ) {
+		wp_deregister_script( 'jquery' );
+		wp_register_script( 'jquery', ( 'https://code.jquery.com/jquery-3.5.1.min.js' ), false, null, true );
+		wp_enqueue_script( 'jquery' );
+	}
+
+  // Slick
+  if ( is_front_page() ) {
+    wp_enqueue_style( 'mycatalog-slick-style', get_template_directory_uri() . '/src/css/slick.css', array(), false );
+    wp_enqueue_style( 'mycatalog-slick-style-theme', get_template_directory_uri() . '/src/css/slick-theme.css', array(), false );
+    wp_enqueue_script( 'mycatalog-slick-script', get_template_directory_uri() . '/src/js/libs/exception/slick.min.js', array(), false, true );
+  }
+
   // Main
   wp_enqueue_style( 'mycatalog-main-css', get_template_directory_uri() . '/src/css/main.css', array(), false );
   wp_enqueue_script( 'mycatalog-index-js', get_template_directory_uri() . '/src/js/index.js', array(), false, true );
   wp_localize_script( 'mycatalog-index-js', 'wp_data', ['ajax_url' => admin_url('admin-ajax.php')] );
+
 }
 add_action( 'wp_enqueue_scripts', 'mycatalog_scripts' );
 
