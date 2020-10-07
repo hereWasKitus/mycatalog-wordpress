@@ -97,12 +97,15 @@
 
     label {
       margin-bottom: 5px;
-
       line-height: 1 !important;
       font-weight: 500;
       font-size: 18px;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Roboto;
       color: #3e3e3e;
+
+      abbr {
+        font-weight: 400 !important;
+      }
     }
 
     .input-text {
@@ -166,7 +169,7 @@
       max-width: 406px;
       height: fit-content;
       padding: 24px 38px 67px 28px;
-      font-family: serif;
+      font-family: Roboto;
       border: 2px solid #D9D3D9;
 
       h3 {
@@ -179,6 +182,13 @@
 
       table.shop_table {
         border: 0;
+        font-family: Roboto;
+
+        th,
+        strong,
+        bdi {
+          font-weight: 500;
+        }
       }
 
       .woocommerce-checkout-payment {
@@ -242,6 +252,10 @@
         &:focus {
           outline: none;
         }
+      }
+
+      .woocommerce-shipping-totals {
+        font-weight: bold;
       }
     }
   }
@@ -320,8 +334,10 @@
       }
 
       table.shop_table {
-        th:nth-child(2n) {
-          text-align: right;
+        th {
+          &:nth-child(2n) {
+            text-align: right;
+          }
         }
 
         td:nth-child(2n) {
@@ -386,5 +402,9 @@
         }
       }
     }
+  }
+
+  .woocommerce-order-details {
+    font-family: Roboto;
   }
 }

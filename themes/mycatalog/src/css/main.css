@@ -26,6 +26,13 @@
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url("../../assets/fonts/roboto/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
 *,
 *::after,
 *::before {
@@ -1579,8 +1586,10 @@ main {
       line-height: 1 !important;
       font-weight: 500;
       font-size: 18px;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Roboto;
       color: #3e3e3e; }
+      .p-checkout .woocommerce-checkout label abbr {
+        font-weight: 400 !important; }
     .p-checkout .woocommerce-checkout .input-text {
       height: 36px;
       padding-left: 9px;
@@ -1618,7 +1627,7 @@ main {
       max-width: 406px;
       height: fit-content;
       padding: 24px 38px 67px 28px;
-      font-family: serif;
+      font-family: Roboto;
       border: 2px solid #D9D3D9; }
       .p-checkout .woocommerce-checkout__review-col h3 {
         font-size: 24px;
@@ -1627,7 +1636,12 @@ main {
         font-weight: normal;
         margin-bottom: 45px; }
       .p-checkout .woocommerce-checkout__review-col table.shop_table {
-        border: 0; }
+        border: 0;
+        font-family: Roboto; }
+        .p-checkout .woocommerce-checkout__review-col table.shop_table th,
+        .p-checkout .woocommerce-checkout__review-col table.shop_table strong,
+        .p-checkout .woocommerce-checkout__review-col table.shop_table bdi {
+          font-weight: 500; }
       .p-checkout .woocommerce-checkout__review-col .woocommerce-checkout-payment {
         background: unset !important;
         font-family: Gotham; }
@@ -1667,6 +1681,8 @@ main {
           transform: scale(0.9); }
         .p-checkout .woocommerce-checkout__review-col #place_order:focus {
           outline: none; }
+      .p-checkout .woocommerce-checkout__review-col .woocommerce-shipping-totals {
+        font-weight: bold; }
   .p-checkout .woocommerce-billing-fields h3 {
     padding-bottom: 26px;
     margin-bottom: 19px;
@@ -1738,6 +1754,8 @@ main {
       width: 100%; }
       .p-checkout .woocommerce-form-coupon .form-row-last button {
         width: inherit; } }
+  .p-checkout .woocommerce-order-details {
+    font-family: Roboto; }
 
 .p-cart {
   padding: 74px 117px 70px 120px; }
@@ -2250,3 +2268,6 @@ main {
       font-size: 11px;
       top: -5px;
       right: -7px; } }
+
+.privacy-policy .floating-content {
+  padding: 50px; }
