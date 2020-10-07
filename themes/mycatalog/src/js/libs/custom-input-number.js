@@ -40,6 +40,8 @@
     },
 
     updateValue ( num ) {
+      if ( parseInt(this.root.value) + num < 0 ) return;
+
       // fire native event to fix woocommerce update cart button behavior
       this.root.dispatchEvent( this.native_event );
       this.root.value = parseInt(this.root.value) + num;
