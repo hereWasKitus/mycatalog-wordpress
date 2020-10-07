@@ -24,6 +24,8 @@ get_template_part('template-parts/page-header'); ?>
 
 	<main>
 		<section class="floating-content p-single-product">
+			<?php get_template_part('template-parts/floating-content-social'); ?>
+
 			<?php while ( have_posts() ) : ?>
 
 				<?php the_post(); ?>
