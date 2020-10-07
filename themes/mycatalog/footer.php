@@ -37,9 +37,9 @@
           <div class="footer-col footer-col--social">
             <p class="footer__heading"><?= __('social', 'mycatalog') ?></p>
             <div class="icons">
-              <a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/facebook.svg' ?>"></a>
-              <a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/linkedin.svg' ?>"></a>
-              <a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/social/instagram.svg' ?>"></a>
+              <a href="<?= get_field('facebook', 'option') ?>"><img src="<?= get_template_directory_uri() . '/assets/images/social/facebook.svg' ?>"></a>
+              <a href="<?= get_field('linkedin', 'option') ?>"><img src="<?= get_template_directory_uri() . '/assets/images/social/linkedin.svg' ?>"></a>
+              <a href="<?= get_field('instagram', 'option') ?>"><img src="<?= get_template_directory_uri() . '/assets/images/social/instagram.svg' ?>"></a>
             </div>
           </div>
         </div>

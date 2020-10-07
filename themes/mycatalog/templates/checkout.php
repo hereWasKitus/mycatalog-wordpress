@@ -10,11 +10,7 @@ get_template_part('template-parts/page-header');
 <main>
   <section class="floating-content p-checkout">
 
-    <div class="floating-content__social">
-      <a href="#" class="floating-content__social__icon"><img src="<?= get_template_directory_uri() . '/assets/images/social/facebook.svg' ?>"></a>
-      <a href="#" class="floating-content__social__icon"><img src="<?= get_template_directory_uri() . '/assets/images/social/linkedin.svg' ?>"></a>
-      <a href="#" class="floating-content__social__icon"><img src="<?= get_template_directory_uri() . '/assets/images/social/twitter.svg' ?>"></a>
-    </div>
+    <?php get_template_part('template-parts/floating-content-social') ?>
 
     <h2><?= get_the_title() ?></h2>
 

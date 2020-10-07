@@ -19,12 +19,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<section class="floating-content">
+			<?php get_template_part('template-parts/floating-content-social') ?>
 
-			<div class="floating-content__social">
-				<a href="#" class="floating-content__social__icon"><img src="<?= get_template_directory_uri() . '/assets/images/social/facebook.svg' ?>"></a>
-				<a href="#" class="floating-content__social__icon"><img src="<?= get_template_directory_uri() . '/assets/images/social/linkedin.svg' ?>"></a>
-				<a href="#" class="floating-content__social__icon"><img src="<?= get_template_directory_uri() . '/assets/images/social/twitter.svg' ?>"></a>
-			</div>
 
 			<?php
 			while ( have_posts() ) :
