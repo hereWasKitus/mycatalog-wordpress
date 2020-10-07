@@ -85,7 +85,7 @@
 
   .woocommerce-checkout {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
 
     .woocommerce-NoticeGroup-checkout {
       width: 100%;
@@ -272,7 +272,7 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1115px) {
     padding: 23px 21px 42px;
 
     h2 {

@@ -1583,7 +1583,8 @@ main {
       padding: 0 27px;
       font-family: Gotham; }
   .p-checkout .woocommerce-checkout {
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
     .p-checkout .woocommerce-checkout .woocommerce-NoticeGroup-checkout {
       width: 100%; }
     .p-checkout .woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
@@ -1697,7 +1698,7 @@ main {
     font-size: 24px;
     font-weight: 400;
     border-bottom: 1px solid #DFDFDF; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1115px) {
     .p-checkout {
       padding: 23px 21px 42px; }
       .p-checkout h2 {
