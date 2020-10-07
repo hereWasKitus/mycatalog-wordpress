@@ -324,7 +324,7 @@ main {
   position: relative;
   z-index: 99; }
   .header .wrapper {
-    max-width: calc(1364px + 53px);
+    max-width: 100%;
     height: 100%;
     padding: 0 31px 0 22px; }
   .header .inner {
@@ -332,7 +332,8 @@ main {
     align-items: center;
     height: inherit; }
   .header__logo {
-    margin: 0 auto; }
+    margin: 0 auto;
+    transform: translateX(50px); }
     .header__logo a {
       display: block; }
   .header__user {
@@ -419,7 +420,7 @@ main {
       .header .inner {
         flex-direction: row-reverse; }
       .header__logo {
-        transform: translateY(5px); }
+        transform: translateY(5px) translateX(-10px); }
       .header__user {
         flex-direction: row-reverse;
         line-height: 1; }
