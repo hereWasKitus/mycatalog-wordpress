@@ -1176,6 +1176,12 @@ main {
   .custom-number__action {
     cursor: pointer; }
 
+.home main {
+  margin-bottom: 231px; }
+  @media screen and (max-width: 768px) {
+    .home main {
+      margin-bottom: 0; } }
+
 .last-products .inner {
   display: flex; }
 
@@ -2049,6 +2055,12 @@ main {
         .p-cart .cart_totals .woocommerce-shipping-calculator .input-text::placeholder {
           font-size: 14px;
           font-weight: 300; } }
+
+.single-product main {
+  margin-bottom: 120px; }
+  @media screen and (max-width: 768px) {
+    .single-product main {
+      margin-bottom: 0; } }
 
 .p-single-product {
   padding: 20px 20px 55px; }

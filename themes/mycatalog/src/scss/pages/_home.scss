@@ -1,3 +1,13 @@
+.home {
+  main {
+    margin-bottom: 231px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .last-products {
   .inner {
     display: flex;

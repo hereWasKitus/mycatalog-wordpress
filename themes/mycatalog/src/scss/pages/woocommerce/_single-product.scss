@@ -1,3 +1,13 @@
+.single-product {
+  main {
+    margin-bottom: 120px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .p-single-product {
   padding: 20px 20px 55px;
 
