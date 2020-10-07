@@ -4,6 +4,7 @@
   background-color: #232323;
   color: #ffffff;
   font-size: 13px;
+  font-family: 'Roboto';
 
   .wrapper {
     max-width: calc(1344px + 53px);
@@ -83,6 +84,7 @@
         text-decoration: underline;
         color: $violet-main;
         cursor: pointer;
+        font-family: 'Roboto';
       }
     }
 

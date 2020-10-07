@@ -19,6 +19,13 @@
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url("../../assets/fonts/roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+
 *,
 *::after,
 *::before {
@@ -422,7 +429,8 @@ main {
   margin-top: auto;
   background-color: #232323;
   color: #ffffff;
-  font-size: 13px; }
+  font-size: 13px;
+  font-family: 'Roboto'; }
   .footer .wrapper {
     max-width: calc(1344px + 53px);
     padding: 0 29px 0 24px; }
@@ -474,7 +482,8 @@ main {
       font-size: 14px;
       text-decoration: underline;
       color: #7A65B4;
-      cursor: pointer; }
+      cursor: pointer;
+      font-family: 'Roboto'; }
   .footer-col--social {
     grid-area: footer-social;
     display: flex;
