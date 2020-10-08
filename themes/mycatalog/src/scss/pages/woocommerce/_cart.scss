@@ -217,6 +217,20 @@
 
   }
 
+  .return-to-shop {
+    display: flex;
+    justify-content: center;
+
+    .wc-backward {
+      @include button-violet;
+
+      &:hover {
+        background-color: $violet-main;
+        color: #ffffff;
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) {
     padding: 35px 30px 98px;
 
