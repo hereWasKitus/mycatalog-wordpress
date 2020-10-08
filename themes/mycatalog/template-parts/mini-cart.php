@@ -3,7 +3,7 @@ global $woocommerce;
 $cart_count = WC() -> cart -> cart_contents_count;
 ?>
 
-<div class="mini-cart js-mini-cart">
+<div class="mini-cart js-mini-cart <?= is_rtl() ? 'rtl' : '' ?>">
   <img class="mini-cart__icon" src="<?= get_template_directory_uri() . '/assets/images/basket.svg' ?>">
   <span class="mini-cart__count"><?= $cart_count ?></span>
 

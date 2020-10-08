@@ -14,10 +14,14 @@ h6 {
   margin: 0;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: hidden;
 }
 
 a {

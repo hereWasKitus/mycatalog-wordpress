@@ -3,6 +3,7 @@
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 99;
+  background-color: #fff;
 
   .wrapper {
     max-width: 100%; // 53 - sum of paddings
@@ -175,6 +176,50 @@
           height: 26px;
         }
       }
+    }
+  }
+}
+
+[dir="rtl"] {
+  .header {
+    &__logo {
+      transform: translateX(-50px);
+    }
+
+    .wrapper {
+      padding: 0 22px 0 31px;
+    }
+
+    &__user {
+      &-cart {
+        margin-right: 0;
+        margin-left: 30px;
+      }
+    }
+
+    &__menu {
+      &__list-wrapper {
+        right: unset;
+        left: -50px;
+      }
+
+      &.is-active .header__menu__list-wrapper{
+        right: unset;
+        left: 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &__logo {
+        transform: translateY(5px) translateX(10px);
+      }
+
+      &__user {
+      &-cart {
+        margin-right: 30px;
+        margin-left: 0;
+      }
+    }
     }
   }
 }

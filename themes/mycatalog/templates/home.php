@@ -43,7 +43,7 @@ get_template_part('template-parts/page-header');
               <p class="last-products__item__category"><?= $product -> get_categories() ?></p>
               <p class="last-products__item__price"><?= $currency . $price ?></p>
               <h3 class="last-products__item__name"><?= $product -> get_name() ?></h3>
-              <a class="last-products__item__button click-animation" href="<?= get_the_permalink() ?>"><?= __('Buy now', 'mycatelog') ?></a>
+              <a class="last-products__item__button click-animation" href="<?= get_the_permalink() ?>"><?= __('Buy now', 'mycatalog') ?></a>
             </div>
             <div class="last-products__item__image">
               <a href="<?= get_the_permalink() ?>"><img src="<?= $image ?>"></a>

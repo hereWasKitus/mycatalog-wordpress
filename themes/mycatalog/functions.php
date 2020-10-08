@@ -166,7 +166,10 @@ function mycatalog_scripts() {
   // Main
   wp_enqueue_style( 'mycatalog-main-css', get_template_directory_uri() . '/src/css/main.css', array(), false );
   wp_enqueue_script( 'mycatalog-index-js', get_template_directory_uri() . '/src/js/index.js', array(), false, true );
-  wp_localize_script( 'mycatalog-index-js', 'wp_data', ['ajax_url' => admin_url('admin-ajax.php')] );
+  wp_localize_script( 'mycatalog-index-js', 'wp_data', [
+    'ajax_url' => admin_url('admin-ajax.php'),
+    'is_rtl' => is_rtl()
+  ] );
 
 }
 add_action( 'wp_enqueue_scripts', 'mycatalog_scripts' );
