@@ -1,0 +1,1025 @@
+# Copyright (C) 2020 sw-wapf
+# This file is distributed under the same license as the sw-wapf package.
+msgid ""
+msgstr ""
+"Project-Id-Version: sw-wapf\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Product Field Groups"
+msgstr ""
+
+msgid "Field Group"
+msgstr ""
+
+msgid "Add New"
+msgstr ""
+
+msgid "Add New Product Field Group"
+msgstr ""
+
+msgid "Edit Product Field Group"
+msgstr ""
+
+msgid "New Field Group"
+msgstr ""
+
+msgid "View Field Group"
+msgstr ""
+
+msgid "Search Field Groups"
+msgstr ""
+
+msgid "No Field Groups found"
+msgstr ""
+
+msgid "No Field Groups found in Trash"
+msgstr ""
+
+msgid "The field \"%s\" is required."
+msgstr ""
+
+msgid "The field \"%s\" requires at minimum %s selections."
+msgstr ""
+
+msgid "The field \"%s\" requires at maximum %s selections."
+msgstr ""
+
+msgid "Value is empty"
+msgstr ""
+
+msgid "Value is any value"
+msgstr ""
+
+msgid "Value is equal to"
+msgstr ""
+
+msgid "Value is not equal to"
+msgstr ""
+
+msgid "Value contains"
+msgstr ""
+
+msgid "Value is greater than"
+msgstr ""
+
+msgid "Value is lesser than"
+msgstr ""
+
+msgid "Is checked"
+msgstr ""
+
+msgid "Is not checked"
+msgstr ""
+
+msgid "Nothing selected"
+msgstr ""
+
+msgid "Anything selected"
+msgstr ""
+
+msgid "Selection contains"
+msgstr ""
+
+msgid "Selection does not contain"
+msgstr ""
+
+msgid "Has no files selected"
+msgstr ""
+
+msgid "Has file(s) selected"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Authentication"
+msgstr ""
+
+msgid "Logged in"
+msgstr ""
+
+msgid "Not logged in"
+msgstr ""
+
+msgid "User role"
+msgstr ""
+
+msgid "Is equal to"
+msgstr ""
+
+msgid "Is not equal to"
+msgstr ""
+
+msgid "Product"
+msgstr ""
+
+msgid "Search a product..."
+msgstr ""
+
+msgid "Any in list"
+msgstr ""
+
+msgid "Not in list"
+msgstr ""
+
+msgid "Product variation"
+msgstr ""
+
+msgid "Search a product variation..."
+msgstr ""
+
+msgid "Product category"
+msgstr ""
+
+msgid "Search a category..."
+msgstr ""
+
+msgid "Product attribute"
+msgstr ""
+
+msgid "Search a product attribute..."
+msgstr ""
+
+msgid "Product tag"
+msgstr ""
+
+msgid "Search a tag..."
+msgstr ""
+
+msgid "Product type"
+msgstr ""
+
+msgid "Select a type"
+msgstr ""
+
+msgid "System"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Text"
+msgstr ""
+
+msgid "A single-line input field."
+msgstr ""
+
+msgid "Text Area"
+msgstr ""
+
+msgid "A multi-line text field."
+msgstr ""
+
+msgid "Number"
+msgstr ""
+
+msgid "A number input field"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "An email input field."
+msgstr ""
+
+msgid "URL"
+msgstr ""
+
+msgid "An input field only accepting URLs."
+msgstr ""
+
+msgid "Select list"
+msgstr ""
+
+msgid "A dropdown list where the user selects one option."
+msgstr ""
+
+msgid "True/False"
+msgstr ""
+
+msgid "One checkbox indicating true (\"yes\") or false (\"no\")."
+msgstr ""
+
+msgid "Checkboxes"
+msgstr ""
+
+msgid "A series of checkboxes. The user can select multiple."
+msgstr ""
+
+msgid "Radio buttons"
+msgstr ""
+
+msgid "A series of radio buttons. The user can select one."
+msgstr ""
+
+msgid "Image swatches"
+msgstr ""
+
+msgid "A series of image options. The user can select only one."
+msgstr ""
+
+msgid "Multi-select image swatches"
+msgstr ""
+
+msgid "A series of image options. The user can select multiple."
+msgstr ""
+
+msgid "Color swatches"
+msgstr ""
+
+msgid "A series of color options. The user can select only one."
+msgstr ""
+
+msgid "Multi-select color swatches"
+msgstr ""
+
+msgid "A series of color options. The user can select multiple."
+msgstr ""
+
+msgid "Text swatches"
+msgstr ""
+
+msgid "A series of text badges. The user can select only one."
+msgstr ""
+
+msgid "Multi-select text swatches"
+msgstr ""
+
+msgid "A series of text badges. The user can select multiple."
+msgstr ""
+
+msgid "File upload"
+msgstr ""
+
+msgid "Allows users to upload a file, or multiple files."
+msgstr ""
+
+msgid "Paragraph"
+msgstr ""
+
+msgid "A text paragraph. Some HTML is allowed."
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "An image."
+msgstr ""
+
+msgid "Section"
+msgstr ""
+
+msgid "A wrapper for fields. Can be used to apply styling or duplicate quantity-based fields in group."
+msgstr ""
+
+msgid "Section end"
+msgstr ""
+
+msgid "Ends a previously started section."
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Displays text alongside the checkbox."
+msgstr ""
+
+msgid "Checked"
+msgstr ""
+
+msgid "Unchecked"
+msgstr ""
+
+msgid "Default value"
+msgstr ""
+
+msgid "The pre-set value of the field when the page loads."
+msgstr ""
+
+msgid "Label for 'true'"
+msgstr ""
+
+msgid "true"
+msgstr ""
+
+msgid "Label for 'false'"
+msgstr ""
+
+msgid "false"
+msgstr ""
+
+msgid "Adjust pricing"
+msgstr ""
+
+msgid "Should the price of the product or cart change when the user interacts with this field?"
+msgstr ""
+
+msgid "Placeholder text"
+msgstr ""
+
+msgid "Appears within the input field"
+msgstr ""
+
+msgid "Minimum length"
+msgstr ""
+
+msgid "The minimum length the input should have. Leave blank if there is no restriction."
+msgstr ""
+
+msgid "Maximum length"
+msgstr ""
+
+msgid "The maximum length the input should have. Leave blank if there is no restriction."
+msgstr ""
+
+msgid "HTML5 validation regex"
+msgstr ""
+
+msgid "You can restrict the input by adding a valid <a href=\"http://html5pattern.com/\" target=\"_blank\">HTML5 regex pattern</a>  here."
+msgstr ""
+
+msgid "Number type"
+msgstr ""
+
+msgid "Allow integers (whole numbers) or decimals."
+msgstr ""
+
+msgid "Integer"
+msgstr ""
+
+msgid "Integer & decimals"
+msgstr ""
+
+msgid "Minimum value"
+msgstr ""
+
+msgid "No minimum"
+msgstr ""
+
+msgid "Maximum value"
+msgstr ""
+
+msgid "No maximum"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Add the options for this select list."
+msgstr ""
+
+msgid "Each option is a checkbox."
+msgstr ""
+
+msgid "Minimum choices needed"
+msgstr ""
+
+msgid "Set the minimum number of choices needed."
+msgstr ""
+
+msgid "Maximum choices allowed"
+msgstr ""
+
+msgid "Set the maximum number of choices allowed."
+msgstr ""
+
+msgid "Each option is a radio button."
+msgstr ""
+
+msgid "Define your image swatches here. Note: for best quality, upload images that are square and a minimum of 250px by 250px."
+msgstr ""
+
+msgid "Items per row"
+msgstr ""
+
+msgid "How many swatches can appear next to each other before starting a new row?"
+msgstr ""
+
+msgid "Define your color swatches here."
+msgstr ""
+
+msgid "Swatch layout"
+msgstr ""
+
+msgid "Square"
+msgstr ""
+
+msgid "Rounded corners"
+msgstr ""
+
+msgid "Circle"
+msgstr ""
+
+msgid "How should the swatch look like?"
+msgstr ""
+
+msgid "Selected border color"
+msgstr ""
+
+msgid "The swatch border color when it is selected."
+msgstr ""
+
+msgid "Size (in pixels)"
+msgstr ""
+
+msgid "How big should the color swatch be?"
+msgstr ""
+
+msgid "Show tooltip"
+msgstr ""
+
+msgid "Show the label in a tooltip when hovering the color."
+msgstr ""
+
+msgid "Tooltip background color"
+msgstr ""
+
+msgid "Tooltip text color"
+msgstr ""
+
+msgid "Define your swatches here."
+msgstr ""
+
+msgid "Allow multiple"
+msgstr ""
+
+msgid "Allow multiple files to be uploaded"
+msgstr ""
+
+msgid "Accepted file types"
+msgstr ""
+
+msgid "Which file types can the user upload? You can select multiple here."
+msgstr ""
+
+msgid "Maximum file size (MB)"
+msgstr ""
+
+msgid "The maximum allowed filesize of 1 file in megabytes."
+msgstr ""
+
+msgid "Should the price of the product or cart change when the user uploads at least 1 file?"
+msgstr ""
+
+msgid "Can contain some basic HTML."
+msgstr ""
+
+msgid "Flat fee"
+msgstr ""
+
+msgid "Quantity based flat fee"
+msgstr ""
+
+msgid "Percentage based fee"
+msgstr ""
+
+msgid "Quantity based percentage fee"
+msgstr ""
+
+msgid "Formula based pricing"
+msgstr ""
+
+msgid "Amount &times; character count"
+msgstr ""
+
+msgid "Amount &times; character count &times; qty"
+msgstr ""
+
+msgid "Amount &times; field value"
+msgstr ""
+
+msgid "Amount &times; field value &times; qty"
+msgstr ""
+
+msgid "Error uploading file \"%s\". %s"
+msgstr ""
+
+msgid "You are not authorized to upload files."
+msgstr ""
+
+msgid "The uploaded file type is not allowed."
+msgstr ""
+
+msgid "You are not allowed to upload multiple files."
+msgstr ""
+
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr ""
+
+msgid "Failed to write file to disk."
+msgstr ""
+
+msgid "The uploaded file was only partially uploaded."
+msgstr ""
+
+msgid "Error code: %s"
+msgstr ""
+
+msgid "The filesize is too big."
+msgstr ""
+
+msgid "This file type is not supported."
+msgstr ""
+
+msgid "The maximum number of allowed simultanious uploads was exceeded. Please upload less files."
+msgstr ""
+
+msgid "per character"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Duplicate &#8220;%s&#8221;"
+msgstr ""
+
+msgid "Duplicate"
+msgstr ""
+
+msgid "No Product Field Groups found."
+msgstr ""
+
+msgid "Any value"
+msgstr ""
+
+msgid "any"
+msgstr ""
+
+msgid "Repeat with persons"
+msgstr ""
+
+msgid "Should this field appear as many times as persons on the booking?"
+msgstr ""
+
+msgid "Repeat for person type"
+msgstr ""
+
+msgid "Select which person type this field should repeat for."
+msgstr ""
+
+msgid "Please add a field group title first."
+msgstr ""
+
+msgid "Please add some fields first."
+msgstr ""
+
+msgid "Product Fields"
+msgstr ""
+
+msgid "License activated. You can now add custom fields by going to WooCommerce > Product Fields or by editing a product individually."
+msgstr ""
+
+msgid "License deactivated"
+msgstr ""
+
+msgid "Global fields"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Custom fields"
+msgstr ""
+
+msgid "Add some custom fields to this group."
+msgstr ""
+
+msgid "Field group layout settings"
+msgstr ""
+
+msgid "Custom variables"
+msgstr ""
+
+msgid "Create dynamic variables to use with formula-based pricing"
+msgstr ""
+
+msgid "Product field settings"
+msgstr ""
+
+msgid "Show in cart"
+msgstr ""
+
+msgid "Show on customer's cart page."
+msgstr ""
+
+msgid "When a user has filled out your fields, should they be summarized on their cart page after adding the product to their cart?"
+msgstr ""
+
+msgid "Show on checkout"
+msgstr ""
+
+msgid "Show on the checkout page."
+msgstr ""
+
+msgid "When a user has filled out your fields, should they be summarized on their checkout page?"
+msgstr ""
+
+msgid "Show in mini cart"
+msgstr ""
+
+msgid "Show in mini cart."
+msgstr ""
+
+msgid "When a user has filled out your fields, should they be summarized on the mini (floating) cart?"
+msgstr ""
+
+msgid "\"Add to cart\" button on shop page"
+msgstr ""
+
+msgid "When a product has custom fields, what should the \"add to cart\" button say on the shop page?."
+msgstr ""
+
+msgid "Select options"
+msgstr ""
+
+msgid "File upload settings"
+msgstr ""
+
+msgid "Must be logged in"
+msgstr ""
+
+msgid "Users must be logged in to upload files."
+msgstr ""
+
+msgid "For security reasons, we advice to turn on this setting. This means your customers need an account before they can upload files."
+msgstr ""
+
+msgid "\"Must be logged in\" text"
+msgstr ""
+
+msgid "If users need to log in before uploading files, display a message to let them know."
+msgstr ""
+
+msgid "You need to be logged in to upload files."
+msgstr ""
+
+msgid "Product fields"
+msgstr ""
+
+msgid "Conditions"
+msgstr ""
+
+msgid "When should this field group be displayed?"
+msgstr ""
+
+msgid "Help with conditions"
+msgstr ""
+
+msgid "In the \"conditions\" section, you can define on which products your options should be shown. Here are a few examples of what you can do:<ul><li>Only show the options on products from a certain category</li><li>Only show the options to users with a certain role.</li><li>Only show these options on variable products.</li></ul>"
+msgstr ""
+
+msgid "Help with custom variables"
+msgstr ""
+
+msgid "You can create dynamic variables which can then be used in formulas. A variable can dynamically change value depending on other values.<br/><br/><a href=\"https://www.studiowombat.com/kb-article/formulas-and-variables-explained/#variables?ref=wapf_admin\" target=\"_blank\">Read more about variables here</a>"
+msgstr ""
+
+msgid "N/a"
+msgstr ""
+
+msgid "Rules"
+msgstr ""
+
+msgid "Add a set of rules to determine when this field group should appear."
+msgstr ""
+
+msgid "Add your first rule"
+msgstr ""
+
+msgid "If you don't add any rules, this field group will display on every product."
+msgstr ""
+
+msgid "Or"
+msgstr ""
+
+msgid "And"
+msgstr ""
+
+msgid "A field group is a collection of fields that belong together."
+msgstr ""
+
+msgid "(No label)"
+msgstr ""
+
+msgid "Delete field"
+msgstr ""
+
+msgid "Duplicate field"
+msgstr ""
+
+msgid "Drag & drop"
+msgstr ""
+
+msgid "What type of field should this be?"
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "This is the label that is shown near the field."
+msgstr ""
+
+msgid "Instructions"
+msgstr ""
+
+msgid "Instructions can be used to display extra information near the field. Keep it short."
+msgstr ""
+
+msgid "Required"
+msgstr ""
+
+msgid "Select \"yes\" if the field should require input from the user."
+msgstr ""
+
+msgid "Quantity based"
+msgstr ""
+
+msgid "Should this field appear multiple times depending on the chosen quantity?"
+msgstr ""
+
+msgid "Conditionals"
+msgstr ""
+
+msgid "Only show this field when conditional rules are true."
+msgstr ""
+
+msgid "Hide this field & value on the cart page"
+msgstr ""
+
+msgid "Hide this field & value on the checkout page"
+msgstr ""
+
+msgid "Hide this field & value on the \"order received\" page and emails."
+msgstr ""
+
+msgid "Hide on cart, checkout, order"
+msgstr ""
+
+msgid "Per default, filled out fields are shown on the customer's cart, checkout and order. You can change that here."
+msgstr ""
+
+msgid "Wrapper attributes"
+msgstr ""
+
+msgid "View help"
+msgstr ""
+
+msgid "Label position"
+msgstr ""
+
+msgid "Where should the label be positioned in relation to the field?"
+msgstr ""
+
+msgid "Above the field"
+msgstr ""
+
+msgid "Below the field"
+msgstr ""
+
+msgid "Instruction position"
+msgstr ""
+
+msgid "Where should the instructions be positioned?"
+msgstr ""
+
+msgid "Below the label"
+msgstr ""
+
+msgid "Mark required fields"
+msgstr ""
+
+msgid "Add a *-symbol next to required fields."
+msgstr ""
+
+msgid "Change product image"
+msgstr ""
+
+msgid "Should the main product image change on your product page when options are selected?"
+msgstr ""
+
+msgid "Plugin license key"
+msgstr ""
+
+msgid "Activate license"
+msgstr ""
+
+msgid "Please enter your license key to activate the plugin and click 'Save changes'."
+msgstr ""
+
+msgid "Deactivate"
+msgstr ""
+
+msgid "Width"
+msgstr ""
+
+msgid "Class"
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "Option label"
+msgstr ""
+
+msgid "Pricing amount"
+msgstr ""
+
+msgid "Selected"
+msgstr ""
+
+msgid "No price change"
+msgstr ""
+
+msgid "Enter a formula"
+msgstr ""
+
+msgid "Amount"
+msgstr ""
+
+msgid "Add option"
+msgstr ""
+
+msgid "Help with pricing"
+msgstr ""
+
+msgid "You need atleast 2 fields to create conditional rules. Add another field first."
+msgstr ""
+
+msgid "Show this field if"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Add new rule group"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "How should images be swapped?"
+msgstr ""
+
+msgid "According to the last option changed"
+msgstr ""
+
+msgid "According to a combination of option values"
+msgstr ""
+
+msgid "Any"
+msgstr ""
+
+msgid "Field"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Select an image from the product gallery:"
+msgstr ""
+
+msgid "Select image"
+msgstr ""
+
+msgid "Or select other image"
+msgstr ""
+
+msgid "&darr; Show all rules ({hidden} hidden) &darr;"
+msgstr ""
+
+msgid "&uarr; Show less rules &uarr;"
+msgstr ""
+
+msgid "You can add rules below. A rule holds a set of values which have to be true before showing that product image. If two or more rules are true, the last rule will be used."
+msgstr ""
+
+msgid "The product image changes based on the value of the last option changed by your visitor. You can set an image for each option value below."
+msgstr ""
+
+msgid "Add new"
+msgstr ""
+
+msgid "You can't add any rules yet. Please add at least one of these fields first: true-false, select, swatches, checkboxes, or radio buttons. Make sure option-fields have at least one option added."
+msgstr ""
+
+msgid "Unique key"
+msgstr ""
+
+msgid "Label for duplicates:"
+msgstr ""
+
+msgid "use {{n}} to denote the number of duplicate."
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "You can use the JSON code below to import into another field group."
+msgstr ""
+
+msgid "Paste exported JSON code below to import it into this field group."
+msgstr ""
+
+msgid "All done!"
+msgstr ""
+
+msgid "An error occured. Is your JSON formatted correctly?"
+msgstr ""
+
+msgid "Delete variable"
+msgstr ""
+
+msgid "Variable name"
+msgstr ""
+
+msgid "A unique key to identify your variable. Use this key in pricing formulas."
+msgstr ""
+
+msgid "Should only contain letters, numbers, or underscores."
+msgstr ""
+
+msgid "Standard value"
+msgstr ""
+
+msgid "The default value of your variable."
+msgstr ""
+
+msgid "This should be a number or a formula."
+msgstr ""
+
+msgid "Value changes"
+msgstr ""
+
+msgid "Add rules when the value of this variable should change."
+msgstr ""
+
+msgid "If this happens"
+msgstr ""
+
+msgid "Field value changes"
+msgstr ""
+
+msgid "Product quantity changes"
+msgstr ""
+
+msgid "And quantity"
+msgstr ""
+
+msgid "This field changes"
+msgstr ""
+
+msgid "Variable value is"
+msgstr ""
+
+msgid "Add new rule"
+msgstr ""
+
+msgid "If you add some fields to this field group first, you can also change this variable when a field value changes!"
+msgstr ""
+
+msgid "Add new variable"
+msgstr ""
+
+msgid "Dynamic variables can make complex pricing easier."
+msgstr ""
+
+msgid "Choose an option"
+msgstr ""
+
+msgid "Product total"
+msgstr ""
+
+msgid "Options total"
+msgstr ""
+
+msgid "Grand total"
+msgstr ""
