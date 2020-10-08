@@ -32,5 +32,21 @@
 
     </div>
   </div>
+
+  <!-- THANK YOU POPUP -->
+  <div class="brief-popup-container">
+    <div class="brief-popup">
+      <div class="brief-popup__header">
+        <img src="<?= get_template_directory_uri() . '/assets/images/logo-mini.svg' ?>">
+        <p class="brief-popup__header__title"><?= __('Thank you!', 'mycatalog') ?></p>
+        <div class="brief-popup__close brief-popup__cross click-animation"></div>
+      </div>
+      <div class="brief-popup__content">
+        <p><?= __('Thanks for your request!', 'mycatalog') ?></p>
+        <p><?= __('Our managers will contact you asap', 'mycatalog') ?></p>
+        <input type="submit" class="brief-popup__submit" value="<?= __('ok', 'mycatalog') ?>">
+      </div>
+    </div>
+  </div>
 </div>
 <?php get_footer(); ?>

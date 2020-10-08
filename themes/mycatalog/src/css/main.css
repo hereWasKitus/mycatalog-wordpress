@@ -1622,6 +1622,42 @@ main {
   .template-franchise .franchise-content {
     font-size: 16px; } }
 
+.template-franchise .brief-popup__header {
+  height: 52px; }
+  .template-franchise .brief-popup__header img {
+    width: 23px;
+    height: 32px; }
+
+.template-franchise .brief-popup__content {
+  padding: 42px 30px 37px;
+  text-align: center; }
+  .template-franchise .brief-popup__content p {
+    font-size: 24px;
+    color: #000000; }
+
+.template-franchise .brief-popup__submit {
+  display: block;
+  padding: 0 15px;
+  background-color: #7A65B4;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+  border-radius: 0;
+  white-space: nowrap;
+  margin-top: 42px;
+  line-height: 46px; }
+  .template-franchise .brief-popup__submit:focus {
+    outline: none; }
+  .template-franchise .brief-popup__submit[disabled] {
+    background-color: #B7A7E4; }
+
+@media screen and (max-width: 768px) {
+  .template-franchise .brief-popup__content p {
+    font-size: 16px; }
+  .template-franchise .brief-popup__submit {
+    margin-top: 24px; } }
+
 .p-checkout {
   padding: 74px 130px 50px 122px; }
   .p-checkout h2 {

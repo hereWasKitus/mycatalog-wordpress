@@ -215,13 +215,18 @@
  * Multiple file uploader
  */
 (function () {
-  if (document.querySelector('.js-add-file') === null) return;
+  if (document.querySelector('.js-franchise-form') === null) return;
+
+  console.log('somethin');
 
   var files = [],
     file_container = document.querySelector('.franchise-form-file-list'),
     form = document.querySelector('.js-franchise-form');
 
-  form.querySelector('.js-file-input').addEventListener('change', onUpload);
+  if ( form.querySelector('.js-file-input') ) {
+    form.querySelector('.js-file-input').addEventListener('change', onUpload);
+  }
+
   form.addEventListener('submit', onSubmit);
 
   function onUpload (e) {
@@ -230,7 +235,7 @@
     showFiles();
   }
 
-  function onSubmit (e) {
+  async function onSubmit (e) {
     e.preventDefault();
     var form_data = new FormData(e.currentTarget);
     form_data.delete('files[]');
@@ -239,12 +244,17 @@
       form_data.append('files[]', file);
     });
 
-    fetch(wp_data.ajax_url, {
-      method: 'POST',
-      body: form_data
-    })
-      .then( resp => resp.json() )
-      .then( data => console.log(data) );
+    var resp = await fetch(wp_data.ajax_url, {method: 'POST',body: form_data});
+    var data = await resp.json();
+
+    window.blockBodyScroll();
+    document.querySelector('.brief-popup-container').classList.add('is-active');
+
+    document.querySelector('.brief-popup__close').addEventListener('click', e => {
+      e.preventDefault();
+      window.enableBodyScroll();
+      document.querySelector('.brief-popup-container').classList.remove('is-active');
+    });
   }
 
   function showFiles () {

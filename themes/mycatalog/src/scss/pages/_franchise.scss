@@ -296,4 +296,43 @@
     }
   }
 
+  .brief-popup {
+    &__header {
+      height: 52px;
+
+      img {
+        width: 23px;
+        height: 32px;
+      }
+    }
+
+    &__content {
+      padding: 42px 30px 37px;
+      text-align: center;
+
+      p {
+        font-size: 24px;
+        color: #000000;
+      }
+    }
+
+    &__submit {
+      @include button-violet;
+      margin-top: 42px;
+      line-height: 46px;
+    }
+
+    @media screen and (max-width: 768px) {
+      &__content {
+        p {
+          font-size: 16px;
+        }
+      }
+
+      &__submit {
+        margin-top: 24px;
+      }
+    }
+  }
+
 }
