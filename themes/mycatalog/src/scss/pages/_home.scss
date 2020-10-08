@@ -222,6 +222,13 @@
     &__input {
       width: 100%;
       position: relative;
+      overflow-x: hidden;
+
+      &.is-loading {
+        &::before {
+          display: block;
+        }
+      }
 
       input {
         width: inherit;
@@ -249,6 +256,28 @@
         bottom: 0;
         margin: auto 0;
         cursor: pointer;
+      }
+
+      &::before {
+        content: '';
+        display: none;
+        position: absolute;
+        z-index: 1;
+        left: -150px;
+        top: 0;
+        height: 100%;
+        width: 150px;
+        background: linear-gradient(to right, transparent 0%, #ffffff 50%, transparent 100%);
+        animation: load .7s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+      }
+
+      @keyframes load {
+        from {
+          left: -150px;
+        }
+        to   {
+          left: 100%;
+        }
       }
     }
 

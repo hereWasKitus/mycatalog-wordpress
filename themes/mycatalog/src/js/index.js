@@ -549,8 +549,14 @@
   const products_body = document.querySelector('.products__grid');
 
   trigger.addEventListener('click', search);
+  search_box.addEventListener('keypress', (e) => {
+    if ( e.key === 'Enter' ) {
+      search();
+    }
+  })
 
   function search() {
+    search_box.parentElement.classList.add('is-loading');
     var form_data = new FormData();
 
     form_data.append('action', 'products_search');
@@ -559,7 +565,10 @@
 
     fetch(wp_data.ajax_url, { method: 'POST', body: form_data })
       .then(resp => resp.json())
-      .then(data => products_body.innerHTML = data.body);
+      .then(data => {
+        products_body.innerHTML = data.body;
+        search_box.parentElement.classList.remove('is-loading');
+      });
   }
 
 })();
