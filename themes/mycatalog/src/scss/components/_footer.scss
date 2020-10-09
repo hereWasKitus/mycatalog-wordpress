@@ -44,7 +44,6 @@
 
   &__phone {
     direction: ltr;
-    text-align: right;
   }
 
   &-col {
@@ -197,6 +196,10 @@
         margin-right: 0;
         margin-left: 34px;
       }
+    }
+
+    &__phone {
+      text-align: right;
     }
 
     @media screen and (max-width: 768px) {

@@ -496,8 +496,7 @@ main {
     .footer__phone:hover, .footer__mail:hover {
       color: #ffffff; }
   .footer__phone {
-    direction: ltr;
-    text-align: right; }
+    direction: ltr; }
   .footer-col--contact {
     grid-area: footer-contact; }
   .footer-col--newsletter {
@@ -582,6 +581,9 @@ main {
 [dir="rtl"] .footer .footer-col--social .icons a:not(:last-child) {
   margin-right: 0;
   margin-left: 34px; }
+
+[dir="rtl"] .footer__phone {
+  text-align: right; }
 
 @media screen and (max-width: 768px) {
   [dir="rtl"] .footer .footer-col--social .icons a:not(:last-child) {
