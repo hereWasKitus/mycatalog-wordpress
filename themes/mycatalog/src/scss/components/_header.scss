@@ -215,11 +215,15 @@
       }
 
       &__user {
-      &-cart {
-        margin-right: 30px;
-        margin-left: 0;
+        &-avatar {
+          margin-right: 0;
+        }
+
+        &-cart {
+          margin-right: 20px;
+          margin-left: 0;
+        }
       }
-    }
     }
   }
 }
