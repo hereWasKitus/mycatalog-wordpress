@@ -134,3 +134,15 @@
     }
   }
 }
+
+[dir="rtl"] .custom-select {
+
+  &-selected {
+    padding: 0 25px 0 25px;
+
+    &::after {
+      margin-left: unset;
+      margin-right: auto;
+    }
+  }
+}

@@ -71,3 +71,16 @@
     }
   }
 }
+
+[dir="rtl"] .c-product-item {
+  .sale-circle {
+    right: unset;
+    left: -28px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .sale-circle {
+      left: -20px;
+    }
+  }
+}

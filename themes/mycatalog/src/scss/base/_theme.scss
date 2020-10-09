@@ -89,6 +89,13 @@ main {
   }
 }
 
+[dir="rtl"] .floating-content {
+  &__social {
+    right: unset;
+    left: 0;
+  }
+}
+
 @for $i from 10 to 50 {
   .mb-#{$i} {
     margin-bottom: #{$i}px;

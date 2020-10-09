@@ -211,6 +211,27 @@
   }
 }
 
+[dir="rtl"] .last-products {
+  &__item {
+    &__image {
+      padding-left: 0;
+      padding-right: 15px;
+
+      a {
+        margin-left: unset;
+        margin-right: auto;
+      }
+    }
+
+    &.item-1 {
+      .last-products__item__image .sale-circle {
+        right: unset;
+        left: -20px;
+      }
+    }
+  }
+}
+
 .products {
   padding: 90px 30px 93px;
 
@@ -399,6 +420,30 @@
   @media screen and (max-width: 568px) {
     &__grid {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+[dir="rtl"] .products {
+  &__search {
+    .custom-select-container {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+
+    &__input {
+      img {
+        right: unset;
+        left: 20px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__search {
+      .custom-select-container {
+        margin-right: 0;
+      }
     }
   }
 }
