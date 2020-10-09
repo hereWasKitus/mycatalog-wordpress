@@ -1407,7 +1407,8 @@ main {
 
 @media screen and (max-width: 1024px) {
   .last-products .inner {
-    flex-direction: column; }
+    flex-direction: column;
+    margin-bottom: 0; }
   .last-products .last-products__item img {
     width: auto;
     height: auto; }
