@@ -6,6 +6,7 @@
     <input class="click-animation" type="submit" value="<?= __('send', 'mycatalog') ?>">
   </div>
   <div class="franchise-form__column">
+    <input type="hidden" name="action" value="send_contact_form">
     <input class="franchise-form__field mb-22" type="email" name="email" placeholder="<?= __('Email', 'mycatalog') ?>">
     <input class="franchise-form__field mb-22" type="tel" name="phone" placeholder="<?= __('Phone number', 'mycatalog') ?>">
     <div class="franchise-form__textarea">

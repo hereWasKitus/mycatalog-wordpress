@@ -44,7 +44,7 @@
       <div class="brief-popup__content">
         <p><?= __('Thanks for your request!', 'mycatalog') ?></p>
         <p><?= __('Our managers will contact you asap', 'mycatalog') ?></p>
-        <input type="submit" class="brief-popup__submit" value="<?= __('ok', 'mycatalog') ?>">
+        <button class="brief-popup__submit brief-popup__close click-animation"><?= __('ok', 'mycatalog') ?></button>
       </div>
     </div>
   </div>

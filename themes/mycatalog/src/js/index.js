@@ -217,8 +217,6 @@
 (function () {
   if (document.querySelector('.js-franchise-form') === null) return;
 
-  console.log('somethin');
-
   var files = [],
     file_container = document.querySelector('.franchise-form-file-list'),
     form = document.querySelector('.js-franchise-form');
@@ -249,12 +247,6 @@
 
     window.blockBodyScroll();
     document.querySelector('.brief-popup-container').classList.add('is-active');
-
-    document.querySelector('.brief-popup__close').addEventListener('click', e => {
-      e.preventDefault();
-      window.enableBodyScroll();
-      document.querySelector('.brief-popup-container').classList.remove('is-active');
-    });
   }
 
   function showFiles () {
@@ -301,9 +293,12 @@
     }, duration + 100);
   }
 
-  // 1. Handle submit and create formdata
-  // 2. Go through files array and set files[] key in formdata
-  // 3. Send formdata
+
+  document.querySelectorAll('.brief-popup__close').forEach(btn => btn.addEventListener('click', e => {
+    e.preventDefault();
+    window.enableBodyScroll();
+    document.querySelector('.brief-popup-container').classList.remove('is-active');
+  }) );
 })();
 /**
  * Gallery popup
