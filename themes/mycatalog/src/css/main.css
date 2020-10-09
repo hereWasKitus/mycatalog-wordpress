@@ -1460,9 +1460,11 @@ main {
     margin-left: unset;
     margin-right: auto; }
 
-[dir="rtl"] .last-products__item.item-1 .last-products__item__image .sale-circle {
-  right: unset;
-  left: -20px; }
+[dir="rtl"] .last-products__item.item-1 {
+  background: linear-gradient(117.42deg, #A577FF 21.18%, #7A65B4 87.3%); }
+  [dir="rtl"] .last-products__item.item-1 .last-products__item__image .sale-circle {
+    right: unset;
+    left: -20px; }
 
 .products {
   padding: 90px 30px 93px; }
