@@ -5,10 +5,9 @@
 
       <h1><?= __('choose for yourself', 'mycatalog') ?></h1>
       <ul>
-        <li><a href="<?= home_url() . '/pod' ?>">pod</a></li>
-        <li><a href="<?= home_url() . '/digital-franchise' ?>">digital franchise</a></li>
-        <li><a href="<?= home_url() . '/for-advertisers' ?>">for advertisers</a></li>
-        <li><a href="<?= home_url() . '/private-label' ?>">private label</a></li>
+        <?php foreach ( get_franchise_pages() as $page ): ?>
+        <li><a href="<?= $page['link'] ?>"><?= $page['name'] ?></a></li>
+        <?php endforeach; ?>
       </ul>
 
     </div>
