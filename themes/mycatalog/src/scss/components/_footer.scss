@@ -42,6 +42,11 @@
     }
   }
 
+  &__phone {
+    direction: ltr;
+    text-align: right;
+  }
+
   &-col {
     &--contact {
       grid-area: footer-contact;

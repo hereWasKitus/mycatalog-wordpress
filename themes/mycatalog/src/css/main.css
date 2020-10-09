@@ -495,6 +495,9 @@ main {
     color: #ffffff; }
     .footer__phone:hover, .footer__mail:hover {
       color: #ffffff; }
+  .footer__phone {
+    direction: ltr;
+    text-align: right; }
   .footer-col--contact {
     grid-area: footer-contact; }
   .footer-col--newsletter {
@@ -648,6 +651,9 @@ main {
     display: block;
     margin: auto;
     color: #ffffff; }
+
+[dir="rtl"] .sale-circle {
+  font-size: 12px; }
 
 .custom-select-container {
   position: relative;

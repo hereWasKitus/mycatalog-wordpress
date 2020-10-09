@@ -48,7 +48,7 @@ get_template_part('template-parts/page-header');
             <div class="last-products__item__image">
               <a href="<?= get_the_permalink() ?>"><img src="<?= $image ?>"></a>
               <?php if ( $is_sale ): ?>
-              <div class="sale-circle is-top-right"><span><?= __('Sale!') ?></span></div>
+              <div class="sale-circle is-top-right"><span><?= __('Sale!', 'mycatalog') ?></span></div>
               <?php endif; ?>
             </div>
           </div>
