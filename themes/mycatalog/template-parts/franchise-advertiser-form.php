@@ -5,7 +5,7 @@
     <input class="franchise-form__field mb-22" type="text" name="position" placeholder="<?= __('Your position in the company', 'mycatalog') ?>">
 
     <div class="franchise-form__textarea mb-22">
-      <textarea class="franchise-form__field" name="message" max-length="600" placeholder="Your message"></textarea>
+      <textarea class="franchise-form__field" name="message" max-length="600" placeholder="<?= __('Your message', 'mycatalog') ?>"></textarea>
     </div>
 
     <!-- FRANCHISE FORM FILE -->
@@ -22,7 +22,7 @@
       </label>
     </div>
 
-    <input class="click-animation" type="submit" value="send">
+    <input class="click-animation" type="submit" value="<?= __('send', 'mycatalog') ?>">
   </div>
 
   <div class="franchise-form__column">
@@ -31,5 +31,5 @@
     <input type="hidden" name="action" value="send_contact_form">
   </div>
 
-  <input class="click-animation" type="submit" value="send">
+  <input class="click-animation" type="submit" value="<?= __('send', 'mycatalog') ?>">
 </form>
