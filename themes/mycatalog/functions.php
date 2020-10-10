@@ -263,7 +263,10 @@ function ajax_get_products () {
   }
 
   wp_reset_postdata();
-  echo json_encode(['status' => 'success', 'body' => $html]);
+  echo json_encode([
+    'status' => 'success',
+    'body' => $html
+  ]);
   wp_die();
 }
 

@@ -11,6 +11,7 @@
   const products_body = document.querySelector('.products__grid');
 
   trigger.addEventListener('click', search);
+  search_category.addEventListener('change', search );
   search_box.addEventListener('keypress', (e) => {
     if ( e.key === 'Enter' ) {
       search();

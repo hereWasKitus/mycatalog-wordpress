@@ -8,6 +8,7 @@
   function customSelect(el) {
     const root = el;
     const wrapper = document.createElement('div');
+    const native_event = new Event('change', { bubbles: true });
 
     function toggleList () {
       wrapper.classList.toggle('is-active');
@@ -52,6 +53,8 @@
       wrapper.querySelector('.custom-select-selected').textContent = wrapper.querySelectorAll('.custom-select-list__item')[index].textContent;
       wrapper.querySelector('.is-active').classList.remove('is-active');
       wrapper.querySelectorAll('.custom-select-list li')[index].classList.add('is-active');
+
+      root.dispatchEvent(native_event);
     }
 
     render();
