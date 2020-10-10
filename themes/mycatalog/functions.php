@@ -168,7 +168,8 @@ function mycatalog_scripts() {
   wp_enqueue_script( 'mycatalog-index-js', get_template_directory_uri() . '/src/js/index.js', array(), false, true );
   wp_localize_script( 'mycatalog-index-js', 'wp_data', [
     'ajax_url' => admin_url('admin-ajax.php'),
-    'is_rtl' => is_rtl()
+    'is_rtl' => is_rtl(),
+    'lang' => ICL_LANGUAGE_CODE
   ] );
 
 }
@@ -226,7 +227,7 @@ function ajax_get_products () {
 
   $args = [
     'post_type' => 'product',
-    'order' => 'ASC',
+    'order' => 'DESC',
     'orderby' => 'date',
     's' => $query,
     'product_cat' => $category
@@ -259,6 +260,9 @@ function ajax_get_products () {
 
       $html .= '</div>';
       $html .= '<a class="c-product-item__link" href="' . get_the_permalink() . '"></a>';
+      if ( $is_sale ) {
+        $html .= '<div class="sale-circle is-top-right"><span>' .  __('Sale!', 'mycatalog') . '</span></div>';
+      }
     $html .= '</div>';
   }
 
