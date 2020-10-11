@@ -299,9 +299,7 @@ function get_search_hints () {
 
   while ( $products -> have_posts() ) {
     $products -> the_post();
-    $product = wc_get_product( get_the_ID() );
-
-    $html .= "<li>" . $product -> get_name() . "</li>";
+    $html .= "<li>" . get_the_title() . "</li>";
   }
   wp_reset_postdata();
 
