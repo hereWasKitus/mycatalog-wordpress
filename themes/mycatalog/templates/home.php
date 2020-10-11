@@ -62,10 +62,18 @@ get_template_part('template-parts/page-header');
     <!-- PRODUCTS -->
     <div class="products">
       <!-- PRODUCTS SEARCH -->
-      <div class="products__search">
-        <div class="products__search__input">
+      <div class="products-search">
+        <div class="products-search__input loading-animation">
           <input type="text" name="product-query" placeholder="<?= __('Search...', 'mycatalog') ?>">
-          <img class="products__search-trigger click-animation" src="<?= get_template_directory_uri() . '/assets/images/search.svg' ?>">
+          <img class="products-search__trigger click-animation" src="<?= get_template_directory_uri() . '/assets/images/search.svg' ?>">
+          <ul class="products-search__list">
+            <li>Juice 1</li>
+            <li>Juice 2</li>
+            <li>Juice 1</li>
+            <li>Juice 2</li>
+            <li>Juice 1</li>
+            <li>Juice 2</li>
+          </ul>
         </div>
         <select name="products-category" class="products__search__category custom-select">
           <option value=""><?= __('Choose category', 'mycatalog') ?></option>

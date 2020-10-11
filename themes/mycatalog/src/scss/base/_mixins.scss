@@ -59,7 +59,7 @@
   }
 }
 
-@mixin scrollbar ($color) {
+@mixin scrollbar ($color, $border-radius: 0) {
   &::-webkit-scrollbar {
     width: 7px;
     height: 7px;
@@ -73,6 +73,7 @@
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: $color;
+    border-radius: $border-radius;
   }
 
   /* Handle on hover */

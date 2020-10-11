@@ -242,12 +242,11 @@ function ajax_get_products () {
   while ( $products_loop -> have_posts() ) {
     $products_loop -> the_post();
     $product = wc_get_product( get_the_ID() );
-    $image = get_the_post_thumbnail_url();
     $currency = get_woocommerce_currency_symbol();
     $is_sale = $product -> get_sale_price() != '';
 
     $html .= '<div class="c-product-item fade-in">';
-      $html .= '<img class="c-product-item__image" src="' . $image . '">';
+      $html .= '<img class="c-product-item__image" src="' . get_the_post_thumbnail_url() . '">';
       $html .= '<div class="c-product-item__footer">';
         $html .= '<div class="c-product-item__category">' . $product -> get_categories() . '</div>';
         $html .= '<h3 class="c-product-item__name">' . $product -> get_name() . '</h3>';
@@ -269,6 +268,44 @@ function ajax_get_products () {
   wp_reset_postdata();
   echo json_encode([
     'status' => 'success',
+    'body' => $html
+  ]);
+  wp_die();
+}
+
+/**
+ * Ajax get search hints
+ */
+add_action( 'wp_ajax_get_search_hints', 'get_search_hints' );
+add_action( 'wp_ajax_nopriv_get_search_hints', 'get_search_hints' );
+function get_search_hints () {
+  $html = '';
+  $args = [
+    'post_type' => 'product',
+    'order' => 'DESC',
+    'orderby' => 'date',
+    's' => $_POST['query'],
+    'product_cat' => $_POST['category']
+  ];
+
+  $products = new WP_Query($args);
+
+  if ( !$products -> have_posts() ) {
+    echo json_encode([
+    'body' => "<li class='is-disabled'>" . __('No such products', 'mycatalog') . "</li>"
+    ]);
+    wp_die();
+  }
+
+  while ( $products -> have_posts() ) {
+    $products -> the_post();
+    $product = wc_get_product( get_the_ID() );
+
+    $html .= "<li>" . $product -> get_name() . "</li>";
+  }
+  wp_reset_postdata();
+
+  echo json_encode([
     'body' => $html
   ]);
   wp_die();

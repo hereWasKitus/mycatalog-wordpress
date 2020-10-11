@@ -154,3 +154,35 @@ main {
     }
   }
 }
+
+.loading-animation {
+  $width: 150px;
+
+  &.is-loading {
+    &::before {
+      display: block;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: $width;
+    background: linear-gradient(to right, transparent 0%, #ffffff 50%, transparent 100%);
+    animation: load .7s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+
+  @keyframes load {
+    from {
+      left: -#{$width};
+    }
+    to   {
+      left: 100%;
+    }
+  }
+}
