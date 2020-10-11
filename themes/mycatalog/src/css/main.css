@@ -1495,12 +1495,15 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 38px; }
+    .products-search .animation-container {
+      overflow-x: hidden;
+      position: relative; }
     .products-search__input {
       width: 100%;
       position: relative;
       z-index: 3; }
       .products-search__input input {
-        width: inherit;
+        width: 100%;
         padding: 15px 20px;
         background-color: #efefef;
         border-radius: 8px !important;

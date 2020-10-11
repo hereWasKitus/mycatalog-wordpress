@@ -243,14 +243,18 @@
     align-items: center;
     margin-bottom: 38px;
 
+    .animation-container {
+      overflow-x: hidden;
+      position: relative;
+    }
+
     &__input {
       width: 100%;
       position: relative;
       z-index: 3;
-      // overflow-x: hidden;
 
       input {
-        width: inherit;
+        width: 100%;
         padding: 15px 20px;
         background-color: #efefef;
         border-radius: 8px !important;
