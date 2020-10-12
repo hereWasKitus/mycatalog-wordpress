@@ -130,6 +130,14 @@ main {
   }
 }
 
+[dir="rtl"] .back-button {
+  img {
+    margin-right: 0;
+    margin-left: 10px;
+    transform: rotate(180deg);
+  }
+}
+
 .woocommerce-info,
 .woocommerce-message {
   border-top-color: $violet-main;
