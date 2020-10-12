@@ -2161,6 +2161,10 @@ main {
   [dir="rtl"] .p-checkout .woocommerce-checkout table.shop_table td:nth-child(2n) {
     text-align: left; } }
 
+@media screen and (max-width: 420px) {
+  [dir="rtl"] .p-checkout .woocommerce-form-coupon-toggle .woocommerce-info img {
+    transform: unset; } }
+
 .p-cart {
   padding: 74px 117px 70px 120px; }
   .p-cart__title {

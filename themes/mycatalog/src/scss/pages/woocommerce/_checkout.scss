@@ -464,4 +464,14 @@
       }
     }
   }
+
+  @media screen and (max-width: 420px) {
+    .woocommerce-form-coupon-toggle {
+      .woocommerce-info {
+        img {
+          transform: unset;
+        }
+      }
+    }
+  }
 }
