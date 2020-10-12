@@ -2239,7 +2239,7 @@ main {
       .p-cart .woocommerce-cart-form .shop_table .coupon button[disabled] {
         background-color: #B7A7E4; }
     .p-cart .woocommerce-cart-form .shop_table .actions {
-      padding-right: 30px; }
+      padding-right: 63px; }
       .p-cart .woocommerce-cart-form .shop_table .actions .button[name="update_cart"] {
         display: block;
         padding: 0 15px;
@@ -2257,6 +2257,9 @@ main {
           background-color: #B7A7E4; }
         .p-cart .woocommerce-cart-form .shop_table .actions .button[name="update_cart"][disabled] {
           color: #000000; }
+      @media screen and (max-width: 992px) {
+        .p-cart .woocommerce-cart-form .shop_table .actions {
+          padding-right: 12px; } }
   .p-cart .cart_totals {
     font-size: 18px; }
     .p-cart .cart_totals__heading {
@@ -2476,9 +2479,15 @@ main {
   margin-right: 0 !important;
   margin-left: 25px !important; }
 
-[dir="rtl"] .p-cart .woocommerce-cart-form .shop_table .actions .button[name="update_cart"] {
-  margin-left: unset;
-  margin-right: auto; }
+[dir="rtl"] .p-cart .woocommerce-cart-form .shop_table .actions {
+  padding-right: 12px;
+  padding-left: 63px; }
+  [dir="rtl"] .p-cart .woocommerce-cart-form .shop_table .actions .button[name="update_cart"] {
+    margin-left: unset;
+    margin-right: auto; }
+  @media screen and (max-width: 992px) {
+    [dir="rtl"] .p-cart .woocommerce-cart-form .shop_table .actions {
+      padding-left: 12px; } }
 
 .single-product main {
   margin-bottom: 120px; }

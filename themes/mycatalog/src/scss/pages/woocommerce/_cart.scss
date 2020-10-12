@@ -69,7 +69,7 @@
     }
 
     .actions {
-      padding-right: 30px;
+      padding-right: 63px;
 
       .button[name="update_cart"] {
         @include button-violet;
@@ -78,6 +78,10 @@
         &[disabled] {
           color: #000000;
         }
+      }
+
+      @media screen and (max-width: 992px) {
+        padding-right: 12px;
       }
     }
   }
@@ -412,9 +416,16 @@
       }
 
       .actions {
+        padding-right: 12px;
+        padding-left: 63px;
+
         .button[name="update_cart"] {
           margin-left: unset;
           margin-right: auto;
+        }
+
+        @media screen and (max-width: 992px) {
+          padding-left: 12px;
         }
       }
     }
