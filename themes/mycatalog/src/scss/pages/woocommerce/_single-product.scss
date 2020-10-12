@@ -369,3 +369,23 @@
     }
   }
 }
+
+[dir="rtl"] .p-single-product {
+  .c-product-summary {
+    .product_meta {
+      &__button:not(:last-child) {
+        margin-right: 0;
+        margin-left: 18px;
+      }
+    }
+  }
+
+  .c-product-images {
+    &__gallery {
+      img:not(:last-child) {
+        margin-right: 0;
+        margin-left: 20px;
+      }
+    }
+  }
+}

@@ -552,7 +552,6 @@
 
   search_button.addEventListener('click', search);
   search_category.addEventListener('change', search );
-
   search_box.addEventListener('keydown', (e) => {
     clearTimeout(typingTimer);
 

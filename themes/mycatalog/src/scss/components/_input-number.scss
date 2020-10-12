@@ -34,3 +34,12 @@
     cursor: pointer;
   }
 }
+
+[dir="rtl"] .custom-number {
+  & > div {
+   &:not(:last-child) {
+      border-right: 0;
+      border-left: 1px solid #EBEBEB;
+    }
+  }
+}

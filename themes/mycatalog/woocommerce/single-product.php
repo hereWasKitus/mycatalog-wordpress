@@ -55,7 +55,7 @@ get_template_part('template-parts/page-header'); ?>
 							<input class="brief-popup__input-text" type="text" name="markets">
 						</div>
 						<div class="brief-popup__control">
-							<p class="brief-popup__control__title"><?= __("The channels your're going to use for distribution:") ?></p>
+							<p class="brief-popup__control__title"><?= __("The channels you're going to use for distribution:") ?></p>
 							<div>
 								<input type="checkbox" name="channels[]" value="Social media">
 								<span><?= __('Social media', 'mycatalog') ?></span>

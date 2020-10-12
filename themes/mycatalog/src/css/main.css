@@ -1322,6 +1322,10 @@ main {
   .custom-number__action {
     cursor: pointer; }
 
+[dir="rtl"] .custom-number > div:not(:last-child) {
+  border-right: 0;
+  border-left: 1px solid #EBEBEB; }
+
 .custom-checkbox {
   position: relative;
   display: inline-block;
@@ -2653,6 +2657,14 @@ main {
       font-size: 11px;
       top: -5px;
       right: -7px; } }
+
+[dir="rtl"] .p-single-product .c-product-summary .product_meta__button:not(:last-child) {
+  margin-right: 0;
+  margin-left: 18px; }
+
+[dir="rtl"] .p-single-product .c-product-images__gallery img:not(:last-child) {
+  margin-right: 0;
+  margin-left: 20px; }
 
 .privacy-policy .floating-content {
   padding: 50px; }
