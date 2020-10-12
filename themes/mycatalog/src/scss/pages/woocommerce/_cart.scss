@@ -393,7 +393,7 @@
       .woocommerce-shipping-calculator {
         .select2 {
           &-selection__rendered {
-            text-align-last: left;
+            text-align: left;
           }
         }
 
@@ -433,6 +433,21 @@
         @media screen and (max-width: 992px) {
           padding-left: 12px;
         }
+      }
+    }
+  }
+
+  .cart_totals {
+    .woocommerce-shipping-calculator {
+      .select2-selection__arrow {
+        b {
+          margin-left: unset;
+          margin-right: -16px;
+        }
+      }
+
+      .select2-selection__rendered {
+        text-align: right;
       }
     }
   }

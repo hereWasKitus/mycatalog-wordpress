@@ -2472,7 +2472,7 @@ main {
         max-width: unset;
         line-height: 40px; }
       .p-cart .cart_totals .woocommerce-shipping-calculator .select2-selection__rendered {
-        text-align-last: left; }
+        text-align: left; }
       .p-cart .cart_totals .woocommerce-shipping-calculator .input-text {
         font-size: 14px;
         font-weight: 300; }
@@ -2493,6 +2493,13 @@ main {
   @media screen and (max-width: 992px) {
     [dir="rtl"] .p-cart .woocommerce-cart-form .shop_table .actions {
       padding-left: 12px; } }
+
+[dir="rtl"] .p-cart .cart_totals .woocommerce-shipping-calculator .select2-selection__arrow b {
+  margin-left: unset;
+  margin-right: -16px; }
+
+[dir="rtl"] .p-cart .cart_totals .woocommerce-shipping-calculator .select2-selection__rendered {
+  text-align: right; }
 
 .single-product main {
   margin-bottom: 120px; }
