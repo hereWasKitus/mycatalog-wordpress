@@ -1311,9 +1311,6 @@ main {
     .brief-popup__header__title {
       font-size: 14px; } }
 
-.custom-number-container input {
-  display: none; }
-
 .custom-number {
   width: fit-content;
   line-height: 35px;
@@ -1324,19 +1321,25 @@ main {
   .custom-number > div {
     width: 35px;
     transition: all .3s ease; }
-    .custom-number > div:not(:last-child) {
-      border-right: 1px solid #EBEBEB; }
     .custom-number > div:hover {
       background-color: #7A65B4;
       color: #ffffff; }
   .custom-number__value {
-    font-size: 12px; }
+    width: 35px;
+    line-height: 1;
+    padding: 12px 13px 10px;
+    border-width: 0 1px !important;
+    border-style: none solid !important;
+    border-color: #ebebeb !important;
+    font-size: 12px;
+    text-align: center;
+    color: #7A65B4 !important;
+    -moz-appearance: textfield; }
+    .custom-number__value::-webkit-outer-spin-button, .custom-number__value::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
   .custom-number__action {
     cursor: pointer; }
-
-[dir="rtl"] .custom-number > div:not(:last-child) {
-  border-right: 0;
-  border-left: 1px solid #EBEBEB; }
 
 .custom-checkbox {
   position: relative;

@@ -14,8 +14,7 @@
 
   CustomNumber.prototype = {
     render() {
-      this.custom_root = document.createElement('div');
-      this.custom_root.classList.add('custom-number-container');
+      this.root.classList.add('custom-number__value');
 
       var custom_el = document.createElement('div');
       custom_el.classList.add('custom-number');
@@ -30,13 +29,8 @@
       plus_el.textContent = '+';
       plus_el.addEventListener( 'click', this.updateValue.bind(this, 1) );
 
-      var value_el = document.createElement('div');
-      value_el.classList.add('custom-number__value');
-      value_el.textContent = this.root.value;
-
-      custom_el.append(minus_el, value_el, plus_el);
-      this.root.after(this.custom_root);
-      this.custom_root.append(this.root, custom_el);
+      this.root.after(custom_el);
+      custom_el.append(minus_el, this.root, plus_el);
     },
 
     updateValue ( num ) {
@@ -45,7 +39,6 @@
       // fire native event to fix woocommerce update cart button behavior
       this.root.dispatchEvent( this.native_event );
       this.root.value = parseInt(this.root.value) + num;
-      this.custom_root.querySelector('.custom-number__value').textContent = this.root.value;
     }
   };
 
