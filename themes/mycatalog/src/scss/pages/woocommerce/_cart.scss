@@ -87,6 +87,7 @@
   }
 
   .cart_totals {
+    min-width: 462px;
     font-size: 18px;
 
     &__heading {
@@ -110,6 +111,7 @@
       margin: 0 !important;
       border-radius: 0;
       color: #000000;
+      overflow-wrap: anywhere;
 
       .cart-subtotal,
       .order-total {
@@ -235,9 +237,11 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     padding: 35px 30px 98px;
+  }
 
+  @media screen and (max-width: 768px) {
     &__title {
       margin: 0 0 11px;
     }
@@ -343,6 +347,8 @@
     }
 
     .cart_totals {
+      min-width: unset;
+
       &__heading {
         line-height: 38px;
         font-size: 14px;
