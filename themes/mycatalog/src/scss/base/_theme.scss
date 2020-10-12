@@ -136,6 +136,18 @@ main {
     margin-left: 10px;
     transform: rotate(180deg);
   }
+
+  &:hover {
+    img {
+      animation: back-arrow-animation-rtl .2s alternate 2 ease;
+    }
+  }
+
+  @keyframes back-arrow-animation-rtl {
+    to {
+      transform: rotate(180deg) translateX(-5px);
+    }
+  }
 }
 
 .woocommerce-info,

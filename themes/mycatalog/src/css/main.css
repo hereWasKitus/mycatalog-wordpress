@@ -296,6 +296,13 @@ main {
   margin-left: 10px;
   transform: rotate(180deg); }
 
+[dir="rtl"] .back-button:hover img {
+  animation: back-arrow-animation-rtl .2s alternate 2 ease; }
+
+@keyframes back-arrow-animation-rtl {
+  to {
+    transform: rotate(180deg) translateX(-5px); } }
+
 .woocommerce-info,
 .woocommerce-message {
   border-top-color: #7A65B4;
@@ -2122,6 +2129,34 @@ main {
         width: inherit; } }
   .p-checkout .woocommerce-order-details {
     font-family: Roboto; }
+
+[dir="rtl"] .p-checkout .woocommerce-checkout .select2-selection__arrow b {
+  margin-left: unset;
+  margin-right: -16px; }
+
+[dir="rtl"] .p-checkout .woocommerce-checkout__details {
+  padding-right: unset;
+  padding-left: 69px; }
+
+[dir="rtl"] .p-checkout .woocommerce-form-coupon-toggle .woocommerce-info img {
+  margin-right: unset;
+  margin-left: 15px; }
+
+[dir="rtl"] .p-checkout .woocommerce-form-coupon-toggle .woocommerce-info .showcoupon {
+  margin-left: unset;
+  margin-right: 5px; }
+
+[dir="rtl"] .p-checkout .woocommerce-form-coupon .form-row-first {
+  margin-right: unset;
+  margin-left: 25px; }
+
+@media screen and (max-width: 1115px) {
+  [dir="rtl"] .p-checkout .woocommerce-checkout__details {
+    padding-left: unset; }
+  [dir="rtl"] .p-checkout .woocommerce-checkout table.shop_table th:nth-child(2n) {
+    text-align: left; }
+  [dir="rtl"] .p-checkout .woocommerce-checkout table.shop_table td:nth-child(2n) {
+    text-align: left; } }
 
 .p-cart {
   padding: 74px 117px 70px 120px; }

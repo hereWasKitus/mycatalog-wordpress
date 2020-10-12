@@ -408,3 +408,60 @@
     font-family: Roboto;
   }
 }
+
+[dir="rtl"] .p-checkout {
+  .woocommerce-checkout {
+    .select2-selection__arrow {
+      b {
+        margin-left: unset;
+        margin-right: -16px;
+      }
+    }
+
+    &__details {
+      padding-right: unset;
+      padding-left: 69px;
+    }
+  }
+
+  .woocommerce-form-coupon-toggle {
+    .woocommerce-info {
+      img {
+        margin-right: unset;
+        margin-left: 15px;
+      }
+
+      .showcoupon {
+        margin-left: unset;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .woocommerce-form-coupon {
+    .form-row {
+      &-first {
+        margin-right: unset;
+        margin-left: 25px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1115px) {
+    .woocommerce-checkout {
+      &__details {
+        padding-left: unset;
+      }
+
+      table.shop_table {
+        th:nth-child(2n) {
+          text-align: left;
+        }
+
+        td:nth-child(2n) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
