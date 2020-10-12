@@ -1816,6 +1816,8 @@ main {
       height: auto; } }
 
 @media screen and (max-width: 630px) {
+  .template-franchise.franchise-private-label .franchise-section:first-child {
+    padding-bottom: 20px; }
   .template-franchise .franchise-title img {
     width: 30px; }
   .template-franchise .franchise-title h1 {

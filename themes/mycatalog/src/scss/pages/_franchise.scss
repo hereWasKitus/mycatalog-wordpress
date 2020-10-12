@@ -245,6 +245,14 @@
   }
 
   @media screen and (max-width: 630px) {
+    &.franchise-private-label {
+      .franchise-section {
+        &:first-child {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
     .franchise {
 
       &-title {
