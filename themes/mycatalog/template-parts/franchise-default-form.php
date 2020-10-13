@@ -10,7 +10,7 @@
     <input class="franchise-form__field mb-22" type="email" name="email" placeholder="<?= __('Email', 'mycatalog') ?>">
     <input class="franchise-form__field mb-22" type="tel" name="phone" placeholder="<?= __('Phone number', 'mycatalog') ?>">
     <div class="franchise-form__textarea">
-      <textarea class="franchise-form__field" name="message" max-length="600" placeholder="<?= __('Your message', 'mycatalog') ?>"></textarea>
+      <textarea class="js-custom-textarea" name="message" max-length="600" placeholder="<?= __('Your message', 'mycatalog') ?>"></textarea>
     </div>
   </div>
   <input class="click-animation" type="submit" value="<?= __('send', 'mycatalog') ?>">

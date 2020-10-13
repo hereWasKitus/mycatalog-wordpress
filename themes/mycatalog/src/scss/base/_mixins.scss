@@ -59,7 +59,7 @@
   }
 }
 
-@mixin scrollbar ($color, $border-radius: 0) {
+@mixin scrollbar ($color: $violet-main, $border-radius: 0) {
   &::-webkit-scrollbar {
     width: 7px;
     height: 7px;
@@ -68,6 +68,7 @@
   /* Track */
   &::-webkit-scrollbar-track {
     background: #f1f1f1;
+    border-radius: $border-radius;
   }
 
   /* Handle */

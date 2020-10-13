@@ -1099,7 +1099,8 @@ main {
       width: 7px;
       height: 7px; }
     .gallery-popup__images-list::-webkit-scrollbar-track {
-      background: #f1f1f1; }
+      background: #f1f1f1;
+      border-radius: 0; }
     .gallery-popup__images-list::-webkit-scrollbar-thumb {
       background: rgba(15, 15, 15, 0.51);
       border-radius: 0; }
@@ -1390,6 +1391,46 @@ main {
   .custom-checkbox.is-checked::before {
     opacity: 1; }
 
+.custom-textarea {
+  position: relative;
+  padding: 12px 4px 38px 18px; }
+  .custom-textarea:focus {
+    background-color: red; }
+  .custom-textarea textarea {
+    height: 100%;
+    width: 100%;
+    padding: 0 5px 0 0;
+    bottom: 0;
+    border: 0;
+    resize: none;
+    background: transparent;
+    /* Track */
+    /* Handle */
+    /* Handle on hover */ }
+    .custom-textarea textarea::-webkit-scrollbar {
+      width: 7px;
+      height: 7px; }
+    .custom-textarea textarea::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 3px; }
+    .custom-textarea textarea::-webkit-scrollbar-thumb {
+      background: #7A65B4;
+      border-radius: 3px; }
+    .custom-textarea textarea::-webkit-scrollbar-thumb:hover {
+      background: #555; }
+  .custom-textarea__counter {
+    position: absolute;
+    bottom: 13px;
+    right: 17px;
+    font-size: 11px;
+    line-height: 1;
+    color: #bababa; }
+  [dir="rtl"] .custom-textarea {
+    padding: 12px 18px 38px 4px; }
+    [dir="rtl"] .custom-textarea__counter {
+      right: unset;
+      left: 17px; }
+
 .home main {
   margin-bottom: 231px; }
   @media screen and (max-width: 768px) {
@@ -1588,7 +1629,8 @@ main {
         width: 7px;
         height: 7px; }
       .products-search__list::-webkit-scrollbar-track {
-        background: #f1f1f1; }
+        background: #f1f1f1;
+        border-radius: 3px; }
       .products-search__list::-webkit-scrollbar-thumb {
         background: #7A65B4;
         border-radius: 3px; }
@@ -1755,8 +1797,6 @@ main {
     .template-franchise .franchise-form__field::placeholder {
       font-size: 18px;
       color: #cecbcb; }
-    .template-franchise .franchise-form__field:focus {
-      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25); }
   .template-franchise .franchise-form input[type='text'], .template-franchise .franchise-form input[type='tel'], .template-franchise .franchise-form input[type='email'] {
     line-height: 44px;
     padding: 0 18px; }
@@ -1771,9 +1811,13 @@ main {
   .template-franchise .franchise-form__textarea {
     height: 100%;
     min-height: 136px; }
-    .template-franchise .franchise-form__textarea textarea {
+    .template-franchise .franchise-form__textarea .custom-textarea {
       height: inherit;
-      padding: 12px 18px; }
+      background: #eeeeee;
+      font-size: 18px; }
+      .template-franchise .franchise-form__textarea .custom-textarea textarea::placeholder {
+        font-size: 18px;
+        color: #cecbcb; }
   .template-franchise .franchise-form-file-container {
     display: flex;
     flex-basis: 100%; }
@@ -1869,8 +1913,9 @@ main {
     .template-franchise .franchise-form__textarea {
       height: fit-content;
       min-height: unset;
-      margin-bottom: 0; }
-      .template-franchise .franchise-form__textarea textarea {
+      margin-bottom: 0;
+      margin-bottom: 22px; }
+      .template-franchise .franchise-form__textarea .custom-textarea {
         height: 164px; }
   .template-franchise .franchise-content {
     font-size: 16px; } }

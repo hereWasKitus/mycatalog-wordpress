@@ -1,0 +1,38 @@
+.custom-textarea {
+  position: relative;
+  padding: 12px 4px 38px 18px;
+  $indent: 17px;
+
+  &:focus {
+    background-color: red;
+  }
+
+  textarea {
+    height: 100%;
+    width: 100%;
+    padding: 0 5px 0 0;
+    bottom: 0;
+    border: 0;
+    resize: none;
+    background: transparent;
+    @include scrollbar( $violet-main, 3px );
+  }
+
+  &__counter {
+    position: absolute;
+    bottom: 13px;
+    right: $indent;
+    font-size: 11px;
+    line-height: 1;
+    color: #bababa;
+  }
+
+  [dir="rtl"] & {
+    padding: 12px 18px 38px 4px;
+
+    &__counter {
+      right: unset;
+      left: $indent;
+    }
+  }
+}
