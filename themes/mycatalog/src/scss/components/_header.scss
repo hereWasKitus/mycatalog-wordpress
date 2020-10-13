@@ -19,7 +19,7 @@
 
   &__logo {
     margin: 0 auto;
-    transform: translateX(50px);
+    transform: translate(50px, 5px);
 
     a {
       display: block;
@@ -183,7 +183,7 @@
 [dir="rtl"] {
   .header {
     &__logo {
-      transform: translateX(-50px);
+      transform: translate(-50px,5px);
     }
 
     .wrapper {

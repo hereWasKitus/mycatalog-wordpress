@@ -374,7 +374,7 @@ main {
     height: inherit; }
   .header__logo {
     margin: 0 auto;
-    transform: translateX(50px); }
+    transform: translate(50px, 5px); }
     .header__logo a {
       display: block; }
   .header__user {
@@ -474,7 +474,7 @@ main {
             height: 26px; } }
 
 [dir="rtl"] .header__logo {
-  transform: translateX(-50px); }
+  transform: translate(-50px, 5px); }
 
 [dir="rtl"] .header .wrapper {
   padding: 0 22px 0 31px; }
