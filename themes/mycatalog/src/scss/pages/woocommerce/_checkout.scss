@@ -272,6 +272,7 @@
     }
   }
 
+
   @media screen and (max-width: 1115px) {
     padding: 23px 21px 42px;
 
@@ -366,6 +367,26 @@
         font-size: 13px;
       }
     }
+
+
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .woocommerce-thankyou-order-details,
+    .wc-bacs-bank-details{
+      display: flex;
+      flex-wrap: wrap;
+      & > li {
+        flex-basis: 40%;
+        padding-top: 10px;
+      }
+
+      & > li:last-child{
+        border-right: 1px dashed #d3ced2 !important;
+      }
+    }   
+    
   }
 
   @media screen and (max-width: 420px) {
@@ -402,6 +423,18 @@
         }
       }
     }
+
+    .woocommerce-thankyou-order-details,
+    .wc-bacs-bank-details{
+      & > li {
+        flex-basis: 100%;
+        border-right: none !important;
+      }
+
+      & > li:last-child{
+        border-right: none !important;
+      }
+    } 
   }
 
   .woocommerce-order-details {
@@ -465,6 +498,18 @@
     }
   }
 
+  @media screen and (max-width: 768px) {
+    .woocommerce-thankyou-order-details,
+    .wc-bacs-bank-details{
+      & > li:last-child{
+        border-right: none !important;
+        border-left: 1px dashed #d3ced2;
+      }
+    }   
+    
+  }
+
+
   @media screen and (max-width: 420px) {
     .woocommerce-form-coupon-toggle {
       .woocommerce-info {
@@ -473,5 +518,17 @@
         }
       }
     }
+
+    .woocommerce-thankyou-order-details,
+    .wc-bacs-bank-details{
+      & > li {
+        border: none !important;
+      }
+
+      & > li:last-child{
+        border: none !important;
+      }
+    }
+
   }
 }

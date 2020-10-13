@@ -2117,6 +2117,18 @@ main {
           font-size: 13px; }
         .p-checkout .woocommerce-checkout .select2 {
           font-size: 13px; } }
+  @media screen and (max-width: 768px) {
+    .p-checkout .woocommerce-thankyou-order-details,
+    .p-checkout .wc-bacs-bank-details {
+      display: flex;
+      flex-wrap: wrap; }
+      .p-checkout .woocommerce-thankyou-order-details > li,
+      .p-checkout .wc-bacs-bank-details > li {
+        flex-basis: 40%;
+        padding-top: 10px; }
+      .p-checkout .woocommerce-thankyou-order-details > li:last-child,
+      .p-checkout .wc-bacs-bank-details > li:last-child {
+        border-right: 1px dashed #d3ced2 !important; } }
   @media screen and (max-width: 420px) {
     .p-checkout .woocommerce-form-coupon-toggle .woocommerce-info img {
       transform: translateY(10px); }
@@ -2131,7 +2143,14 @@ main {
     .p-checkout .woocommerce-form-coupon .form-row-last {
       width: 100%; }
       .p-checkout .woocommerce-form-coupon .form-row-last button {
-        width: inherit; } }
+        width: inherit; }
+    .p-checkout .woocommerce-thankyou-order-details > li,
+    .p-checkout .wc-bacs-bank-details > li {
+      flex-basis: 100%;
+      border-right: none !important; }
+    .p-checkout .woocommerce-thankyou-order-details > li:last-child,
+    .p-checkout .wc-bacs-bank-details > li:last-child {
+      border-right: none !important; } }
   .p-checkout .woocommerce-order-details {
     font-family: Roboto; }
 
@@ -2163,9 +2182,21 @@ main {
   [dir="rtl"] .p-checkout .woocommerce-checkout table.shop_table td:nth-child(2n) {
     text-align: left; } }
 
+@media screen and (max-width: 768px) {
+  [dir="rtl"] .p-checkout .woocommerce-thankyou-order-details > li:last-child,
+  [dir="rtl"] .p-checkout .wc-bacs-bank-details > li:last-child {
+    border-right: none !important;
+    border-left: 1px dashed #d3ced2; } }
+
 @media screen and (max-width: 420px) {
   [dir="rtl"] .p-checkout .woocommerce-form-coupon-toggle .woocommerce-info img {
-    transform: unset; } }
+    transform: unset; }
+  [dir="rtl"] .p-checkout .woocommerce-thankyou-order-details > li,
+  [dir="rtl"] .p-checkout .wc-bacs-bank-details > li {
+    border: none !important; }
+  [dir="rtl"] .p-checkout .woocommerce-thankyou-order-details > li:last-child,
+  [dir="rtl"] .p-checkout .wc-bacs-bank-details > li:last-child {
+    border: none !important; } }
 
 .p-cart {
   padding: 74px 117px 70px 120px; }
