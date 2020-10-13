@@ -338,6 +338,10 @@
         this.close();
       });
 
+      this.popup.querySelector(".gallery-popup__button-close").addEventListener('click', (e) =>{
+        this.close();
+      });
+
       this.popup.querySelectorAll('.gallery-popup__small-image').forEach(img => img.addEventListener('click', e => {
         let index = parseInt(e.currentTarget.dataset.index);
         this.activate(index);

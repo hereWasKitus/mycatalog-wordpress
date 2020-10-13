@@ -24,6 +24,26 @@
   width: 100%;
   max-width: 989px;
 
+  &__button-close-wrapper{
+    position: relative;
+  }
+
+  &__button-close{
+    position: absolute;
+    top: 10px;
+    right: calc(118px + 5px);  
+    width: 40px;
+    height: 40px;
+    background: #000000;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      width: 13.5px;
+      height: 2.2px;
+    }
+  }
+
   &__display-image {
     position: relative;
     background-color: rgba(15, 15, 15, 0.51);
@@ -107,6 +127,11 @@
   }
 
   @media screen and (max-width: 768px) {
+
+    &__button-close{
+      right: calc(50px + 5.5%);
+    }
+
     &__images-list {
       max-width: unset;
     }
@@ -126,6 +151,21 @@
   }
 
   @media screen and (max-width: 530px) {
+    
+
+    &__button-close{
+      width: 18px;
+      height: 18px;
+      top: 5px;
+      right: 5px;
+  
+      &::before,
+      &::after {
+        width: 9.5px;
+        height: 1.2px;
+      }
+    }
+
     &__display-image {
       & >img {
         width: 100%;
