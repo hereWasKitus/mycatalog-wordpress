@@ -1495,6 +1495,10 @@ main {
     top: -13px !important;
     right: -21px; } }
 
+@media screen and (max-width: 425px) {
+  .last-products__item__status {
+    padding: 4px 9px; } }
+
 [dir="rtl"] .last-products__item__image {
   padding-left: 0;
   padding-right: 15px; }
