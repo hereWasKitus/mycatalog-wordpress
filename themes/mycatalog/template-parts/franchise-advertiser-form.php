@@ -11,7 +11,7 @@
 
   <div class="franchise-form__column">
     <input class="franchise-form__field mb-22" type="text" name="company" placeholder="<?= __('Company name', 'mycatalog') ?>">
-    <input class="franchise-form__field" type="text" name="link" placeholder="<?= __('Link to your web resource', 'mycatalog') ?>">
+    <input class="franchise-form__field mb-22" type="text" name="link" placeholder="<?= __('Link to your web resource', 'mycatalog') ?>">
     <input type="hidden" name="action" value="send_contact_form">
   </div>
 

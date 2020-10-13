@@ -1540,7 +1540,7 @@ main {
   .products-search {
     display: flex;
     align-items: center;
-    margin-bottom: 38px; }
+    margin-bottom: 20px; }
     .products-search .animation-container {
       overflow-x: hidden;
       position: relative; }
