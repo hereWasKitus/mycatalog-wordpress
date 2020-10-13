@@ -1964,10 +1964,6 @@ main {
   padding-right: 0;
   padding-left: 85px; }
 
-[dir="rtl"] .template-franchise .franchise-form__column:first-child {
-  margin-right: 0;
-  margin-left: 38px; }
-
 @media screen and (max-width: 1024px) {
   [dir="rtl"] .template-franchise .franchise-section:first-child {
     padding-left: 0; } }

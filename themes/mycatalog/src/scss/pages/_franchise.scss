@@ -373,15 +373,6 @@
       }
     }
 
-    .franchise-form {
-      &__column {
-        &:first-child {
-          margin-right: 0;
-          margin-left: 38px;
-        }
-      }
-    }
-
     @media screen and (max-width: 1024px) {
      .franchise-section {
         &:first-child {
