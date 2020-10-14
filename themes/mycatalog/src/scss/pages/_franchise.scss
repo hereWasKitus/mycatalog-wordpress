@@ -359,6 +359,24 @@
 
 }
 
+.franchise-pod{
+  .franchise-image{
+    img{
+      position: absolute;
+      bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .franchise-image{
+      img{
+        position: initial;
+        bottom: 0px;
+      }
+    }
+  }
+}
+
 [dir="rtl"] {
   .template-franchise {
     .franchise-title {
