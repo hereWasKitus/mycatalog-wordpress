@@ -203,3 +203,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
+<script>
+	document.querySelector('.product-remove__thumbnail').addEventListener('click', function(evt){
+		evt.preventDefault();
+		window.location ='<?php echo esc_url( $product_permalink ) ?>';
+	});
+</script>
