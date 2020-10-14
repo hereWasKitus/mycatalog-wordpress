@@ -374,7 +374,7 @@ main {
     height: inherit; }
   .header__logo {
     margin: 0 auto;
-    transform: translate(50px, 5px); }
+    transform: translate(50px, 10px); }
     .header__logo a {
       display: block; }
   .header__user {
