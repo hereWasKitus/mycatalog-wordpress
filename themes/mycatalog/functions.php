@@ -616,3 +616,34 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 }
+
+/**
+ * Zip Code validation for checkout
+ */
+
+
+add_filter( 'woocommerce_checkout_fields', 'misha_no_email_validation' );
+ 
+function misha_no_email_validation( $fields ){
+ 
+  unset( $fields['billing']['billing_postcode']['validate']);
+  unset( $fields['billing']['billing_phone']['validate']);
+	return $fields;
+ 
+}
+
+
+add_action( 'woocommerce_after_checkout_validation', 'checkout_validate_zip_code', 10, 2);
+ 
+function checkout_validate_zip_code( $fields, $errors ){
+  if(!preg_match( '/(^\d{5}$)|(^[A-z0-9]{6}$)|(^[A-z0-9]{3}\s[A-z0-9]{3}$)|(^\d{5}-\d{4}$)|(^[A-z0-9]{3,10}$)/', $fields[ 'billing_postcode' ] )){
+    $errors->add( 'validation', '<strong>Billing Postcode / ZIP</strong> is a required field.' );
+  }
+  if(!preg_match( '/(^\+?[0-9]{10,15}$)/', $fields[ 'billing_phone' ] )){
+    $errors->add( 'validation', '<strong>Billing Phone</strong> is a required field.' );
+  }
+
+   /* if ( preg_match( '/\\d/', $fields[ 'billing_first_name' ] ) || preg_match( '/\\d/', $fields[ 'billing_last_name' ] )  ){
+        $errors->add( 'validation', 'Your first or last name contains a number. Really?' );
+    }*/
+}
