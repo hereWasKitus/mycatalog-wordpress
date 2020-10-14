@@ -24,6 +24,12 @@
     a {
       display: block;
     }
+
+    img{
+      max-width: 210px;
+      width: 100%;
+    }
+
   }
 
   &__user {
@@ -124,6 +130,7 @@
 
     @media screen and (max-width: 768px) {
       display: block;
+      
     }
   }
 
@@ -152,12 +159,21 @@
   @media screen and (max-width: 768px) {
     height: 70px;
 
+    &__logo {
+      transform: translate(50px, 15px);
+  
+      img{
+        max-width: 115px;
+      }
+  
+    }
+
     .inner {
       flex-direction: row-reverse;
     }
 
     &__logo {
-      transform: translateY(5px) translateX(-10px);
+      transform: translateY(10px) translateX(-10px);
     }
 
     &__user {
@@ -175,6 +191,13 @@
           width: 26px;
           height: 26px;
         }
+      }
+    }
+  }
+  @media screen and (max-width: 425px) {
+    &__logo {
+      img{
+        max-width: 110px;
       }
     }
   }

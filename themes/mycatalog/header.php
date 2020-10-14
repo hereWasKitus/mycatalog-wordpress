@@ -43,7 +43,7 @@
         </div>
 
         <a class="header__logo" href="<?= home_url() ?>">
-          <?php $logo_url = wp_is_mobile() ? get_template_directory_uri() . '/assets/images/logo-mobile.png' : get_template_directory_uri() . '/assets/images/logo.svg' ?>
+          <?php $logo_url = get_template_directory_uri() . '/assets/images/logo-svg.svg' ?>
           <img src="<?= $logo_url ?>">
         </a>
 

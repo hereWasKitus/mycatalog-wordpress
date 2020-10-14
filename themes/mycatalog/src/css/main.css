@@ -377,6 +377,9 @@ main {
     transform: translate(50px, 10px); }
     .header__logo a {
       display: block; }
+    .header__logo img {
+      max-width: 210px;
+      width: 100%; }
   .header__user {
     display: flex; }
     .header__user a {
@@ -458,10 +461,14 @@ main {
   @media screen and (max-width: 768px) {
     .header {
       height: 70px; }
+      .header__logo {
+        transform: translate(50px, 15px); }
+        .header__logo img {
+          max-width: 115px; }
       .header .inner {
         flex-direction: row-reverse; }
       .header__logo {
-        transform: translateY(5px) translateX(-10px); }
+        transform: translateY(10px) translateX(-10px); }
       .header__user {
         flex-direction: row-reverse;
         line-height: 1; }
@@ -472,6 +479,9 @@ main {
           .header__user-avatar img {
             width: 26px;
             height: 26px; } }
+  @media screen and (max-width: 425px) {
+    .header__logo img {
+      max-width: 110px; } }
 
 [dir="rtl"] .header__logo {
   transform: translate(-50px, 5px); }
