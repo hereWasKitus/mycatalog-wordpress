@@ -189,6 +189,12 @@
           color: #bebebe;
         }
       }
+      @media screen and (max-width: 768px) {
+        .input-text {
+          line-height: 1;
+          padding: 7.5px 11px;  
+        }
+      }
     }
 
     .wc-proceed-to-checkout {

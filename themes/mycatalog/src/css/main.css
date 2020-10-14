@@ -2477,6 +2477,10 @@ main {
       padding: 0 11px; }
       .p-cart .cart_totals .woocommerce-shipping-calculator .input-text::placeholder {
         color: #bebebe; }
+    @media screen and (max-width: 768px) {
+      .p-cart .cart_totals .woocommerce-shipping-calculator .input-text {
+        line-height: 1;
+        padding: 7.5px 11px; } }
     .p-cart .cart_totals .wc-proceed-to-checkout {
       padding: 0; }
       .p-cart .cart_totals .wc-proceed-to-checkout .checkout-button {
