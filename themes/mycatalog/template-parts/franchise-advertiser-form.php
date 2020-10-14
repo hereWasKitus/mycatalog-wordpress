@@ -27,6 +27,10 @@
       <label class="franchise-form-add-file franchise-form-square js-add-file click-animation" for="file">
         <img src="<?= get_template_directory_uri() . '/assets/images/plus.svg' ?>">
       </label>
+
+      <div class="franchise-form-file-formats">
+        <p>You can also attach a file with your presentation or offer (PDF or MP4, up to XMB)</p>
+      </div>
     </div>
 
 

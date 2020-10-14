@@ -124,6 +124,17 @@
       &-file-container {
         display: flex;
         flex-basis: 100%;
+        flex-wrap: wrap;
+
+        .franchise-form-file-formats{
+          flex-basis: 100%;
+
+          p{
+            padding-top: 14px;
+            font-size: 13px;
+            color: #C1C1C1;
+          }
+        }
       }
 
       &-square {
