@@ -1492,6 +1492,11 @@ main {
   .last-products__item__price {
     font-size: 14px;
     margin-bottom: 18px; }
+    .last-products__item__price span {
+      color: #c7c7c7;
+      text-decoration: line-through;
+      font-size: .86em;
+      margin-right: 8px; }
   .last-products__item__name {
     font-size: 23px;
     line-height: 27.5px;

@@ -79,6 +79,13 @@
     &__price {
       font-size: 14px;
       margin-bottom: 18px;
+
+      span{
+        color: #c7c7c7;
+        text-decoration: line-through;
+        font-size: .86em;
+        margin-right: 8px;
+      }
     }
 
     &__name {
