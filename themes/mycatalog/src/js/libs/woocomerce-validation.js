@@ -23,4 +23,13 @@
             wrapper.addClass('woocommerce-validated'); // success
         }
     });
+
+    /**
+     * Delete attribute title for tag input.custom-number__value
+     */
+    var isMobileVersion = document.getElementsByClassName('custom-number__value');
+    if (isMobileVersion.length > 0) {
+        document.getElementsByClassName('custom-number__value')[0].removeAttribute('title');
+    }
+	
 })();
