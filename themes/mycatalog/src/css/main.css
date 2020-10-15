@@ -2048,6 +2048,10 @@ main {
   padding-right: 0;
   padding-left: 85px; }
 
+[dir="rtl"] .template-franchise .franchise-form__column:first-child {
+  margin-left: 38px;
+  margin-right: 0; }
+
 @media screen and (max-width: 1024px) {
   [dir="rtl"] .template-franchise .franchise-section:first-child {
     padding-left: 0; } }
@@ -2062,6 +2066,10 @@ main {
   [dir="rtl"] .franchise-private-label .franchise-form__column:first-child {
     margin-right: 0px;
     margin-left: 38px; } }
+
+@media screen and (max-width: 640px) {
+  [dir="rtl"] .franchise-private-label .franchise-form__column:first-child {
+    margin: 0px; } }
 
 .p-checkout {
   padding: 74px 130px 50px 122px; }
