@@ -156,9 +156,7 @@
             &:last-child {
               margin-top: 15px;
             }
-
           }
-
         }
       }
     }
@@ -405,6 +403,18 @@
       img:not(:last-child) {
         margin-right: 0;
         margin-left: 20px;
+      }
+    }
+  }
+  
+  @media screen and(max-width: 460px){
+    .product_meta__button {
+      &:first-child {
+        margin: 0px !important;
+      }
+
+      &:last-child {
+        margin-top: 15px;
       }
     }
   }

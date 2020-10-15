@@ -2058,6 +2058,11 @@ main {
   [dir="rtl"] .template-franchise .franchise-form__column:first-child {
     margin-left: 0; } }
 
+@media screen and (max-width: 1200px) {
+  [dir="rtl"] .franchise-private-label .franchise-form__column:first-child {
+    margin-right: 0px;
+    margin-left: 38px; } }
+
 .p-checkout {
   padding: 74px 130px 50px 122px; }
   .p-checkout h2 {
@@ -2947,6 +2952,12 @@ main {
 [dir="rtl"] .p-single-product .c-product-images__gallery img:not(:last-child) {
   margin-right: 0;
   margin-left: 20px; }
+
+@media screen and (max-width: 460px) {
+  [dir="rtl"] .p-single-product .product_meta__button:first-child {
+    margin: 0px !important; }
+  [dir="rtl"] .p-single-product .product_meta__button:last-child {
+    margin-top: 15px; } }
 
 .privacy-policy .floating-content {
   padding: 50px; }

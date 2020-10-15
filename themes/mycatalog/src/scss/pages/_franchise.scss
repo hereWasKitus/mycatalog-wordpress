@@ -528,4 +528,15 @@
       }
     }
   }
+
+  .franchise-private-label{
+    @media screen and (max-width: 1200px) {
+      .franchise-form__column{
+        &:first-child{
+          margin-right: 0px;
+          margin-left: 38px;
+        }   
+      }
+    }
+  }
 }

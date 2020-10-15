@@ -38,9 +38,7 @@
       <p><?= __('You can also attach a file with your presentation or offer (PDF or MP4, up to XMB)', 'mycatalog') ?></p>
     </div>
   </div>
-
-
-    <div class="franchise-form__row">
-      <input class="click-animation" type="submit" value="<?= __('send', 'mycatalog') ?>">
-    </div>
+  <div class="franchise-form__row">
+    <input class="click-animation" type="submit" value="<?= __('send', 'mycatalog') ?>">
+  </div>
 </form>
