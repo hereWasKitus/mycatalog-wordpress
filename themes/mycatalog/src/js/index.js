@@ -726,7 +726,6 @@ if ( document.querySelector('.slick-last-products') && window.innerWidth <= 1024
 })();
 (function () {
     $('body').on('blur change', '#billing_postcode', function(){
-        console.log("Test");
         var wrapper = $(this).closest('.form-row');
 
         if(! /(^\d{5}$)|(^[A-z0-9]{6}$)|(^[A-z0-9]{3}\s[A-z0-9]{3}$)|(^\d{5}-\d{4}$)|(^[A-z0-9]{3,10}$)/.test( $(this).val() ) ) {
