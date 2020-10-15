@@ -1796,14 +1796,13 @@ main {
       content: '- '; }
 
 .template-franchise .franchise-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+  display: flex; }
   .template-franchise .franchise-form__column {
     display: flex;
     flex-direction: column;
-    flex-grow: 0;
-    flex-basis: 47%; }
+    flex-grow: 0; }
+    .template-franchise .franchise-form__column:first-child {
+      margin-right: 38px; }
   .template-franchise .franchise-form__field {
     background-color: #eeeeee;
     padding: 0 18px;
@@ -2000,6 +1999,14 @@ main {
 
 .template-franchise .form-field-invalid {
   border: 1px solid #a00; }
+
+.franchise-for-advertisers .franchise-form {
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .franchise-for-advertisers .franchise-form__column {
+    flex-basis: 47%; }
+    .franchise-for-advertisers .franchise-form__column:first-child {
+      margin-right: 0px; }
 
 .franchise-pod .franchise-image img {
   position: absolute;

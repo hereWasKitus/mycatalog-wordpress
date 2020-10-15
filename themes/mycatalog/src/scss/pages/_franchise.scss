@@ -63,15 +63,18 @@
 
     &-form {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
 
       &__column {
         display: flex;
         flex-direction: column;
         flex-grow: 0;
-        flex-basis: 47%;
+
+        &:first-child{
+          margin-right: 38px;
+        }
+  
       }
+
 
       &__field {
         background-color: #eeeeee;
@@ -103,7 +106,7 @@
             img{
               cursor: pointer;
             }
-            
+
             .blocked_button{
               display: none;
             }
@@ -403,10 +406,26 @@
       }
     }
   }
+
   .form-field-invalid{
     border: 1px solid #a00;
   }
+}
 
+
+.franchise-for-advertisers{
+  .franchise-form {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__column {
+      flex-basis: 47%;
+
+      &:first-child{
+        margin-right: 0px;
+      }
+    }
+  }
 }
 
 .franchise-pod{
