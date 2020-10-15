@@ -29,7 +29,7 @@
       </label>
 
       <div class="franchise-form-file-formats">
-        <p>You can also attach a file with your presentation or offer (PDF or MP4, up to XMB)</p>
+        <p><?= __('You can also attach a file with your presentation or offer (PDF or MP4, up to XMB)', 'mycatalog') ?></p>
       </div>
     </div>
 
