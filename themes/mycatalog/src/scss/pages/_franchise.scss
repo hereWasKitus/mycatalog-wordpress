@@ -449,15 +449,15 @@
 .franchise-private-label{
   .franchise-section{
     &:first-child{
-      width: calc(100% - 650px);
+      width: calc(100% - 750px);
     }
   }
 
   .franchise-image{
-    width: 650px;
+    width: 750px;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1200px) {
     .inner{
       flex-direction: column;
     }
@@ -471,6 +471,20 @@
       }   
     }
 
+    .franchise-content {
+      max-width: 100%;
+    }
+    
+    .franchise-form__column{
+      width: 50%;
+    }
+
+  }
+
+  @media screen and (max-width: 630px) {
+    .franchise-form__column{
+      width: auto;
+    }
   }
 } 
 

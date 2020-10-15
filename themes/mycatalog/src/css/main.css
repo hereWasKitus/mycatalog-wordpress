@@ -2018,19 +2018,27 @@ main {
     bottom: 0px; } }
 
 .franchise-private-label .franchise-section:first-child {
-  width: calc(100% - 650px); }
+  width: calc(100% - 750px); }
 
 .franchise-private-label .franchise-image {
-  width: 650px; }
+  width: 750px; }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .franchise-private-label .inner {
     flex-direction: column; }
   .franchise-private-label .franchise-section {
     width: 100%; }
     .franchise-private-label .franchise-section:first-child {
       width: 100%;
-      max-width: 100% !important; } }
+      max-width: 100% !important; }
+  .franchise-private-label .franchise-content {
+    max-width: 100%; }
+  .franchise-private-label .franchise-form__column {
+    width: 50%; } }
+
+@media screen and (max-width: 630px) {
+  .franchise-private-label .franchise-form__column {
+    width: auto; } }
 
 [dir="rtl"] .template-franchise .franchise-title {
   flex-direction: row-reverse;
