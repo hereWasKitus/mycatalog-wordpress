@@ -2017,6 +2017,21 @@ main {
     position: initial;
     bottom: 0px; } }
 
+.franchise-private-label .franchise-section:first-child {
+  width: calc(100% - 650px); }
+
+.franchise-private-label .franchise-image {
+  width: 650px; }
+
+@media screen and (max-width: 1100px) {
+  .franchise-private-label .inner {
+    flex-direction: column; }
+  .franchise-private-label .franchise-section {
+    width: 100%; }
+    .franchise-private-label .franchise-section:first-child {
+      width: 100%;
+      max-width: 100% !important; } }
+
 [dir="rtl"] .template-franchise .franchise-title {
   flex-direction: row-reverse;
   justify-content: flex-end; }

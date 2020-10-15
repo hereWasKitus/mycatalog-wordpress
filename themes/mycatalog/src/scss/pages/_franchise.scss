@@ -446,6 +446,34 @@
   }
 }
 
+.franchise-private-label{
+  .franchise-section{
+    &:first-child{
+      width: calc(100% - 650px);
+    }
+  }
+
+  .franchise-image{
+    width: 650px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .inner{
+      flex-direction: column;
+    }
+
+    .franchise-section{
+      width: 100%;
+
+      &:first-child{
+        width: 100%;
+        max-width: 100% !important;
+      }   
+    }
+
+  }
+} 
+
 [dir="rtl"] {
   .template-franchise {
     .franchise-title {
