@@ -2406,8 +2406,8 @@ main {
       width: 100% !important;
       margin-right: 25px !important;
       max-width: 169px;
-      padding: 0 6px !important;
-      line-height: 36px;
+      padding: 3.5px 6px 6.5px 6px !important;
+      line-height: 1;
       border: 1px solid #C5C5C5 !important; }
       .p-cart .woocommerce-cart-form .shop_table .coupon input[name="coupon_code"]::placeholder {
         font-size: 13px;
