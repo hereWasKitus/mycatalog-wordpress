@@ -100,25 +100,27 @@
   /**
    * Add New link field
    */
-  document.querySelector('.add_link_field').addEventListener('click', function(){
-    var element = document.querySelector('.franchise-form__field-link');
-    var clone = element.cloneNode(true);
-    var link_field_img = clone.querySelector('.link_field_img');
-    clone.querySelector('input').value = '';
-    link_field_img.classList.remove('add_link_field');
-    link_field_img.classList.add('remove_link_field');
-
-    element.querySelector('.link_field_img').classList.add('blocked_button');
-
-    document.querySelector('.franchise-form__field-link').after(clone);
-    
-    //Delete extra link field
-    document.querySelector('.remove_link_field').addEventListener('click', function(){
-        document.querySelectorAll('.franchise-form__field-link')[1].remove();
-        document.querySelector('.link_field_img').classList.remove('blocked_button');
+  if(document.querySelector('.add_link_field')){
+    document.querySelector('.add_link_field').addEventListener('click', function(){
+      var element = document.querySelector('.franchise-form__field-link');
+      var clone = element.cloneNode(true);
+      var link_field_img = clone.querySelector('.link_field_img');
+      clone.querySelector('input').value = '';
+      link_field_img.classList.remove('add_link_field');
+      link_field_img.classList.add('remove_link_field');
+  
+      element.querySelector('.link_field_img').classList.add('blocked_button');
+  
+      document.querySelector('.franchise-form__field-link').after(clone);
+      
+      //Delete extra link field
+      document.querySelector('.remove_link_field').addEventListener('click', function(){
+          document.querySelectorAll('.franchise-form__field-link')[1].remove();
+          document.querySelector('.link_field_img').classList.remove('blocked_button');
+      });
     });
-
-  });
+  }
+  
 
 
 
