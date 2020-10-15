@@ -2807,6 +2807,16 @@ main {
             background-color: #B7A7E4; }
           .p-single-product .c-product-summary .product_meta__button:not(:last-child) {
             margin-right: 18px; }
+        @media screen and (max-width: 460px) {
+          .p-single-product .c-product-summary .product_meta__buttons {
+            flex-direction: column;
+            align-items: center; }
+          .p-single-product .c-product-summary .product_meta__button {
+            width: 75%; }
+            .p-single-product .c-product-summary .product_meta__button:not(:last-child) {
+              margin-right: 0px; }
+            .p-single-product .c-product-summary .product_meta__button:last-child {
+              margin-top: 15px; } }
     .p-single-product .c-product-tabs {
       grid-area: product-tabs; }
       .p-single-product .c-product-tabs ul.tabs {
