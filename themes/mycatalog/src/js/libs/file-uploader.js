@@ -31,9 +31,12 @@
 
     var resp = await fetch(wp_data.ajax_url, {method: 'POST',body: form_data});
     var data = await resp.json();
-
-    document.querySelector('input[name="email"]').classList.remove("form-field-invalid");
-    document.querySelector('input[name="phone"]').classList.remove("form-field-invalid");
+    
+    if(document.querySelector('input[name="email"]') && document.querySelector('input[name="phone"]'))
+    {
+      document.querySelector('input[name="email"]').classList.remove("form-field-invalid");
+      document.querySelector('input[name="phone"]').classList.remove("form-field-invalid");
+    }
     if(data['status']['response']==0){
       if(data['status']['errors']['email']==0){
         document.querySelector('input[name="email"]').classList.add("form-field-invalid");
@@ -93,6 +96,30 @@
       removeFile(index, files);
     }, duration + 100);
   }
+
+  /**
+   * Add New link field
+   */
+  document.querySelector('.add_link_field').addEventListener('click', function(){
+    var element = document.querySelector('.franchise-form__field-link');
+    var clone = element.cloneNode(true);
+    var link_field_img = clone.querySelector('.link_field_img');
+    clone.querySelector('input').value = '';
+    link_field_img.classList.remove('add_link_field');
+    link_field_img.classList.add('remove_link_field');
+
+    element.querySelector('.link_field_img').classList.add('blocked_button');
+
+    document.querySelector('.franchise-form__field-link').after(clone);
+    
+    //Delete extra link field
+    document.querySelector('.remove_link_field').addEventListener('click', function(){
+        document.querySelectorAll('.franchise-form__field-link')[1].remove();
+        document.querySelector('.link_field_img').classList.remove('blocked_button');
+    });
+
+  });
+
 
 
   document.querySelectorAll('.brief-popup__close').forEach(btn => btn.addEventListener('click', e => {

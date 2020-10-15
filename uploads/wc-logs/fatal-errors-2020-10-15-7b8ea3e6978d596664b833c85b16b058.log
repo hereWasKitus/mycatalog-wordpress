@@ -1,0 +1,4 @@
+2020-10-15T11:18:13+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in C:\OSPanel\domains\mycatalog.loc\wp-content\themes\mycatalog\functions.php on line 401
+
+2020-10-15T11:18:15+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in C:\OSPanel\domains\mycatalog.loc\wp-content\themes\mycatalog\functions.php on line 401
+

@@ -83,6 +83,41 @@
           font-size: 18px;
           color: #cecbcb;
         }
+
+        &-link{
+          display: flex;
+
+          input{
+            width: 100%;
+          }
+
+          &-icon-wrapper{
+            display: flex;
+            width: auto;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            background-color: #eeeeee;
+            padding-right: 10px;
+            
+            img{
+              cursor: pointer;
+            }
+            
+            .blocked_button{
+              display: none;
+            }
+
+            .remove_link_field{
+              transform: rotate(45deg);
+            }
+
+            .blocked_button{
+              pointer-events: none;
+            }
+          }
+
+        }
       }
 
       input {

@@ -393,8 +393,11 @@ function send_contact_form () {
     }
   }
 
-  if ( isset($_POST['link']) ) {
-    $message_body .= "Web resource: " . $_POST['link'] . "\r\n";
+  if ( isset($_POST['links']) ) {
+    foreach($_POST['links'] as $key => $value)
+    {
+      $message_body .= "Web resource: " . $_POST['links'][$key] . "\r\n";
+    }
   }
 
   if ( isset($_POST['message']) ) {

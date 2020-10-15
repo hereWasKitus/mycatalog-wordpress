@@ -1812,6 +1812,26 @@ main {
     .template-franchise .franchise-form__field::placeholder {
       font-size: 18px;
       color: #cecbcb; }
+    .template-franchise .franchise-form__field-link {
+      display: flex; }
+      .template-franchise .franchise-form__field-link input {
+        width: 100%; }
+      .template-franchise .franchise-form__field-link-icon-wrapper {
+        display: flex;
+        width: auto;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeeee;
+        padding-right: 10px; }
+        .template-franchise .franchise-form__field-link-icon-wrapper img {
+          cursor: pointer; }
+        .template-franchise .franchise-form__field-link-icon-wrapper .blocked_button {
+          display: none; }
+        .template-franchise .franchise-form__field-link-icon-wrapper .remove_link_field {
+          transform: rotate(45deg); }
+        .template-franchise .franchise-form__field-link-icon-wrapper .blocked_button {
+          pointer-events: none; }
   .template-franchise .franchise-form input[type='text'], .template-franchise .franchise-form input[type='tel'], .template-franchise .franchise-form input[type='email'] {
     line-height: 44px;
     padding: 0 18px; }
