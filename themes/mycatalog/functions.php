@@ -365,8 +365,16 @@ function send_contact_form () {
     'from' => 'mycatalog@gmail.com'
   ];
 
+  $response['response']=1;
+  $response['errors']['email']=1;
+  $response['errors']['phone']=1;
+
   if ( isset($_POST['email']) ) {
     $message_body .= "Email: " . $_POST['email'] . "\r\n";
+    if(!preg_match( '/^([A-Z|a-z|0-9](\.|_){0,1})+[A-Z|a-z|0-9]\@([A-Z|a-z|0-9])+((\.){0,1}[A-Z|a-z|0-9]){2}\.[a-z]{2,3}$/', $_POST['email'] )){
+      $response['response']=0;
+      $response['errors']['email']=0;
+    }
   }
 
   if ( isset($_POST['company']) ) {
@@ -379,6 +387,10 @@ function send_contact_form () {
 
   if ( isset($_POST['phone']) ) {
     $message_body .= "Phone: " . $_POST['phone'] . "\r\n";
+    if(!preg_match( '/(^\+?[0-9]{10,15}$)/', $_POST['phone'] )){
+      $response['response']=0;
+      $response['errors']['phone']=0;
+    }
   }
 
   if ( isset($_POST['link']) ) {
@@ -405,6 +417,12 @@ function send_contact_form () {
   foreach ($files as $file) {
     $attachments[] = $file['file'];
   }
+
+  if(isset($response['response']) && $response['response']==0){
+    echo json_encode(['status' => $response]);
+    wp_die();
+  }
+
 
   // $mail_sent = wp_mail(get_option('admin_email'), 'My Catalog form', $message_body, $headers, $attachments);
   $mail_sent = wp_mail(get_field('contact_email', 'option'), 'My Catalog form', $message_body, $headers, $attachments);

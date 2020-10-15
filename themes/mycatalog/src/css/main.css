@@ -1978,6 +1978,9 @@ main {
   .template-franchise .brief-popup__submit {
     margin-top: 24px; } }
 
+.template-franchise .form-field-invalid {
+  border: 1px solid #a00; }
+
 .franchise-pod .franchise-image img {
   position: absolute;
   bottom: 60px; }

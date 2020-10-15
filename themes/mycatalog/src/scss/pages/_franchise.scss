@@ -1,4 +1,5 @@
 .template-franchise {
+
   .wrapper {
     max-width: (1328px + 60px);
     padding: 0 30px;
@@ -366,6 +367,9 @@
         margin-top: 24px;
       }
     }
+  }
+  .form-field-invalid{
+    border: 1px solid #a00;
   }
 
 }

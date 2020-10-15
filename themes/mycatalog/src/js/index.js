@@ -299,8 +299,22 @@
     var resp = await fetch(wp_data.ajax_url, {method: 'POST',body: form_data});
     var data = await resp.json();
 
-    window.blockBodyScroll();
-    document.querySelector('.brief-popup-container').classList.add('is-active');
+    document.querySelector('input[name="email"]').classList.remove("form-field-invalid");
+    document.querySelector('input[name="phone"]').classList.remove("form-field-invalid");
+    if(data['status']['response']==0){
+      if(data['status']['errors']['email']==0){
+        document.querySelector('input[name="email"]').classList.add("form-field-invalid");
+      }
+      if(data['status']['errors']['phone']==0){
+        document.querySelector('input[name="phone"]').classList.add("form-field-invalid");
+      }
+    }
+    else{
+      window.blockBodyScroll();
+      document.querySelector('.brief-popup-container').classList.add('is-active');
+    }
+
+
   }
 
   function showFiles () {
