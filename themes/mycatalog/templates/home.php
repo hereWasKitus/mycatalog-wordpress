@@ -43,7 +43,7 @@ get_template_part('template-parts/page-header');
               <p class="last-products__item__category"><?= $product -> get_categories() ?></p>
               <p class="last-products__item__price">
                 <?php if ( $is_sale ): ?>
-                  <span class="crossed"><?= $currency . $product -> get_regular_price() ?></span> 
+                  <span class="crossed"><?= $currency . $product -> get_regular_price() ?></span>
                 <?php endif; ?>
                 <?= $currency . $price ?></p>
               <h3 class="last-products__item__name"><?= $product -> get_name() ?></h3>
