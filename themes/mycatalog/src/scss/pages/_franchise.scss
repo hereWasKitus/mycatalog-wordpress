@@ -509,7 +509,23 @@
           margin-right: 0 ;
         }
       }
+      
+      &__field-link-icon-wrapper{
+        display: flex;
+        width: auto;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeeee;
+        padding-left: 10px;
+        padding-right: 0;
+        
+        img{
+          cursor: pointer;
+        }
+      }
     }
+    
 
     @media screen and (max-width: 1024px) {
      .franchise-section {

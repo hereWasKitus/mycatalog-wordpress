@@ -2085,6 +2085,18 @@ main {
   margin-left: 38px;
   margin-right: 0; }
 
+[dir="rtl"] .template-franchise .franchise-form__field-link-icon-wrapper {
+  display: flex;
+  width: auto;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  padding-left: 10px;
+  padding-right: 0; }
+  [dir="rtl"] .template-franchise .franchise-form__field-link-icon-wrapper img {
+    cursor: pointer; }
+
 @media screen and (max-width: 1024px) {
   [dir="rtl"] .template-franchise .franchise-section:first-child {
     padding-left: 0; } }
