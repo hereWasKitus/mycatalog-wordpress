@@ -19,7 +19,15 @@
     font-size: 30px;
     font-weight: 700;
   }
+
+  @media screen and (max-width: 425px){
+    span{
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
 }
+
 
 [dir="rtl"] .sale-circle {
   font-size: 12px;

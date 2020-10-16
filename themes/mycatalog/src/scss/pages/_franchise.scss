@@ -127,8 +127,8 @@
         &[type='text'],
         &[type='tel'],
         &[type='email'] {
-          line-height: 44px;
-          padding: 0 18px;
+          line-height: 1;
+          padding: 11.5px 18px;
         }
 
         &[type='submit'] {
