@@ -695,7 +695,9 @@ main {
   .sale-circle span {
     display: block;
     margin: auto;
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700; }
 
 [dir="rtl"] .sale-circle {
   font-size: 12px; }

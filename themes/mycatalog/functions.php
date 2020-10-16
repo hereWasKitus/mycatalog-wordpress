@@ -260,7 +260,7 @@ function ajax_get_products () {
       $html .= '</div>';
       $html .= '<a class="c-product-item__link" href="' . get_the_permalink() . '"></a>';
       if ( $is_sale ) {
-        $html .= '<div class="sale-circle is-top-right"><span>' .  __('Sale!', 'mycatalog') . '</span></div>';
+        $html .= '<div class="sale-circle is-top-right"><span>' .  __('%', 'mycatalog') . '</span></div>';
       }
     $html .= '</div>';
   }

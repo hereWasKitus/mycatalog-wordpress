@@ -25,6 +25,6 @@ $is_sale = $product -> get_sale_price() != '';
   </div>
   <a class="c-product-item__link" href="<?= get_the_permalink() ?>"></a>
   <?php if ( $is_sale ): ?>
-  <div class="sale-circle is-top-right"><span><?= __('Sale!', 'mycatalog') ?></span></div>
+  <div class="sale-circle is-top-right"><span><?= __('%', 'mycatalog') ?></span></div>
   <?php endif; ?>
 </div>
