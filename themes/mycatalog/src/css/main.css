@@ -3107,12 +3107,17 @@ main {
       .error404-content__text {
         font-size: 13px; } }
   @media screen and (max-width: 425px) {
-    .error404-content__images-oops {
-      transform: scale(0.8);
-      left: -10px;
-      top: 0; }
-    .error404-content__text {
-      padding: 0 10px; } }
+    .error404-content {
+      height: calc(100vh - 237px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .error404-content__images-oops {
+        transform: scale(0.8);
+        left: -10px;
+        top: 0; }
+      .error404-content__text {
+        padding: 0 10px; } }
 
 [dir="rtl"] .error404-content__circles-top {
   position: absolute;

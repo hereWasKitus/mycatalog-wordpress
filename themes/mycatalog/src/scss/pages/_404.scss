@@ -141,6 +141,10 @@
     }
 
     @media screen and (max-width: 425px) {
+        height: calc(100vh - 237px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         &__images-oops{
             transform: scale(.8);
