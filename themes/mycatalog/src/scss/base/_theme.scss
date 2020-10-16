@@ -90,6 +90,7 @@ main {
 }
 
 [dir="rtl"] .floating-content {
+  
   &__social {
     right: unset;
     left: 0;
@@ -205,4 +206,8 @@ main {
       left: 100%;
     }
   }
+}
+
+[dir="rtl"] body{
+  font-family: 'Assistant';
 }
