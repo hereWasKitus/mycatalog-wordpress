@@ -3018,3 +3018,117 @@ main {
 
 .privacy-policy .floating-content {
   padding: 50px; }
+
+.error404 footer {
+  z-index: 1; }
+
+.error404-content {
+  width: 100%;
+  height: auto;
+  padding: 96px 0;
+  position: relative; }
+  .error404-content__images {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .error404-content__images-main {
+      position: relative;
+      padding-bottom: 60px; }
+    .error404-content__images-oops {
+      position: absolute;
+      left: 0;
+      top: 7%; }
+      .error404-content__images-oops p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 20px;
+        width: 90px;
+        padding: 32px 0;
+        /* padding: 32px 14px;*/
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-align: center; }
+  .error404-content__text {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    color: #434343; }
+  .error404-content-circle {
+    position: absolute;
+    background-color: #7A65B4;
+    border-radius: 50%; }
+    .error404-content-circle-s117 {
+      padding: 58.5px; }
+    .error404-content-circle-s39 {
+      padding: 19.5px; }
+    .error404-content-circle-s13 {
+      padding: 6.4px; }
+  .error404-content__circles-top {
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .error404-content__circles-top div:nth-child(1) {
+      top: -65px; }
+    .error404-content__circles-top div:nth-child(2) {
+      top: 21px;
+      right: 21px; }
+    .error404-content__circles-top div:nth-child(3) {
+      top: 74px;
+      right: 74px; }
+  .error404-content__circles-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+    .error404-content__circles-bottom div:nth-child(1) {
+      bottom: 74px;
+      left: 190px; }
+    .error404-content__circles-bottom div:nth-child(2) {
+      bottom: 21px;
+      left: 138px; }
+    .error404-content__circles-bottom div:nth-child(3) {
+      bottom: -65px; }
+  @media screen and (max-width: 1024px) {
+    .error404-content__circles-top {
+      right: 117px; } }
+  @media screen and (max-width: 520px) {
+    .error404-content {
+      padding: 30px 0; }
+      .error404-content__images-main {
+        transform: scale(0.8);
+        padding-bottom: 0; }
+      .error404-content__circles-top {
+        display: none; }
+      .error404-content__circles-bottom {
+        display: none; }
+      .error404-content__text {
+        font-size: 13px; } }
+  @media screen and (max-width: 425px) {
+    .error404-content__images-oops {
+      transform: scale(0.8);
+      left: -10px;
+      top: 0; }
+    .error404-content__text {
+      padding: 0 10px; } }
+
+[dir="rtl"] .error404-content__circles-top {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  [dir="rtl"] .error404-content__circles-top div:nth-child(2) {
+    right: 138px; }
+  [dir="rtl"] .error404-content__circles-top div:nth-child(3) {
+    right: 190px; }
+
+[dir="rtl"] .error404-content__circles-bottom div:nth-child(1) {
+  left: 74px; }
+
+[dir="rtl"] .error404-content__circles-bottom div:nth-child(2) {
+  left: 21px; }
+
+@media screen and (max-width: 1024px) {
+  [dir="rtl"] .error404-content__circles-bottom {
+    left: 117px; } }

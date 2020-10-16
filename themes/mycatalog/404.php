@@ -9,52 +9,32 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'mycatalog' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'mycatalog' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'mycatalog' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$mycatalog_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'mycatalog' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$mycatalog_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
+<div class="wrapper">
+	<div class="error404-content">
+		<div class="error404-content__images">
+			<div class="error404-content__images-main">
+				<img src="<?= get_template_directory_uri() . '/assets/images/error404-cut.png' ?>" alt="error 404 page">
+				<div class="error404-content__images-oops">
+					<img src="<?= get_template_directory_uri() . '/assets/images/error404-oops.svg' ?>" alt="error 404 oops!">
+					<p><?= __('oops!', 'mycatalog') ?></p>
+				</div>
+			</div>
+		</div>
+		<div class="error404-content__text">
+			<p><?= __('This page is currently unavailable or does not exist.', 'mycatalog') ?></p>
+		</div>
+		<div class="error404-content__circles-top">
+			<div class="error404-content-circle error404-content-circle-s117"></div>
+			<div class="error404-content-circle error404-content-circle-s39"></div>
+			<div class="error404-content-circle error404-content-circle-s13"></div>
+		</div>
+		<div class="error404-content__circles-bottom">
+			<div class="error404-content-circle error404-content-circle-s13"></div>
+			<div class="error404-content-circle error404-content-circle-s39"></div>
+			<div class="error404-content-circle error404-content-circle-s117"></div>
+		</div>
+	</div>
+</div>
 
 <?php
 get_footer();
