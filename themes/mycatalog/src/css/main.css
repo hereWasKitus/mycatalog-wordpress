@@ -1865,8 +1865,8 @@ main {
         .template-franchise .franchise-form__field-link-icon-wrapper .blocked_button {
           pointer-events: none; }
   .template-franchise .franchise-form input[type='text'], .template-franchise .franchise-form input[type='tel'], .template-franchise .franchise-form input[type='email'] {
-    line-height: 44px;
-    padding: 0 18px; }
+    line-height: 1;
+    padding: 11.5px 18px; }
   .template-franchise .franchise-form input[type='submit'] {
     margin-top: auto;
     line-height: 62px;
